@@ -1,1396 +1,2793 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khaled Ahmed Ibrahim | Digital Marketing Manager</title>
-  <meta name="description" content="Khaled Ahmed Ibrahim - Digital Marketing Manager, Content Creator, and Social Media Strategist based in Cairo, Egypt." />
-  <meta name="keywords" content="Khaled Ahmed Ibrahim, Digital Marketing, Content Creator, Social Media Strategist, SEO, Media Buying, Cairo, Egypt" />
-
-  <meta property="og:title" content="Khaled Ahmed Ibrahim | Digital Marketing Manager" />
-  <meta property="og:description" content="Portfolio of Khaled Ahmed Ibrahim - Digital Marketing Manager, Content Creator, and Social Media Strategist." />
-  <meta property="og:image" content="images/hero.jpg" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg: #0b1020;
-      --bg2: #121a30;
-      --card: rgba(255,255,255,0.06);
-      --border: rgba(255,255,255,0.10);
-      --text: #ffffff;
-      --muted: #c1c8de;
-      --primary: #7c89ff;
-      --secondary: #d7ae6d;
-      --accent: #8ef0c3;
-      --shadow: 0 20px 60px rgba(0,0,0,0.35);
-      --radius: 24px;
-      --max: 1200px;
-      --grad1: linear-gradient(135deg, #7c89ff, #9b6dff);
-      --grad2: linear-gradient(135deg, #d7ae6d, #f0d39d);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(124,137,255,0.16), transparent 25%),
-        radial-gradient(circle at bottom right, rgba(215,174,109,0.10), transparent 20%),
-        linear-gradient(135deg, #090d18, #0f172a 45%, #121a30 100%);
-      color: var(--text);
-      overflow-x: hidden;
-    }
-
-    body.ar {
-      font-family: 'Cairo', sans-serif;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    .container {
-      width: min(92%, var(--max));
-      margin: auto;
-    }
-
-    section {
-      padding: 95px 0;
-    }
-
-    .section-head {
-      text-align: center;
-      margin-bottom: 55px;
-    }
-
-    .section-head .tag {
-      color: var(--secondary);
-      font-size: .9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      display: inline-block;
-      margin-bottom: 12px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: 12px;
-      font-weight: 900;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      max-width: 760px;
-      margin: auto;
-      line-height: 1.9;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 14px 22px;
-      border-radius: 14px;
-      font-weight: 700;
-      transition: .3s ease;
-      border: 1px solid transparent;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: var(--grad2);
-      color: #111;
-      box-shadow: 0 12px 30px rgba(215,174,109,.25);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-3px);
-    }
-
-    .btn-secondary {
-      background: rgba(255,255,255,0.04);
-      border-color: var(--border);
-      color: var(--text);
-      backdrop-filter: blur(10px);
-    }
-
-    .btn-secondary:hover {
-      transform: translateY(-3px);
-      background: rgba(255,255,255,0.08);
-    }
-
-    /* Navbar */
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: rgba(9, 13, 24, 0.76);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-
-    .nav-wrap {
-      min-height: 78px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .logo {
-      font-size: 1.2rem;
-      font-weight: 900;
-      white-space: nowrap;
-    }
-
-    .logo span {
-      color: var(--secondary);
-    }
-
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      font-weight: 500;
-      transition: .25s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--text);
-    }
-
-    .lang-toggle {
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.05);
-      color: var(--text);
-      border-radius: 12px;
-      padding: 10px 14px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    /* Hero */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 70px 0 40px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.08fr .92fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.09);
-      color: var(--secondary);
-      font-size: .92rem;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 14px var(--accent);
-    }
-
-    .hero h1 {
-      font-size: clamp(2.8rem, 5vw, 5rem);
-      line-height: 1.05;
-      margin-bottom: 12px;
-      font-weight: 900;
-    }
-
-    .hero h1 span {
-      background: var(--grad2);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-role {
-      color: var(--primary);
-      font-weight: 800;
-      font-size: 1.1rem;
-      margin-bottom: 18px;
-    }
-
-    .hero-desc {
-      color: var(--muted);
-      line-height: 1.9;
-      font-size: 1rem;
-      max-width: 650px;
-      margin-bottom: 28px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 28px;
-    }
-
-    .hero-tags {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .hero-tags span {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.08);
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    .hero-img-wrap {
-      position: relative;
-    }
-
-    .hero-card {
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: 30px;
-      padding: 14px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
-    }
-
-    .hero-card img {
-      width: 100%;
-      height: 620px;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: 22px;
-    }
-
-    .float-box {
-      position: absolute;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 18px;
-      padding: 14px 18px;
-      backdrop-filter: blur(14px);
-      box-shadow: var(--shadow);
-      max-width: 220px;
-    }
-
-    .float-box h4 {
-      margin-bottom: 4px;
-      font-size: .96rem;
-    }
-
-    .float-box p {
-      color: var(--muted);
-      font-size: .86rem;
-      line-height: 1.6;
-    }
-
-    .float-1 {
-      left: -20px;
-      bottom: 30px;
-    }
-
-    .float-2 {
-      right: -20px;
-      top: 40px;
-    }
-
-    /* Stats */
-    .stats {
-      margin-top: 35px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .stat {
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 20px;
-      padding: 24px;
-      backdrop-filter: blur(10px);
-      transition: .3s ease;
-    }
-
-    .stat:hover {
-      transform: translateY(-5px);
-    }
-
-    .stat h3 {
-      font-size: 1.9rem;
-      color: var(--secondary);
-      margin-bottom: 6px;
-    }
-
-    .stat p {
-      color: var(--muted);
-      font-size: .94rem;
-      line-height: 1.7;
-    }
-
-    /* Generic cards */
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 22px;
-      padding: 26px;
-      transition: .3s ease;
-      backdrop-filter: blur(10px);
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-    }
-
-    .card h3 {
-      margin-bottom: 12px;
-      font-size: 1.08rem;
-    }
-
-    .card p {
-      color: var(--muted);
-      line-height: 1.8;
-      font-size: .95rem;
-    }
-
-    /* About */
-    .about {
-      background: rgba(255,255,255,.02);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 38px;
-      align-items: center;
-    }
-
-    .about-image {
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.1);
-      border-radius: 28px;
-      padding: 12px;
-      box-shadow: var(--shadow);
-    }
-
-    .about-image img {
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
-      border-radius: 22px;
-    }
-
-    .about-content h3 {
-      font-size: 2rem;
-      margin-bottom: 18px;
-    }
-
-    .about-content p {
-      color: var(--muted);
-      margin-bottom: 16px;
-      line-height: 1.9;
-    }
-
-    .mini-grid {
-      margin-top: 24px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    .mini-card {
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 18px;
-      padding: 18px;
-    }
-
-    .mini-card h4 {
-      color: var(--secondary);
-      margin-bottom: 8px;
-      font-size: 1rem;
-    }
-
-    .mini-card p {
-      margin: 0;
-      font-size: .92rem;
-    }
-
-    /* Experience */
-    .timeline {
-      display: grid;
-      gap: 20px;
-    }
-
-    .timeline-item {
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 24px;
-      padding: 28px;
-    }
-
-    .timeline-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 8px;
-    }
-
-    .timeline-top h3 {
-      color: var(--secondary);
-      font-size: 1.15rem;
-    }
-
-    .timeline-top span {
-      color: var(--primary);
-      font-weight: 700;
-    }
-
-    .timeline-company {
-      color: var(--muted);
-      margin-bottom: 14px;
-      font-size: .95rem;
-    }
-
-    .timeline-item ul {
-      padding-left: 20px;
-      color: var(--muted);
-    }
-
-    .timeline-item li {
-      margin-bottom: 8px;
-      line-height: 1.8;
-    }
-
-    body.ar .timeline-item ul {
-      padding-left: 0;
-      padding-right: 20px;
-    }
-
-    /* Portfolio */
-    .portfolio {
-      background: rgba(255,255,255,.02);
-    }
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .portfolio-card {
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 24px;
-      overflow: hidden;
-      transition: .3s ease;
-    }
-
-    .portfolio-card:hover {
-      transform: translateY(-8px);
-    }
-
-    .portfolio-img {
-      height: 240px;
-      overflow: hidden;
-    }
-
-    .portfolio-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: .4s ease;
-    }
-
-    .portfolio-card:hover .portfolio-img img {
-      transform: scale(1.05);
-    }
-
-    .portfolio-body {
-      padding: 22px;
-    }
-
-    .portfolio-label {
-      display: inline-block;
-      color: var(--secondary);
-      font-size: .84rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .portfolio-body h3 {
-      margin-bottom: 10px;
-      font-size: 1.06rem;
-    }
-
-    .portfolio-body p {
-      color: var(--muted);
-      line-height: 1.8;
-      font-size: .94rem;
-      margin-bottom: 16px;
-    }
-
-    /* Gallery */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .gallery-item {
-      position: relative;
-      min-height: 320px;
-      overflow: hidden;
-      border-radius: 22px;
-      border: 1px solid rgba(255,255,255,.08);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: .45s ease;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.05);
-    }
-
-    .gallery-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,.08));
-      display: flex;
-      align-items: flex-end;
-      padding: 18px;
-    }
-
-    .gallery-overlay p {
-      color: white;
-      font-weight: 600;
-      font-size: .94rem;
-    }
-
-    /* Tools */
-    .tools-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      justify-content: center;
-    }
-
-    .tool {
-      padding: 14px 18px;
-      border-radius: 14px;
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.08);
-      font-weight: 600;
-      transition: .3s ease;
-    }
-
-    .tool:hover {
-      transform: translateY(-4px);
-    }
-
-    /* Contact */
-    .contact {
-      background: rgba(255,255,255,.02);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-    }
-
-    .contact-card {
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 24px;
-      padding: 28px;
-    }
-
-    .contact-card h3 {
-      margin-bottom: 14px;
-      color: var(--secondary);
-    }
-
-    .contact-card p {
-      color: var(--muted);
-      line-height: 1.8;
-      margin-bottom: 14px;
-    }
-
-    .contact-list {
-      list-style: none;
-      display: grid;
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    .contact-list li {
-      color: var(--muted);
-    }
-
-    .contact-list a {
-      color: var(--white);
-      font-weight: 600;
-    }
-
-    footer {
-      padding: 40px 0;
-      text-align: center;
-      color: var(--muted);
-      border-top: 1px solid rgba(255,255,255,.08);
-    }
-
-    @media (max-width: 1100px) {
-      .hero-grid,
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .stats,
-      .grid-3,
-      .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hero-card img {
-        height: 520px;
-      }
-
-      .float-1,
-      .float-2 {
-        position: static;
-        margin-top: 14px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .stats,
-      .grid-3,
-      .portfolio-grid,
-      .gallery-grid,
-      .mini-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      section {
-        padding: 75px 0;
-      }
-
-      .hero-card img,
-      .about-image img {
-        height: 420px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khaled Ahmed - Full Stack Developer | Portfolio">
+    <meta name="keywords" content="Khaled Ahmed, Developer, Full Stack, Web Developer, Egypt">
+    <meta property="og:title" content="Khaled Ahmed | Full Stack Developer">
+    <meta property="og:description" content="محترف في تطوير الويب والتطبيقات">
+    <meta property="og:image" content="your-photo.jpg">
+    <title>Khaled Ahmed | Full Stack Developer</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* ===== VARIABLES ===== */
+        :root {
+            --primary: #6C63FF;
+            --secondary: #FF6584;
+            --accent: #43E97B;
+            --dark: #0A0A1A;
+            --dark2: #12122A;
+            --card: #1A1A35;
+            --text: #E0E0FF;
+            --text-muted: #8888AA;
+            --gradient: linear-gradient(135deg, #6C63FF, #FF6584);
+            --gradient2: linear-gradient(135deg, #43E97B, #38F9D7);
+            --shadow: 0 20px 60px rgba(108, 99, 255, 0.3);
+        }
+
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--dark);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 3px;
+        }
+
+        /* ===== LOADER ===== */
+        .loader {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-circle {
+            width: 60px;
+            height: 60px;
+            border: 3px solid transparent;
+            border-top-color: var(--primary);
+            border-right-color: var(--secondary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* ===== CURSOR ===== */
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.1s ease;
+        }
+
+        .cursor-follower {
+            width: 8px;
+            height: 8px;
+            background: var(--secondary);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9997;
+            transition: transform 0.3s ease;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(10, 10, 26, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 15px 5%;
+            border-bottom: 1px solid rgba(108, 99, 255, 0.2);
+        }
+
+        .nav-logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--gradient);
+            color: white !important;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 700 !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 10px 30px rgba(108, 99, 255, 0.5) !important;
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 5% 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+
+        .hero-bg .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+        }
+
+        .orb-1 {
+            width: 600px;
+            height: 600px;
+            background: var(--primary);
+            top: -200px;
+            left: -200px;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .orb-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--secondary);
+            bottom: -100px;
+            right: -100px;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+
+        .orb-3 {
+            width: 300px;
+            height: 300px;
+            background: var(--accent);
+            top: 50%;
+            left: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-30px) scale(1.05); }
+        }
+
+        /* Grid particles */
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(108, 99, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(108, 99, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-text .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(108, 99, 255, 0.15);
+            border: 1px solid rgba(108, 99, 255, 0.3);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            animation: pulse-border 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-border {
+            0%, 100% { border-color: rgba(108, 99, 255, 0.3); }
+            50% { border-color: rgba(108, 99, 255, 0.8); }
+        }
+
+        .badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.2; }
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .hero-text h1 .name {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text .typed-container {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            min-height: 50px;
+        }
+
+        .typed-text {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .typed-cursor {
+            color: var(--secondary);
+            animation: blink 1s infinite;
+        }
+
+        .hero-text p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(108, 99, 255, 0.4);
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 50px rgba(108, 99, 255, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(108, 99, 255, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            background: rgba(108, 99, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Hero Stats */
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 900;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 3px;
+        }
+
+        .stat-divider {
+            width: 1px;
+            background: rgba(108, 99, 255, 0.2);
+        }
+
+        /* Hero Image */
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .image-container {
+            position: relative;
+            width: 380px;
+            height: 380px;
+        }
+
+        .image-container .ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid transparent;
+        }
+
+        .ring-1 {
+            inset: -20px;
+            border-color: rgba(108, 99, 255, 0.3);
+            animation: rotate 10s linear infinite;
+        }
+
+        .ring-2 {
+            inset: -40px;
+            border-color: rgba(255, 101, 132, 0.2);
+            animation: rotate 15s linear infinite reverse;
+            border-style: dashed;
+        }
+
+        @keyframes rotate {
+            to { transform: rotate(360deg); }
+        }
+
+        .profile-img-wrapper {
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: var(--gradient);
+            padding: 4px;
+            box-shadow: var(--shadow);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            background: var(--card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+        }
+
+        /* Floating Cards on Image */
+        .floating-card {
+            position: absolute;
+            background: rgba(26, 26, 53, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(108, 99, 255, 0.3);
+            border-radius: 15px;
+            padding: 12px 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            animation: floatCard 4s ease-in-out infinite;
+        }
+
+        .floating-card:nth-child(3) {
+            top: 20px;
+            right: -30px;
+            animation-delay: 0s;
+        }
+
+        .floating-card:nth-child(4) {
+            bottom: 50px;
+            left: -40px;
+            animation-delay: 2s;
+        }
+
+        .floating-card:nth-child(5) {
+            bottom: -10px;
+            right: 20px;
+            animation-delay: 1s;
+        }
+
+        @keyframes floatCard {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .card-icon {
+            width: 35px;
+            height: 35px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .card-text {
+            font-size: 0.8rem;
+        }
+
+        .card-text strong {
+            display: block;
+            color: var(--text);
+            font-size: 0.85rem;
+        }
+
+        .card-text span {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+        }
+
+        /* ===== SECTIONS COMMON ===== */
+        section {
+            padding: 100px 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: rgba(108, 99, 255, 0.1);
+            color: var(--primary);
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            border: 1px solid rgba(108, 99, 255, 0.2);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+
+        .section-title span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* ===== ABOUT ===== */
+        .about {
+            background: var(--dark2);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-image-side {
+            position: relative;
+        }
+
+        .about-img-box {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .about-img-box img,
+        .about-img-placeholder {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            background: var(--card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+        }
+
+        .about-img-box::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient);
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--gradient);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .experience-badge .num {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: white;
+            display: block;
+        }
+
+        .experience-badge .label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .about-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .info-item i {
+            color: var(--primary);
+            width: 20px;
+        }
+
+        .info-item strong {
+            color: var(--text);
+        }
+
+        /* ===== SKILLS ===== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skill-category {
+            background: var(--card);
+            border: 1px solid rgba(108, 99, 255, 0.15);
+            border-radius: 20px;
+            padding: 35px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            border-color: rgba(108, 99, 255, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(108, 99, 255, 0.15);
+        }
+
+        .skill-category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .skill-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .skill-category h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .skill-item {
+            margin-bottom: 18px;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .skill-name {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .skill-percent {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .skill-bar {
+            height: 6px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .skill-fill {
+            height: 100%;
+            border-radius: 3px;
+            background: var(--gradient);
+            width: 0;
+            transition: width 1.5s ease;
+        }
+
+        /* Tech Icons */
+        .tech-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 50px;
+            justify-content: center;
+        }
+
+        .tech-icon {
+            background: var(--card);
+            border: 1px solid rgba(108, 99, 255, 0.15);
+            border-radius: 12px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .tech-icon:hover {
+            border-color: var(--primary);
+            background: rgba(108, 99, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .tech-icon i {
+            font-size: 1.3rem;
+        }
+
+        /* ===== PROJECTS ===== */
+        .projects {
+            background: var(--dark2);
+        }
+
+        .projects-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            color: var(--text-muted);
+            border: 1px solid rgba(108, 99, 255, 0.2);
+            padding: 10px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--gradient);
+            border-color: transparent;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: var(--card);
+            border: 1px solid rgba(108, 99, 255, 0.15);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            position: relative;
+            group: true;
+        }
+
+        .project-card:hover {
+            border-color: rgba(108, 99, 255, 0.4);
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(108, 99, 255, 0.2);
+        }
+
+        .project-image {
+            height: 220px;
+            background: var(--dark);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .project-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(108, 99, 255, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .overlay-btn {
+            background: white;
+            color: var(--primary);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            transform: translateY(20px);
+        }
+
+        .project-card:hover .overlay-btn {
+            transform: translateY(0);
+        }
+
+        .overlay-btn:nth-child(2) {
+            transition-delay: 0.1s;
+        }
+
+        .overlay-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.1) !important;
+        }
+
+        .project-info {
+            padding: 25px;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .project-tag {
+            background: rgba(108, 99, 255, 0.1);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .project-info h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .project-info p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .project-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: var(--primary);
+        }
+
+        .project-featured {
+            background: var(--gradient);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        /* ===== SERVICES ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--card);
+            border: 1px solid rgba(108, 99, 255, 0.15);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            border-color: rgba(108, 99, 255, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(108, 99, 255, 0.15);
+        }
+
+        .service-icon-wrap {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            background: rgba(108, 99, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 25px;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon-wrap {
+            background: var(--gradient);
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .service-features {
+            list-style: none;
+            text-align: right;
+        }
+
+        .service-features li {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .service-features li i {
+            color: var(--accent);
+            font-size: 0.8rem;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            background: var(--dark2);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: var(--card);
+            border: 1px solid rgba(108, 99, 255, 0.15);
+            border-radius: 20px;
+            padding: 35px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            border-color: rgba(108, 99, 255, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: 20px;
+            left: 25px;
+            font-size: 3rem;
+            color: rgba(108, 99, 255, 0.15);
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 20px;
+        }
+
+        .stars i {
+            color: #FFD700;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-text {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .author-info strong {
+            display: block;
+            font-size: 0.95rem;
+        }
+
+        .author-info span {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .contact-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: var(--card);
+            border: 1px solid rgba(108, 99, 255, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            border-color: var(--primary);
+            transform: translateX(-5px);
+        }
+
+        .contact-item-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: rgba(108, 99, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .contact-item-text strong {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 3px;
+        }
+
+        .contact-item-text span {
+            color: var(--text);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: var(--card);
+            border: 1px solid rgba(108, 99, 255, 0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: var(--card);
+            border: 1px solid rgba(108, 99, 255, 0.15);
+            border-radius: 25px;
+            padding: 45px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-muted);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(108, 99, 255, 0.2);
+            border-radius: 12px;
+            padding: 15px 20px;
+            color: var(--text);
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            direction: rtl;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(108, 99, 255, 0.05);
+            box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+        }
+
+        .form-group textarea {
+            height: 140px;
+            resize: vertical;
+        }
+
+        .form-group select option {
+            background: var(--card);
+        }
+
+        .form-submit {
+            width: 100%;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 17px;
+            border-radius: 12px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(108, 99, 255, 0.4);
+        }
+
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--dark2);
+            border-top: 1px solid rgba(108, 99, 255, 0.1);
+            padding: 50px 5% 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.8;
+            margin: 15px 0 25px;
+        }
+
+        .footer-title {
+            font-size: 1rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-right: 5px;
+        }
+
+        .footer-links a i {
+            font-size: 0.75rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(108, 99, 255, 0.1);
+            padding-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-bottom p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom .heart {
+            color: var(--secondary);
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+
+        /* ===== SCROLL TO TOP ===== */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 10px 30px rgba(108, 99, 255, 0.5);
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--gradient);
+            z-index: 9999;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== TOAST ===== */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--card);
+            border: 1px solid rgba(108, 99, 255, 0.3);
+            border-radius: 15px;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transform: translateX(200px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 9999;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .toast i {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        /* ===== AVAILABILITY ===== */
+        .availability-banner {
+            background: rgba(67, 233, 123, 0.1);
+            border: 1px solid rgba(67, 233, 123, 0.3);
+            border-radius: 15px;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+        }
+
+        .availability-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        .availability-banner p {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text p {
+                max-width: 100%;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .image-container {
+                width: 280px;
+                height: 280px;
+            }
+
+            .profile-img-wrapper {
+                width: 280px;
+                height: 280px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                height: 100vh;
+                background: rgba(10, 10, 26, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: right 0.3s ease;
+                backdrop-filter: blur(20px);
+                border-left: 1px solid rgba(108, 99, 255, 0.2);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .projects-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 25px;
+            }
+
+            .floating-card {
+                display: none;
+            }
+
+            .cursor,
+            .cursor-follower {
+                display: none;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="container nav-wrap">
-      <a href="#" class="logo">Khaled <span>Ahmed</span></a>
 
-      <div class="nav-right">
-        <nav class="nav-links">
-          <a href="#about" data-i18n="navAbout">About</a>
-          <a href="#expertise" data-i18n="navExpertise">Expertise</a>
-          <a href="#experience" data-i18n="navExperience">Experience</a>
-          <a href="#portfolio" data-i18n="navPortfolio">Portfolio</a>
-          <a href="#gallery" data-i18n="navGallery">Gallery</a>
-          <a href="#contact" data-i18n="navContact">Contact</a>
-        </nav>
+<!-- Loader -->
+<div class="loader" id="loader">
+    <div class="loader-circle"></div>
+</div>
 
-        <button class="lang-toggle" id="langToggle">العربية</button>
-      </div>
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<!-- Progress Bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Navbar -->
+<nav id="navbar">
+    <a href="#hero" class="nav-logo">KA</a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#about">من أنا</a></li>
+        <li><a href="#skills">المهارات</a></li>
+        <li><a href="#projects">المشاريع</a></li>
+        <li><a href="#services">الخدمات</a></li>
+        <li><a href="#contact" class="nav-cta">تواصل معي 🚀</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
-  </header>
+</nav>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-grid">
-          <div>
-            <div class="hero-badge">
-              <span class="dot"></span>
-              <span data-i18n="heroBadge">Open to Full-time & Freelance Opportunities</span>
-            </div>
-
-            <h1 data-i18n="heroTitle">Hi, I'm <span>Khaled Ahmed Ibrahim</span></h1>
-            <div class="hero-role" data-i18n="heroRole">Digital Marketing Manager • Content Creator • Social Media Strategist</div>
-            <p class="hero-desc" data-i18n="heroDesc">
-              I help brands grow through strategic content, social media management, SEO-driven communication, paid media campaigns, and creative visual storytelling that connects with the right audience.
-            </p>
-
-            <div class="hero-actions">
-              <a href="#portfolio" class="btn btn-primary" data-i18n="heroBtn1">View My Work</a>
-              <a href="Khaled-Ahmed-Ibrahim-CV.pdf" class="btn btn-secondary" download data-i18n="heroBtn2">Download CV</a>
-              <a href="#contact" class="btn btn-secondary" data-i18n="heroBtn3">Hire Me</a>
-            </div>
-
-            <div class="hero-tags">
-              <span>SEO / SEM</span>
-              <span>Media Buying</span>
-              <span data-i18n="tagContent">Content Strategy</span>
-              <span data-i18n="tagVideo">Videography</span>
-              <span data-i18n="tagSocial">Social Media Management</span>
-            </div>
-          </div>
-
-          <div class="hero-img-wrap">
-            <div class="hero-card">
-              <img src="images/hero.jpg" alt="Khaled Ahmed Ibrahim portrait">
-            </div>
-
-            <div class="float-box float-1">
-              <h4 data-i18n="float1Title">2+ Years Experience</h4>
-              <p data-i18n="float1Desc">Digital marketing, content, and campaign execution</p>
-            </div>
-
-            <div class="float-box float-2">
-              <h4 data-i18n="float2Title">Creative + Strategic</h4>
-              <p data-i18n="float2Desc">Blending storytelling with performance-focused thinking</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="stats">
-          <div class="stat">
-            <h3>2+</h3>
-            <p data-i18n="stat1">Years of hands-on marketing experience</p>
-          </div>
-          <div class="stat">
-            <h3>4+</h3>
-            <p data-i18n="stat2">Major digital platforms managed</p>
-          </div>
-          <div class="stat">
-            <h3>5+</h3>
-            <p data-i18n="stat3">Marketing specialties across content, SEO, and paid media</p>
-          </div>
-          <div class="stat">
-            <h3>100%</h3>
-            <p data-i18n="stat4">Open to full-time, freelance, and remote opportunities</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="about" id="about">
-      <div class="container">
-        <div class="section-head">
-          <div class="tag" data-i18n="aboutTag">About Me</div>
-          <h2 data-i18n="aboutTitle">A marketer with strategy, creativity, and real execution</h2>
-          <p data-i18n="aboutSub">
-            I combine communication, content, media buying, SEO, and visual production to help brands build stronger digital presence and better audience engagement.
-          </p>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-image">
-            <img src="images/about.jpg" alt="Khaled Ahmed Ibrahim professional photo">
-          </div>
-
-          <div class="about-content">
-            <h3 data-i18n="aboutHeading">Building stronger brands through modern digital marketing</h3>
-            <p data-i18n="aboutP1">
-              I’m Khaled Ahmed Ibrahim, a results-driven Digital Marketing Manager and Content Creator based in Cairo, Egypt. My background includes hands-on work in SEO/SEM, paid media, social media strategy, content writing, videography, and post-production.
-            </p>
-            <p data-i18n="aboutP2">
-              I’ve worked on campaigns and content across Meta, Google, TikTok, Snapchat, and LinkedIn, with a strong focus on creating marketing that is not only visually appealing, but also aligned with measurable communication and growth goals.
-            </p>
-            <p data-i18n="aboutP3">
-              I also use AI-powered tools like ChatGPT, Midjourney, Canva AI, and CapCut AI to accelerate ideation, production, and content optimization.
-            </p>
-
-            <div class="mini-grid">
-              <div class="mini-card">
-                <h4 data-i18n="mini1Title">SEO & Paid Media</h4>
-                <p data-i18n="mini1Desc">Improving discoverability, reach, and campaign performance across digital channels.</p>
-              </div>
-              <div class="mini-card">
-                <h4 data-i18n="mini2Title">Content & Copywriting</h4>
-                <p data-i18n="mini2Desc">Creating content that reflects brand voice and connects with target audiences.</p>
-              </div>
-              <div class="mini-card">
-                <h4 data-i18n="mini3Title">Video Production</h4>
-                <p data-i18n="mini3Desc">Managing visual storytelling from concept to filming and post-production editing.</p>
-              </div>
-              <div class="mini-card">
-                <h4 data-i18n="mini4Title">AI Marketing Tools</h4>
-                <p data-i18n="mini4Desc">Enhancing speed, creativity, and content workflows using modern AI solutions.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Expertise -->
-    <section id="expertise">
-      <div class="container">
-        <div class="section-head">
-          <div class="tag" data-i18n="expTag">Core Expertise</div>
-          <h2 data-i18n="expTitle">What I Do Best</h2>
-          <p data-i18n="expSub">My work combines creative production, performance thinking, and audience-focused communication across multiple marketing disciplines.</p>
-        </div>
-
-        <div class="grid-3">
-          <div class="card">
-            <h3 data-i18n="card1Title">Digital Marketing Strategy</h3>
-            <p data-i18n="card1Desc">Planning integrated campaigns that align content, audience targeting, brand communication, and measurable goals.</p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="card2Title">Social Media Management</h3>
-            <p data-i18n="card2Desc">Managing platform presence, content calendars, community engagement, and strategic communication.</p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="card3Title">Media Buying</h3>
-            <p data-i18n="card3Desc">Working across Meta, Google, TikTok, and Snapchat with performance-focused campaign execution.</p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="card4Title">SEO / SEM</h3>
-            <p data-i18n="card4Desc">Improving organic discoverability, search visibility, content structure, and audience reach.</p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="card5Title">Content Creation & Copywriting</h3>
-            <p data-i18n="card5Desc">Building content that balances storytelling, audience relevance, and brand consistency.</p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="card6Title">Videography & Editing</h3>
-            <p data-i18n="card6Desc">Creating engaging visual content from idea to final delivery for marketing and brand storytelling.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience">
-      <div class="container">
-        <div class="section-head">
-          <div class="tag" data-i18n="experienceTag">Experience</div>
-          <h2 data-i18n="experienceTitle">Professional Experience</h2>
-          <p data-i18n="experienceSub">Practical work experience in content production, digital strategy, social media, and campaign execution.</p>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-top">
-              <h3 data-i18n="job1Title">Marketing Manager</h3>
-              <span data-i18n="job1Date">Sep 2024 – Present</span>
-            </div>
-            <div class="timeline-company" data-i18n="job1Company">Al-Aasem Foundation for Development — Cairo, Egypt</div>
-            <ul>
-              <li data-i18n="job1Li1">Led digital marketing campaigns across Facebook, Instagram, LinkedIn, and TikTok.</li>
-              <li data-i18n="job1Li2">Built multi-channel promotional strategies including SEO content, email marketing, and paid social advertising.</li>
-              <li data-i18n="job1Li3">Managed the full content production pipeline from copywriting and planning to videography and post-production.</li>
-              <li data-i18n="job1Li4">Applied SEO best practices to improve search rankings and organic discoverability.</li>
-              <li data-i18n="job1Li5">Used AI tools to improve speed in ideation, execution, and content analysis.</li>
-            </ul>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-top">
-              <h3 data-i18n="job2Title">Content Writer & Videographer</h3>
-              <span data-i18n="job2Date">Feb 2024 – Jun 2024</span>
-            </div>
-            <div class="timeline-company" data-i18n="job2Company">Torjoman — Cairo, Egypt</div>
-            <ul>
-              <li data-i18n="job2Li1">Produced articles, blog posts, and social content aligned with brand voice and campaign needs.</li>
-              <li data-i18n="job2Li2">Delivered full-cycle videography projects covering concept, shooting, editing, and final delivery.</li>
-              <li data-i18n="job2Li3">Supported social media management, visual consistency, and brand communication quality.</li>
-              <li data-i18n="job2Li4">Applied SEO principles to written content to improve reach and click-through performance.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section class="portfolio" id="portfolio">
-      <div class="container">
-        <div class="section-head">
-          <div class="tag" data-i18n="portfolioTag">Selected Work</div>
-          <h2 data-i18n="portfolioTitle">Portfolio & Featured Projects</h2>
-          <p data-i18n="portfolioSub">A selected view of my work across video, content strategy, social media execution, and brand-focused communication.</p>
-        </div>
-
-        <div class="portfolio-grid">
-          <div class="portfolio-card">
-            <div class="portfolio-img">
-              <img src="images/gallery1.jpg" alt="Videography project">
-            </div>
-            <div class="portfolio-body">
-              <div class="portfolio-label" data-i18n="p1Label">Videography & Editing</div>
-              <h3 data-i18n="p1Title">Video Production Showcase</h3>
-              <p data-i18n="p1Desc">A curated visual portfolio showing storytelling, filming, editing, and content crafted for digital campaigns and social platforms.</p>
-              <a href="#" class="btn btn-secondary" data-i18n="viewProject">View Project</a>
-            </div>
-          </div>
-
-          <div class="portfolio-card">
-            <div class="portfolio-img">
-              <img src="images/gallery2.jpg" alt="SEO project">
-            </div>
-            <div class="portfolio-body">
-              <div class="portfolio-label" data-i18n="p2Label">SEO & Content Strategy</div>
-              <h3 data-i18n="p2Title">SEO-Driven Content Planning</h3>
-              <p data-i18n="p2Desc">A content approach focused on discoverability, search visibility, engagement, and stronger brand communication.</p>
-              <a href="#" class="btn btn-secondary" data-i18n="viewProject">View Project</a>
-            </div>
-          </div>
-
-          <div class="portfolio-card">
-            <div class="portfolio-img">
-              <img src="images/gallery3.jpg" alt="Social media project">
-            </div>
-            <div class="portfolio-body">
-              <div class="portfolio-label" data-i18n="p3Label">Social Media Strategy</div>
-              <h3 data-i18n="p3Title">Cross-Platform Campaign Execution</h3>
-              <p data-i18n="p3Desc">Strategic content planning and campaign communication across Meta, LinkedIn, TikTok, and other key platforms.</p>
-              <a href="#" class="btn btn-secondary" data-i18n="viewProject">View Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery -->
-    <section id="gallery">
-      <div class="container">
-        <div class="section-head">
-          <div class="tag" data-i18n="galleryTag">Gallery</div>
-          <h2 data-i18n="galleryTitle">Personal Brand Gallery</h2>
-          <p data-i18n="gallerySub">A visual side of my personal brand — professional, authentic, and aligned with the image I bring to my work.</p>
-        </div>
-
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <img src="images/gallery1.jpg" alt="Khaled image 1">
-            <div class="gallery-overlay"><p data-i18n="g1">Professional Presence</p></div>
-          </div>
-          <div class="gallery-item">
-            <img src="images/gallery2.jpg" alt="Khaled image 2">
-            <div class="gallery-overlay"><p data-i18n="g2">Creative Identity</p></div>
-          </div>
-          <div class="gallery-item">
-            <img src="images/gallery3.jpg" alt="Khaled image 3">
-            <div class="gallery-overlay"><p data-i18n="g3">Confident Personal Brand</p></div>
-          </div>
-          <div class="gallery-item">
-            <img src="images/gallery4.jpg" alt="Khaled image 4">
-            <div class="gallery-overlay"><p data-i18n="g4">Modern & Professional Image</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tools -->
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <div class="tag" data-i18n="toolsTag">Tools & Platforms</div>
-          <h2 data-i18n="toolsTitle">Tools I Work With</h2>
-          <p data-i18n="toolsSub">Modern tools that support content quality, campaign execution, analytics, and digital growth.</p>
-        </div>
-
-        <div class="tools-wrap">
-          <div class="tool">Meta Ads</div>
-          <div class="tool">Google Ads</div>
-          <div class="tool">TikTok Ads</div>
-          <div class="tool">Snapchat Ads</div>
-          <div class="tool">Google Analytics 4</div>
-          <div class="tool">Canva</div>
-          <div class="tool">CapCut</div>
-          <div class="tool">ChatGPT</div>
-          <div class="tool">Midjourney</div>
-          <div class="tool">Canva AI</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-      <div class="container">
-        <div class="section-head">
-          <div class="tag" data-i18n="contactTag">Contact</div>
-          <h2 data-i18n="contactTitle">Let’s Work Together</h2>
-          <p data-i18n="contactSub">I’m currently available for full-time roles, freelance projects, and collaborative opportunities in marketing, content, and brand growth.</p>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3 data-i18n="contactInfoTitle">Contact Information</h3>
-            <ul class="contact-list">
-              <li><span data-i18n="emailLabel">Email</span>: <a href="mailto:khaled2092002@gmail.com">khaled2092002@gmail.com</a></li>
-              <li><span data-i18n="phoneLabel">Phone</span>: <a href="tel:01156766611">01156766611</a></li>
-              <li><span data-i18n="phoneLabel">Phone</span>: <a href="tel:01015793576">01015793576</a></li>
-              <li><span data-i18n="locationLabel">Location</span>: <span data-i18n="locationValue">Cairo, Egypt</span></li>
-              <li>LinkedIn: <a href="#">Add your LinkedIn link</a></li>
-              <li>Behance: <a href="#">Add your Behance link</a></li>
-            </ul>
-          </div>
-
-          <div class="contact-card">
-            <h3 data-i18n="contactWhyTitle">Why work with me?</h3>
-            <p data-i18n="contactWhyP1">I bring a combination of marketing strategy, creative execution, audience understanding, and content production — which allows me to contribute across both planning and implementation.</p>
-            <p data-i18n="contactWhyP2">Whether you need stronger content, better campaign execution, improved visibility, or a more polished digital brand image, I’m ready to help.</p>
-            <a href="mailto:khaled2092002@gmail.com" class="btn btn-primary" data-i18n="contactBtn">Send Email</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p data-i18n="footerText">© 2025 Khaled Ahmed Ibrahim — All rights reserved.</p>
+<!-- Hero Section -->
+<section class="hero" id="hero">
+    <div class="hero-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="hero-grid"></div>
     </div>
-  </footer>
 
-  <script>
-    const translations = {
-      en: {
-        navAbout: "About",
-        navExpertise: "Expertise",
-        navExperience: "Experience",
-        navPortfolio: "Portfolio",
-        navGallery: "Gallery",
-        navContact: "Contact",
+    <div class="hero-content">
+        <div class="hero-text" data-aos="fade-right">
+            <div class="badge">
+                <span class="dot"></span>
+                متاح للعمل الآن
+            </div>
+            <h1>
+                أهلاً، أنا<br>
+                <span class="name">خالد أحمد</span>
+            </h1>
+            <div class="typed-container">
+                <span class="typed-text" id="typedText"></span>
+                <span class="typed-cursor">|</span>
+            </div>
+            <p>
+                مطور متخصص في بناء تجارب رقمية استثنائية. أحول أفكارك إلى واقع رقمي يترك أثراً. شغوف بالتقنية، ملتزم بالجودة، ومتطور باستمرار.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    شاهد أعمالي
+                </a>
+                <a href="#contact" class="btn-secondary">
+                    <i class="fas fa-paper-plane"></i>
+                    تواصل معي
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="projectsCount">0</div>
+                    <div class="stat-label">مشروع منجز</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number" id="clientsCount">0</div>
+                    <div class="stat-label">عميل راضٍ</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number" id="expCount">0</div>
+                    <div class="stat-label">سنوات خبرة</div>
+                </div>
+            </div>
+        </div>
 
-        heroBadge: "Open to Full-time & Freelance Opportunities",
-        heroTitle: "Hi, I'm <span>Khaled Ahmed Ibrahim</span>",
-        heroRole: "Digital Marketing Manager • Content Creator • Social Media Strategist",
-        heroDesc: "I help brands grow through strategic content, social media management, SEO-driven communication, paid media campaigns, and creative visual storytelling that connects with the right audience.",
-        heroBtn1: "View My Work",
-        heroBtn2: "Download CV",
-        heroBtn3: "Hire Me",
-        tagContent: "Content Strategy",
-        tagVideo: "Videography",
-        tagSocial: "Social Media Management",
-        float1Title: "2+ Years Experience",
-        float1Desc: "Digital marketing, content, and campaign execution",
-        float2Title: "Creative + Strategic",
-        float2Desc: "Blending storytelling with performance-focused thinking",
+        <div class="hero-image" data-aos="fade-left">
+            <div class="image-container">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="profile-img-wrapper">
+                    <!-- ضع صورتك هنا -->
+                    <div class="profile-img">👨‍💻</div>
+                </div>
 
-        stat1: "Years of hands-on marketing experience",
-        stat2: "Major digital platforms managed",
-        stat3: "Marketing specialties across content, SEO, and paid media",
-        stat4: "Open to full-time, freelance, and remote opportunities",
+                <!-- Floating Cards -->
+                <div class="floating-card">
+                    <div class="card-icon" style="background: rgba(108,99,255,0.2);">⚡</div>
+                    <div class="card-text">
+                        <strong>Full Stack</strong>
+                        <span>Developer</span>
+                    </div>
+                </div>
 
-        aboutTag: "About Me",
-        aboutTitle: "A marketer with strategy, creativity, and real execution",
-        aboutSub: "I combine communication, content, media buying, SEO, and visual production to help brands build stronger digital presence and better audience engagement.",
-        aboutHeading: "Building stronger brands through modern digital marketing",
-        aboutP1: "I’m Khaled Ahmed Ibrahim, a results-driven Digital Marketing Manager and Content Creator based in Cairo, Egypt. My background includes hands-on work in SEO/SEM, paid media, social media strategy, content writing, videography, and post-production.",
-        aboutP2: "I’ve worked on campaigns and content across Meta, Google, TikTok, Snapchat, and LinkedIn, with a strong focus on creating marketing that is not only visually appealing, but also aligned with measurable communication and growth goals.",
-        aboutP3: "I also use AI-powered tools like ChatGPT, Midjourney, Canva AI, and CapCut AI to accelerate ideation, production, and content optimization.",
-        mini1Title: "SEO & Paid Media",
-        mini1Desc: "Improving discoverability, reach, and campaign performance across digital channels.",
-        mini2Title: "Content & Copywriting",
-        mini2Desc: "Creating content that reflects brand voice and connects with target audiences.",
-        mini3Title: "Video Production",
-        mini3Desc: "Managing visual storytelling from concept to filming and post-production editing.",
-        mini4Title: "AI Marketing Tools",
-        mini4Desc: "Enhancing speed, creativity, and content workflows using modern AI solutions.",
+                <div class="floating-card">
+                    <div class="card-icon" style="background: rgba(67,233,123,0.2);">✅</div>
+                    <div class="card-text">
+                        <strong>مشروع مكتمل</strong>
+                        <span>100% جودة</span>
+                    </div>
+                </div>
 
-        expTag: "Core Expertise",
-        expTitle: "What I Do Best",
-        expSub: "My work combines creative production, performance thinking, and audience-focused communication across multiple marketing disciplines.",
-        card1Title: "Digital Marketing Strategy",
-        card1Desc: "Planning integrated campaigns that align content, audience targeting, brand communication, and measurable goals.",
-        card2Title: "Social Media Management",
-        card2Desc: "Managing platform presence, content calendars, community engagement, and strategic communication.",
-        card3Title: "Media Buying",
-        card3Desc: "Working across Meta, Google, TikTok, and Snapchat with performance-focused campaign execution.",
-        card4Title: "SEO / SEM",
-        card4Desc: "Improving organic discoverability, search visibility, content structure, and audience reach.",
-        card5Title: "Content Creation & Copywriting",
-        card5Desc: "Building content that balances storytelling, audience relevance, and brand consistency.",
-        card6Title: "Videography & Editing",
-        card6Desc: "Creating engaging visual content from idea to final delivery for marketing and brand storytelling.",
+                <div class="floating-card">
+                    <div class="card-icon" style="background: rgba(255,101,132,0.2);">🏆</div>
+                    <div class="card-text">
+                        <strong>Top Rated</strong>
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        experienceTag: "Experience",
-        experienceTitle: "Professional Experience",
-        experienceSub: "Practical work experience in content production, digital strategy, social media, and campaign execution.",
-        job1Title: "Marketing Manager",
-        job1Date: "Sep 2024 – Present",
-        job1Company: "Al-Aasem Foundation for Development — Cairo, Egypt",
-        job1Li1: "Led digital marketing campaigns across Facebook, Instagram, LinkedIn, and TikTok.",
-        job1Li2: "Built multi-channel promotional strategies including SEO content, email marketing, and paid social advertising.",
-        job1Li3: "Managed the full content production pipeline from copywriting and planning to videography and post-production.",
-        job1Li4: "Applied SEO best practices to improve search rankings and organic discoverability.",
-        job1Li5: "Used AI tools to improve speed in ideation, execution, and content analysis.",
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">من أنا</span>
+        <h2 class="section-title">قصتي مع <span>التقنية</span></h2>
+        <p class="section-desc">شغوف بالبرمجة وبناء حلول رقمية تحل مشكلات حقيقية</p>
+    </div>
 
-        job2Title: "Content Writer & Videographer",
-        job2Date: "Feb 2024 – Jun 2024",
-        job2Company: "Torjoman — Cairo, Egypt",
-        job2Li1: "Produced articles, blog posts, and social content aligned with brand voice and campaign needs.",
-        job2Li2: "Delivered full-cycle videography projects covering concept, shooting, editing, and final delivery.",
-        job2Li3: "Supported social media management, visual consistency, and brand communication quality.",
-        job2Li4: "Applied SEO principles to written content to improve reach and click-through performance.",
+    <div class="about-content">
+        <div class="about-image-side" data-aos="fade-right">
+            <div class="about-img-box">
+                <div class="about-img-placeholder" style="background: var(--card); display:flex; align-items:center; justify-content:center;">
+                    👨‍💻
+                </div>
+            </div>
+            <div class="experience-badge">
+                <span class="num">2+</span>
+                <span class="label">سنوات خبرة</span>
+            </div>
+        </div>
 
-        portfolioTag: "Selected Work",
-        portfolioTitle: "Portfolio & Featured Projects",
-        portfolioSub: "A selected view of my work across video, content strategy, social media execution, and brand-focused communication.",
-        p1Label: "Videography & Editing",
-        p1Title: "Video Production Showcase",
-        p1Desc: "A curated visual portfolio showing storytelling, filming, editing, and content crafted for digital campaigns and social platforms.",
-        p2Label: "SEO & Content Strategy",
-        p2Title: "SEO-Driven Content Planning",
-        p2Desc: "A content approach focused on discoverability, search visibility, engagement, and stronger brand communication.",
-        p3Label: "Social Media Strategy",
-        p3Title: "Cross-Platform Campaign Execution",
-        p3Desc: "Strategic content planning and campaign communication across Meta, LinkedIn, TikTok, and other key platforms.",
-        viewProject: "View Project",
+        <div class="about-text" data-aos="fade-left">
+            <h2>مطور ويب <span style="background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">شغوف بالتقنية</span></h2>
+            <p>
+                أنا خالد أحمد، مطور ويب متخصص في بناء تطبيقات ويب حديثة وسريعة. أجمع بين الجانب التقني والإبداعي لتقديم حلول متكاملة تلبي احتياجات العملاء وتتجاوز توقعاتهم.
+            </p>
+            <p>
+                اعتدت العمل على مشاريع متنوعة من المواقع الشخصية وصولاً إلى التطبيقات المعقدة. أؤمن بأن الكود الجيد هو الذي يحل مشكلة حقيقية بطريقة نظيفة وقابلة للتوسع.
+            </p>
 
-        galleryTag: "Gallery",
-        galleryTitle: "Personal Brand Gallery",
-        gallerySub: "A visual side of my personal brand — professional, authentic, and aligned with the image I bring to my work.",
-        g1: "Professional Presence",
-        g2: "Creative Identity",
-        g3: "Confident Personal Brand",
-        g4: "Modern & Professional Image",
+            <div class="about-info-grid">
+                <div class="info-item">
+                    <i class="fas fa-user"></i>
+                    <div><strong>الاسم:</strong> خالد أحمد</div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div><strong>الموقع:</strong> مصر</div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div><strong>التخصص:</strong> علوم الحاسب</div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-briefcase"></i>
+                    <div><strong>متاح:</strong> Freelance & Full-time</div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-language"></i>
+                    <div><strong>اللغات:</strong> عربي، English</div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-heart"></i>
+                    <div><strong>اهتمامات:</strong> AI, Open Source</div>
+                </div>
+            </div>
 
-        toolsTag: "Tools & Platforms",
-        toolsTitle: "Tools I Work With",
-        toolsSub: "Modern tools that support content quality, campaign execution, analytics, and digital growth.",
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                <a href="#" class="btn-primary" download>
+                    <i class="fas fa-download"></i>
+                    تحميل CV
+                </a>
+                <a href="#contact" class="btn-secondary">
+                    <i class="fas fa-comment"></i>
+                    دعنا نتحدث
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
-        contactTag: "Contact",
-        contactTitle: "Let’s Work Together",
-        contactSub: "I’m currently available for full-time roles, freelance projects, and collaborative opportunities in marketing, content, and brand growth.",
-        contactInfoTitle: "Contact Information",
-        emailLabel: "Email",
-        phoneLabel: "Phone",
-        locationLabel: "Location",
-        locationValue: "Cairo, Egypt",
-        contactWhyTitle: "Why work with me?",
-        contactWhyP1: "I bring a combination of marketing strategy, creative execution, audience understanding, and content production — which allows me to contribute across both planning and implementation.",
-        contactWhyP2: "Whether you need stronger content, better campaign execution, improved visibility, or a more polished digital brand image, I’m ready to help.",
-        contactBtn: "Send Email",
+<!-- Skills Section -->
+<section class="skills" id="skills">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">المهارات</span>
+        <h2 class="section-title">أدواتي <span>وخبراتي</span></h2>
+        <p class="section-desc">تقنيات متنوعة أستخدمها لبناء حلول متكاملة ومتطورة</p>
+    </div>
 
-        footerText: "© 2025 Khaled Ahmed Ibrahim — All rights reserved."
-      },
+    <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="0">
+            <div class="skill-category-header">
+                <div class="skill-icon" style="background: rgba(108,99,255,0.15);">🎨</div>
+                <h3>Frontend Development</h3>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">HTML5 & CSS3</span>
+                    <span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">JavaScript (ES6+)</span>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">React.js</span>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">Responsive Design</span>
+                    <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+        </div>
 
-      ar: {
-        navAbout: "من أنا",
-        navExpertise: "الخبرات",
-        navExperience: "الخبرة",
-        navPortfolio: "الأعمال",
-        navGallery: "الصور",
-        navContact: "تواصل",
+        <!-- Backend -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-category-header">
+                <div class="skill-icon" style="background: rgba(67,233,123,0.15);">⚙️</div>
+                <h3>Backend Development</h3>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">Python</span>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="80" style="background: linear-gradient(135deg, #43E97B, #38F9D7);"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">Node.js</span>
+                    <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="75" style="background: linear-gradient(135deg, #43E97B, #38F9D7);"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">SQL & Databases</span>
+                    <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="75" style="background: linear-gradient(135deg, #43E97B, #38F9D7);"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">REST APIs</span>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="80" style="background: linear-gradient(135deg, #43E97B, #38F9D7);"></div></div>
+            </div>
+        </div>
 
-        heroBadge: "متاح لفرص العمل بدوام كامل والعمل الحر",
-        heroTitle: "مرحبًا، أنا <span>خالد أحمد إبراهيم</span>",
-        heroRole: "مدير تسويق رقمي • صانع محتوى • استراتيجي سوشيال ميديا",
-        heroDesc: "أساعد العلامات التجارية على النمو من خلال المحتوى الاستراتيجي، وإدارة السوشيال ميديا، والتواصل المعتمد على SEO، والحملات الإعلانية المدفوعة، وصناعة محتوى بصري إبداعي يصل للجمهور المناسب.",
-        heroBtn1: "شاهد أعمالي",
-        heroBtn2: "تحميل السيرة الذاتية",
-        heroBtn3: "وظفني",
-        tagContent: "استراتيجية المحتوى",
-        tagVideo: "تصوير وصناعة فيديو",
-        tagSocial: "إدارة السوشيال ميديا",
-        float1Title: "خبرة +2 سنوات",
-        float1Desc: "في التسويق الرقمي والمحتوى وتنفيذ الحملات",
-        float2Title: "إبداع + استراتيجية",
-        float2Desc: "دمج بين السرد الإبداعي والتفكير القائم على النتائج",
+        <!-- Tools -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-category-header">
+                <div class="skill-icon" style="background: rgba(255,101,132,0.15);">🛠️</div>
+                <h3>Tools & Others</h3>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">Git & GitHub</span>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="85" style="background: linear-gradient(135deg, #FF6584, #FF8E53);"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">UI/UX Design</span>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="70" style="background: linear-gradient(135deg, #FF6584, #FF8E53);"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">Problem Solving</span>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="85" style="background: linear-gradient(135deg, #FF6584, #FF8E53);"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">Docker & Deployment</span>
+                    <span class="skill-percent">65%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="65" style="background: linear-gradient(135deg, #FF6584, #FF8E53);"></div></div>
+            </div>
+        </div>
+    </div>
 
-        stat1: "سنوات من الخبرة العملية في التسويق",
-        stat2: "منصات رقمية رئيسية تم العمل عليها",
-        stat3: "تخصصات تسويقية في المحتوى وSEO والإعلانات",
-        stat4: "متاح للعمل الكامل، الحر، والريموت",
+    <!-- Tech Icons -->
+    <div class="tech-icons" data-aos="fade-up">
+        <div class="tech-icon"><span>🌐</span> HTML5</div>
+        <div class="tech-icon"><span>🎨</span> CSS3</div>
+        <div class="tech-icon"><span>⚡</span> JavaScript</div>
+        <div class="tech-icon"><span>⚛️</span> React</div>
+        <div class="tech-icon"><span>🐍</span> Python</div>
+        <div class="tech-icon"><span>🟢</span> Node.js</div>
+        <div class="tech-icon"><span>🗄️</span> MySQL</div>
+        <div class="tech-icon"><span>🍃</span> MongoDB</div>
+        <div class="tech-icon"><span>🐙</span> Git</div>
+        <div class="tech-icon"><span>🐳</span> Docker</div>
+        <div class="tech-icon"><span>☁️</span> Cloud</div>
+        <div class="tech-icon"><span>🎯</span> Figma</div>
+    </div>
+</section>
 
-        aboutTag: "من أنا",
-        aboutTitle: "مسوّق يجمع بين الاستراتيجية، والإبداع، والتنفيذ الحقيقي",
-        aboutSub: "أجمع بين التواصل، والمحتوى، والإعلانات، وSEO، والإنتاج البصري لمساعدة العلامات التجارية على بناء حضور رقمي أقوى وتفاعل أفضل.",
-        aboutHeading: "بناء علامات تجارية أقوى من خلال التسويق الرقمي الحديث",
-        aboutP1: "أنا خالد أحمد إبراهيم، مدير تسويق رقمي وصانع محتوى أعمل من القاهرة. لدي خبرة عملية في SEO/SEM، والإعلانات المدفوعة، واستراتيجيات السوشيال ميديا، وكتابة المحتوى، والتصوير، والمونتاج.",
-        aboutP2: "عملت على حملات ومحتوى عبر Meta وGoogle وTikTok وSnapchat وLinkedIn، مع تركيز قوي على صناعة تسويق جذاب بصريًا ومبني أيضًا على أهداف واضحة للنمو والتواصل.",
-        aboutP3: "كما أستخدم أدوات الذكاء الاصطناعي مثل ChatGPT وMidjourney وCanva AI وCapCut AI لتسريع الأفكار والإنتاج وتحسين المحتوى.",
-        mini1Title: "SEO والإعلانات المدفوعة",
-        mini1Desc: "تحسين الظهور والوصول وأداء الحملات عبر القنوات الرقمية المختلفة.",
-        mini2Title: "المحتوى والكابشنات",
-        mini2Desc: "صناعة محتوى يعكس هوية العلامة التجارية ويتواصل مع الجمهور المستهدف.",
-        mini3Title: "إنتاج الفيديو",
-        mini3Desc: "إدارة السرد البصري من الفكرة وحتى التصوير والمونتاج النهائي.",
-        mini4Title: "أدوات الذكاء الاصطناعي",
-        mini4Desc: "رفع السرعة والإبداع وكفاءة العمل باستخدام أدوات AI الحديثة.",
+<!-- Projects Section -->
+<section class="projects" id="projects">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">المشاريع</span>
+        <h2 class="section-title">أبرز <span>أعمالي</span></h2>
+        <p class="section-desc">مشاريع حقيقية صممتها وطورتها من الصفر بأعلى معايير الجودة</p>
+    </div>
 
-        expTag: "الخبرات الأساسية",
-        expTitle: "أهم ما أقدمه",
-        expSub: "عملي يجمع بين الإنتاج الإبداعي، والتفكير المبني على الأداء، والتواصل الموجه للجمهور عبر تخصصات تسويقية متعددة.",
-        card1Title: "استراتيجية التسويق الرقمي",
-        card1Desc: "تخطيط حملات متكاملة تربط بين المحتوى، والجمهور، وهوية العلامة التجارية، والأهداف القابلة للقياس.",
-        card2Title: "إدارة السوشيال ميديا",
-        card2Desc: "إدارة المنصات، وخطط المحتوى، والتفاعل مع الجمهور، والتواصل الاستراتيجي.",
-        card3Title: "الإعلانات الممولة",
-        card3Desc: "العمل على Meta وGoogle وTikTok وSnapchat مع تركيز على الأداء والنتائج.",
-        card4Title: "SEO / SEM",
-        card4Desc: "تحسين الظهور العضوي، وترتيب البحث، وبنية المحتوى، والوصول للجمهور.",
-        card5Title: "صناعة المحتوى والكتابة",
-        card5Desc: "بناء محتوى يجمع بين السرد، واهتمامات الجمهور، وثبات هوية العلامة التجارية.",
-        card6Title: "التصوير والمونتاج",
-        card6Desc: "إنتاج محتوى بصري جذاب من الفكرة حتى التسليم النهائي لأغراض التسويق وبناء العلامة.",
+    <div class="projects-filter" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">الكل</button>
+        <button class="filter-btn" data-filter="web">مواقع ويب</button>
+        <button class="filter-btn" data-filter="app">تطبيقات</button>
+        <button class="filter-btn" data-filter="design">تصميم</button>
+    </div>
 
-        experienceTag: "الخبرة",
-        experienceTitle: "الخبرة المهنية",
-        experienceSub: "خبرة عملية في إنتاج المحتوى، والاستراتيجية الرقمية، والسوشيال ميديا، وتنفيذ الحملات.",
-        job1Title: "مدير تسويق",
-        job1Date: "سبتمبر 2024 – حتى الآن",
-        job1Company: "مؤسسة العاصم للتنمية — القاهرة، مصر",
-        job1Li1: "قيادة الحملات التسويقية الرقمية عبر Facebook وInstagram وLinkedIn وTikTok.",
-        job1Li2: "بناء استراتيجيات ترويج متعددة القنوات تشمل محتوى SEO، والتسويق عبر البريد، والإعلانات المدفوعة.",
-        job1Li3: "إدارة دورة إنتاج المحتوى بالكامل من الكتابة والتخطيط وحتى التصوير والمونتاج.",
-        job1Li4: "تطبيق أفضل ممارسات SEO لتحسين ترتيب البحث وزيادة الظهور العضوي.",
-        job1Li5: "استخدام أدوات الذكاء الاصطناعي لتسريع الأفكار والتنفيذ وتحليل الأداء.",
+    <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0" data-category="web">
+            <div class="project-image">
+                🛍️
+                <div class="project-overlay">
+                    <a href="#" class="overlay-btn" title="معاينة"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="overlay-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="project-info">
+                <div class="project-tags">
+                    <span class="project-tag">React</span>
+                    <span class="project-tag">Node.js</span>
+                    <span class="project-tag">MongoDB</span>
+                </div>
+                <h3>منصة تجارة إلكترونية</h3>
+                <p>متجر إلكتروني متكامل مع لوحة تحكم، نظام دفع، وإدارة المخزون. يدعم آلاف المنتجات مع أداء عالٍ.</p>
+                <div class="project-footer">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> معاينة</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> كود</a>
+                    </div>
+                    <span class="project-featured">مميز ⭐</span>
+                </div>
+            </div>
+        </div>
 
-        job2Title: "كاتب محتوى ومصور فيديو",
-        job2Date: "فبراير 2024 – يونيو 2024",
-        job2Company: "ترجمان — القاهرة، مصر",
-        job2Li1: "إنتاج مقالات ومنشورات ومدخلات سوشيال ميديا متوافقة مع صوت العلامة التجارية.",
-        job2Li2: "تنفيذ مشاريع تصوير فيديو كاملة من الفكرة وحتى التصوير والمونتاج والتسليم.",
-        job2Li3: "دعم إدارة السوشيال ميديا والحفاظ على الاتساق البصري وجودة التواصل.",
-        job2Li4: "تطبيق مبادئ SEO على المحتوى المكتوب لتحسين الوصول ومعدلات النقر.",
+        <!-- Project 2 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-category="app">
+            <div class="project-image" style="background: linear-gradient(135deg, rgba(67,233,123,0.1), rgba(56,249,215,0.1));">
+                📱
+                <div class="project-overlay">
+                    <a href="#" class="overlay-btn" title="معاينة"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="overlay-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="project-info">
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">Django</span>
+                    <span class="project-tag">PostgreSQL</span>
+                </div>
+                <h3>نظام إدارة المهام</h3>
+                <p>تطبيق ويب متكامل لإدارة المشاريع والمهام مع ميزات التعاون الجماعي والتتبع اللحظي للتقدم.</p>
+                <div class="project-footer">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> معاينة</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> كود</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        portfolioTag: "أعمال مختارة",
-        portfolioTitle: "الأعمال والمشاريع المميزة",
-        portfolioSub: "نظرة مختارة على أعمالي في الفيديو، واستراتيجية المحتوى، وتنفيذ السوشيال ميديا، والتواصل المرتبط بالعلامة التجارية.",
-        p1Label: "تصوير ومونتاج",
-        p1Title: "عرض أعمال إنتاج الفيديو",
-        p1Desc: "عرض بصري منسق يوضح السرد الإبداعي، والتصوير، والمونتاج، وصناعة محتوى للحملات والمنصات الاجتماعية.",
-        p2Label: "SEO واستراتيجية المحتوى",
-        p2Title: "تخطيط محتوى معتمد على SEO",
-        p2Desc: "أسلوب محتوى يركز على الظهور، وتحسين محركات البحث، والتفاعل، وتقوية الرسالة التسويقية.",
-        p3Label: "استراتيجية السوشيال ميديا",
-        p3Title: "تنفيذ حملات متعددة المنصات",
-        p3Desc: "تخطيط محتوى واستراتيجية تواصل عبر Meta وLinkedIn وTikTok ومنصات رئيسية أخرى.",
-        viewProject: "عرض المشروع",
+        <!-- Project 3 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-category="web">
+            <div class="project-image" style="background: linear-gradient(135deg, rgba(255,101,132,0.1), rgba(255,142,83,0.1));">
+                🎓
+                <div class="project-overlay">
+                    <a href="#" class="overlay-btn" title="معاينة"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="overlay-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="project-info">
+                <div class="project-tags">
+                    <span class="project-tag">HTML/CSS</span>
+                    <span class="project-tag">JavaScript</span>
+                    <span class="project-tag">Firebase</span>
+                </div>
+                <h3>منصة تعليمية تفاعلية</h3>
+                <p>منصة لتعلم البرمجة بطريقة تفاعلية مع تمارين حية، اختبارات، وشهادات إتمام فورية.</p>
+                <div class="project-footer">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> معاينة</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> كود</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        galleryTag: "الصور",
-        galleryTitle: "معرض الهوية الشخصية",
-        gallerySub: "جانب بصري من هويتي الشخصية — احترافي، حقيقي، ومتوافق مع الصورة التي أقدمها في عملي.",
-        g1: "حضور احترافي",
-        g2: "هوية إبداعية",
-        g3: "علامة شخصية واثقة",
-        g4: "صورة عصرية واحترافية",
+        <!-- Project 4 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0" data-category="design">
+            <div class="project-image" style="background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(255,101,132,0.1));">
+                🤖
+                <div class="project-overlay">
+                    <a href="#" class="overlay-btn" title="معاينة"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="overlay-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="project-info">
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">AI/ML</span>
+                    <span class="project-tag">API</span>
+                </div>
+                <h3>نظام ذكاء اصطناعي</h3>
+                <p>نموذج تحليل وتصنيف بيانات باستخدام تقنيات الذكاء الاصطناعي، مع واجهة مستخدم بسيطة وفعّالة.</p>
+                <div class="project-footer">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> معاينة</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> كود</a>
+                    </div>
+                    <span class="project-featured">جديد 🆕</span>
+                </div>
+            </div>
+        </div>
 
-        toolsTag: "الأدوات والمنصات",
-        toolsTitle: "الأدوات التي أعمل بها",
-        toolsSub: "أدوات حديثة تدعم جودة المحتوى، وتنفيذ الحملات، والتحليل، والنمو الرقمي.",
+        <!-- Project 5 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-category="web">
+            <div class="project-image" style="background: linear-gradient(135deg, rgba(56,249,215,0.1), rgba(108,99,255,0.1));">
+                💰
+                <div class="project-overlay">
+                    <a href="#" class="overlay-btn" title="معاينة"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="overlay-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="project-info">
+                <div class="project-tags">
+                    <span class="project-tag">React</span>
+                    <span class="project-tag">Chart.js</span>
+                    <span class="project-tag">API</span>
+                </div>
+                <h3>لوحة تحكم مالية</h3>
+                <p>داشبورد لتتبع المصروفات والإيرادات مع رسوم بيانية تفاعلية وتقارير تلقائية شهرية وسنوية.</p>
+                <div class="project-footer">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> معاينة</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> كود</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        contactTag: "تواصل",
-        contactTitle: "دعنا نعمل معًا",
-        contactSub: "أنا متاح حاليًا للوظائف بدوام كامل، والعمل الحر، وفرص التعاون في التسويق والمحتوى ونمو العلامات التجارية.",
-        contactInfoTitle: "معلومات التواصل",
-        emailLabel: "البريد",
-        phoneLabel: "الهاتف",
-        locationLabel: "الموقع",
-        locationValue: "القاهرة، مصر",
-        contactWhyTitle: "لماذا العمل معي؟",
-        contactWhyP1: "أجمع بين الاستراتيجية التسويقية، والتنفيذ الإبداعي، وفهم الجمهور، وإنتاج المحتوى، مما يسمح لي بالمساهمة في التخطيط والتنفيذ معًا.",
-        contactWhyP2: "إذا كنت تحتاج إلى محتوى أقوى، أو تنفيذ أفضل للحملات، أو ظهور أكبر، أو صورة رقمية أكثر احترافية للعلامة التجارية، فأنا مستعد للمساعدة.",
-        contactBtn: "إرسال بريد",
+        <!-- Project 6 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-category="app">
+            <div class="project-image" style="background: linear-gradient(135deg, rgba(255,142,83,0.1), rgba(255,101,132,0.1));">
+                🌐
+                <div class="project-overlay">
+                    <a href="#" class="overlay-btn" title="معاينة"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="overlay-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="project-info">
+                <div class="project-tags">
+                    <span class="project-tag">Portfolio</span>
+                    <span class="project-tag">JavaScript</span>
+                    <span class="project-tag">CSS3</span>
+                </div>
+                <h3>موقع البورتفوليو</h3>
+                <p>الموقع الذي أنت تشاهده الآن! صممته وطورته بالكامل لعرض أعمالي ومهاراتي باحترافية.</p>
+                <div class="project-footer">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> معاينة</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> كود</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        footerText: "© 2025 خالد أحمد إبراهيم — جميع الحقوق محفوظة."
-      }
-    };
+    <div style="text-align:center; margin-top: 50px;" data-aos="fade-up">
+        <a href="https://github.com/khaled2092002-alt" target="_blank" class="btn-secondary">
+            <i class="fab fa-github"></i>
+            شاهد المزيد على GitHub
+        </a>
+    </div>
+</section>
 
-    const toggleBtn = document.getElementById('langToggle');
-    let currentLang = 'en';
+<!-- Services Section -->
+<section class="services" id="services">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">الخدمات</span>
+        <h2 class="section-title">ماذا <span>أقدم لك؟</span></h2>
+        <p class="section-desc">خدمات متكاملة لمساعدتك في تحقيق أهدافك الرقمية</p>
+    </div>
 
-    function setLanguage(lang) {
-      currentLang = lang;
-      document.documentElement.lang = lang;
-      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-      document.body.classList.toggle('ar', lang === 'ar');
+    <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="service-icon-wrap">💻</div>
+            <h3>تطوير مواقع الويب</h3>
+            <p>تصميم وتطوير مواقع ويب احترافية وسريعة ومتجاوبة مع جميع الأجهزة</p>
+            <ul class="service-features">
+                <li><i class="fas fa-check-circle"></i> Landing Pages احترافية</li>
+                <li><i class="fas fa-check-circle"></i> مواقع شركات ومؤسسات</li>
+                <li><i class="fas fa-check-circle"></i> بوابات إلكترونية</li>
+                <li><i class="fas fa-check-circle"></i> تحسين محركات البحث SEO</li>
+            </ul>
+        </div>
 
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang][key]) {
-          el.innerHTML = translations[lang][key];
-        }
-      });
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon-wrap">🛒</div>
+            <h3>التجارة الإلكترونية</h3>
+            <p>بناء متاجر إلكترونية متكاملة مع نظم دفع آمنة وإدارة شاملة</p>
+            <ul class="service-features">
+                <li><i class="fas fa-check-circle"></i> متاجر WooCommerce</li>
+                <li><i class="fas fa-check-circle"></i> متاجر مخصصة Full-Stack</li>
+                <li><i class="fas fa-check-circle"></i> تكامل بوابات الدفع</li>
+                <li><i class="fas fa-check-circle"></i> لوحات تحكم المنتجات</li>
+            </ul>
+        </div>
 
-      toggleBtn.textContent = lang === 'en' ? 'العربية' : 'English';
-    }
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon-wrap">⚡</div>
+            <h3>تطوير التطبيقات</h3>
+            <p>بناء تطبيقات ويب متقدمة وأنظمة قواعد بيانات قوية وقابلة للتوسع</p>
+            <ul class="service-features">
+                <li><i class="fas fa-check-circle"></i> تطبيقات React & Vue</li>
+                <li><i class="fas fa-check-circle"></i> APIs RESTful</li>
+                <li><i class="fas fa-check-circle"></i> لوحات تحكم Admin</li>
+                <li><i class="fas fa-check-circle"></i> أنظمة المصادقة والأمان</li>
+            </ul>
+        </div>
 
-    toggleBtn.addEventListener('click', () => {
-      setLanguage(currentLang === 'en' ? 'ar' : 'en');
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="service-icon-wrap">🎨</div>
+            <h3>تصميم UI/UX</h3>
+            <p>تصميم واجهات مستخدم جميلة وتجربة مستخدم سلسة وجذابة</p>
+            <ul class="service-features">
+                <li><i class="fas fa-check-circle"></i> تصميم Figma احترافي</li>
+                <li><i class="fas fa-check-circle"></i> Wireframes & Prototypes</li>
+                <li><i class="fas fa-check-circle"></i> نظام تصميم متناسق</li>
+                <li><i class="fas fa-check-circle"></i> تحسين تجربة المستخدم</li>
+            </ul>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon-wrap">🤖</div>
+            <h3>حلول الذكاء الاصطناعي</h3>
+            <p>تكامل تقنيات AI في مشاريعك لأتمتة العمليات وتحسين الكفاءة</p>
+            <ul class="service-features">
+                <li><i class="fas fa-check-circle"></i> Chatbots ذكية</li>
+                <li><i class="fas fa-check-circle"></i> تحليل البيانات</li>
+                <li><i class="fas fa-check-circle"></i> تكامل OpenAI API</li>
+                <li><i class="fas fa-check-circle"></i> أتمتة العمليات</li>
+            </ul>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon-wrap">🔧</div>
+            <h3>الصيانة والدعم</h3>
+            <p>دعم تقني مستمر وصيانة دورية لضمان استمرارية وكفاءة مشاريعك</p>
+            <ul class="service-features">
+                <li><i class="fas fa-check-circle"></i> تحديثات أمنية دورية</li>
+                <li><i class="fas fa-check-circle"></i> تحسين الأداء والسرعة</li>
+                <li><i class="fas fa-check-circle"></i> دعم تقني 24/7</li>
+                <li><i class="fas fa-check-circle"></i> نسخ احتياطية تلقائية</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">آراء العملاء</span>
+        <h2 class="section-title">ماذا <span>قالوا عني؟</span></h2>
+        <p class="section-desc">رضا العملاء هو معيار نجاحي الحقيقي</p>
+    </div>
+
+    <div class="testimonials-grid">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="quote-icon">"</div>
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">خالد محترف حقيقي! سلّم المشروع قبل الموعد بتصميم احترافي جداً. التواصل كان سلساً وفهم احتياجاتي بشكل ممتاز.</p>
+            <div class="testimonial-author">
+                <div class="author-avatar">أ</div>
+                <div class="author-info">
+                    <strong>أحمد محمد</strong>
+                    <span>صاحب متجر إلكتروني</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="quote-icon">"</div>
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">عمل رائع وجودة عالية. أنشأ لنا موقع شركة مميز مع لوحة تحكم سهلة الاستخدام. سأتعامل معه مرة أخرى بكل تأكيد!</p>
+            <div class="testimonial-author">
+                <div class="author-avatar" style="background: linear-gradient(135deg, #43E97B, #38F9D7);">س</div>
+                <div class="author-info">
+                    <strong>سارة العمري</strong>
+                    <span>مدير تنفيذي - شركة تقنية</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="quote-icon">"</div>
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testimonial-text">مبدع في عمله ومتجاوب بسرعة. ساعدني في حل مشكلة تقنية معقدة بطريقة ذكية ووفّر عليّ الكثير من الوقت والمجهود.</p>
+            <div class="testimonial-author">
+                <div class="author-avatar" style="background: linear-gradient(135deg, #FF6584, #FF8E53);">م</div>
+                <div class="author-info">
+                    <strong>محمد الزهراني</strong>
+                    <span>مطور مستقل</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">تواصل معي</span>
+        <h2 class="section-title">لنبني <span>شيئاً رائعاً</span> معاً</h2>
+        <p class="section-desc">هل لديك مشروع في ذهنك؟ دعنا نحوله إلى حقيقة!</p>
+    </div>
+
+    <!-- Availability Banner -->
+    <div class="availability-banner" data-aos="fade-up">
+        <div class="availability-dot"></div>
+        <p>🎉 متاح حالياً لقبول مشاريع جديدة - وقت الاستجابة أقل من 24 ساعة</p>
+    </div>
+
+    <div class="contact-wrapper">
+        <!-- Contact Info -->
+        <div class="contact-info" data-aos="fade-right">
+            <h3>هل أنت مستعد؟<br><span style="background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">لنتحدث!</span></h3>
+            <p>أنا متاح للعمل الحر والمشاريع المؤقتة والتوظيف الكامل. لا تتردد في التواصل معي.</p>
+
+            <div class="contact-items">
+                <a href="mailto:khaled@example.com" class="contact-item">
+                    <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-item-text">
+                        <strong>البريد الإلكتروني</strong>
+                        <span>khaled@example.com</span>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/201234567890" target="_blank" class="contact-item">
+                    <div class="contact-item-icon" style="color: #25D366;"><i class="fab fa-whatsapp"></i></div>
+                    <div class="contact-item-text">
+                        <strong>واتساب</strong>
+                        <span>+20 1234 567 890</span>
+                    </div>
+                </a>
+
+                <a href="https://linkedin.com/in/khaled" target="_blank" class="contact-item">
+                    <div class="contact-item-icon" style="color: #0A66C2;"><i class="fab fa-linkedin"></i></div>
+                    <div class="contact-item-text">
+                        <strong>LinkedIn</strong>
+                        <span>linkedin.com/in/khaled</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/khaled2092002-alt" target="_blank" class="contact-item">
+                    <div class="contact-item-icon"><i class="fab fa-github"></i></div>
+                    <div class="contact-item-text">
+                        <strong>GitHub</strong>
+                        <span>github.com/khaled2092002-alt</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="social-links">
+                <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-link" title="Telegram"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form" data-aos="fade-left">
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>الاسم الكامل *</label>
+                        <input type="text" placeholder="اسمك هنا" required>
+                    </div>
+                    <div class="form-group">
+                        <label>البريد الإلكتروني *</label>
+                        <input type="email" placeholder="email@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>رقم الهاتف</label>
+                        <input type="tel" placeholder="+20 1XX XXXX XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label>نوع الخدمة</label>
+                        <select>
+                            <option value="">اختر الخدمة...</option>
+                            <option>تطوير موقع ويب</option>
+                            <option>تطبيق ويب</option>
+                            <option>متجر إلكتروني</option>
+                            <option>تصميم UI/UX</option>
+                            <option>استشارة تقنية</option>
+                            <option>أخرى</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>موضوع الرسالة *</label>
+                    <input type="text" placeholder="موضوع مشروعك أو استفسارك" required>
+                </div>
+
+                <div class="form-group">
+                    <label>تفاصيل المشروع *</label>
+                    <textarea placeholder="أخبرني أكثر عن مشروعك، أهدافه، ميزانيتك التقريبية، والموعد النهائي..." required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">
+                    <i class="fas fa-paper-plane"></i>
+                    إرسال الرسالة
+                </button>
+
+                <div class="form-success" id="formSuccess">
+                    <i class="fas fa-check-circle" style="font-size: 2rem; display: block; margin-bottom: 10px;"></i>
+                    تم الإرسال بنجاح! سأتواصل معك خلال 24 ساعة 🎉
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-brand">
+            <a href="#hero" class="nav-logo" style="font-size: 2rem;">KA</a>
+            <p>مطور ويب متخصص في بناء تجارب رقمية استثنائية. أحول أفكارك إلى واقع رقمي يترك أثراً.</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-nav">
+            <h4 class="footer-title">روابط سريعة</h4>
+            <ul class="footer-links">
+                <li><a href="#hero"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                <li><a href="#about"><i class="fas fa-chevron-left"></i> من أنا</a></li>
+                <li><a href="#skills"><i class="fas fa-chevron-left"></i> المهارات</a></li>
+                <li><a href="#projects"><i class="fas fa-chevron-left"></i> المشاريع</a></li>
+                <li><a href="#services"><i class="fas fa-chevron-left"></i> الخدمات</a></li>
+                <li><a href="#contact"><i class="fas fa-chevron-left"></i> تواصل معي</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-services">
+            <h4 class="footer-title">خدماتي</h4>
+            <ul class="footer-links">
+                <li><a href="#services"><i class="fas fa-chevron-left"></i> تطوير مواقع الويب</a></li>
+                <li><a href="#services"><i class="fas fa-chevron-left"></i> تطبيقات الويب</a></li>
+                <li><a href="#services"><i class="fas fa-chevron-left"></i> التجارة الإلكترونية</a></li>
+                <li><a href="#services"><i class="fas fa-chevron-left"></i> تصميم UI/UX</a></li>
+                <li><a href="#services"><i class="fas fa-chevron-left"></i> حلول AI</a></li>
+                <li><a href="#services"><i class="fas fa-chevron-left"></i> الدعم والصيانة</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2024 خالد أحمد. جميع الحقوق محفوظة.</p>
+        <p>صُنع بـ <span class="heart">❤️</span> في مصر 🇪🇬</p>
+    </div>
+</footer>
+
+<!-- Scroll to Top -->
+<button class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span>تم نسخ البريد الإلكتروني!</span>
+</div>
+
+<!-- AOS Animation Library -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    // ===== INIT AOS =====
+    AOS.init({
+        duration: 800,
+        easing: 'ease-out',
+        once: true,
+        offset: 100
     });
 
-    setLanguage('en');
-  </script>
+    // ===== LOADER =====
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            document.getElementById('loader').classList.add('hidden');
+        }, 1000);
+    });
+
+    // ===== CUSTOM CURSOR =====
+    const cursor = document.getElementById('cursor');
+    const cursorFollower = document.getElementById('cursorFollower');
+
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX - 10 + 'px';
+        cursor.style.top = e.clientY - 10 + 'px';
+        
+        setTimeout(() => {
+            cursorFollower.style.left = e.clientX - 4 + 'px';
+            cursorFollower.style.top = e.clientY - 4 + 'px';
+        }, 100);
+    });
+
+    document.querySelectorAll('a, button').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.style.transform = 'scale(2)';
+            cursor.style.borderColor = 'var(--secondary)';
+        });
+        el.addEventListener('mouseleave', () => {
+            cursor.style.transform = 'scale(1)';
+            cursor.style.borderColor = 'var(--primary)';
+        });
+    });
+
+    // ===== NAVBAR =====
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // ===== HAMBURGER =====
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // ===== TYPED TEXT =====
+    const texts = [
+        'Full Stack Developer 🚀',
+        'Frontend Expert ⚡',
+        'UI/UX Designer 🎨',
+        'Problem Solver 🧩',
+        'Python Developer 🐍',
+        'Open Source Contributor 🌐'
+    ];
+
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typedEl = document.getElementById('typedText');
+
+    function typeEffect() {
+        const currentText = texts[textIndex];
+        
+        if (isDeleting) {
+            typedEl.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typedEl.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        let speed = isDeleting ? 50 : 100;
+
+        if (!isDeleting && charIndex === currentText.length) {
+            speed = 2000;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+            speed = 300;
+        }
+
+        setTimeout(typeEffect, speed);
+    }
+
+    typeEffect();
+
+    // ===== COUNTER ANIMATION =====
+    function animateCounter(el, target, suffix = '') {
+        let count = 0;
+        const duration = 2000;
+        const step = target / (duration / 16);
+        
+        const timer = setInterval(() => {
+            count += step;
+            if (count >= target) {
+                count = target;
+                clearInterval(timer);
+            }
+            el.textContent = Math.floor(count) + suffix;
+        }, 16);
+    }
+
+    // Trigger counters when hero is visible
+    const heroObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            setTimeout(() => {
+                animateCounter(document.getElementById('projectsCount'), 15, '+');
+                animateCounter(document.getElementById('clientsCount'), 20, '+');
+                animateCounter(document.getElementById('expCount'), 2, '+');
+            }, 500);
+            heroObserver.disconnect();
+        }
+    });
+
+    heroObserver.observe(document.getElementById('hero'));
+
+    // ===== SKILL BARS =====
+    const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.querySelectorAll('.skill-fill').forEach(fill => {
+                    const width = fill.getAttribute('data-width');
+                    setTimeout(() => {
+                        fill.style.width = width + '%';
+                    }, 200);
+                });
+            }
+        });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.skill-category').forEach(cat => {
+        skillObserver.observe(cat);
+    });
+
+    // ===== PROJECT FILTER =====
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.4s ease';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // ===== PROGRESS BAR =====
+    const progressBar = document.getElementById('progressBar');
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const progress = (scrollTop / docHeight) * 100;
+        progressBar.style.width = progress + '%';
+    });
+
+    // ===== SCROLL TO TOP =====
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ===== CONTACT FORM =====
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const btn = e.target.querySelector('.form-submit');
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
+        btn.disabled = true;
+
+        // Simulate send
+        setTimeout(() => {
+            btn.style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+            showToast('تم إرسال رسالتك بنجاح! 🎉');
+        }, 2000);
+    });
+
+    // ===== TOAST =====
+    function showToast(message) {
+        const toast = document.getElementById('toast');
+        toast.querySelector('span').textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3500);
+    }
+
+    // ===== ACTIVE NAV ON SCROLL =====
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+        const scrollPos = window.scrollY + 100;
+        sections.forEach(section => {
+            if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+                document.querySelectorAll('.nav-links a').forEach(a => {
+                    a.classList.remove('active-link');
+                    if (a.getAttribute('href') === '#' + section.id) {
+                        a.classList.add('active-link');
+                    }
+                });
+            }
+        });
+    });
+
+    // ===== PARTICLES (Simple version) =====
+    function createParticle() {
+        const particle = document.createElement('div');
+        particle.style.cssText = `
+            position: fixed;
+            width: 3px;
+            height: 3px;
+            background: rgba(108, 99, 255, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            left: ${Math.random() * 100}vw;
+            top: ${Math.random() * 100}vh;
+            animation: particleFloat ${5 + Math.random() * 10}s linear infinite;
+        `;
+        document.body.appendChild(particle);
+        setTimeout(() => particle.remove(), 15000);
+    }
+
+    // CSS for particles
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes particleFloat {
+            0% { transform: translateY(0) scale(1); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) scale(0); opacity: 0; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .nav-links a.active-link {
+            color: var(--primary) !important;
+        }
+        .nav-links a.active-link::after {
+            width: 100% !important;
+        }
+    `;
+    document.head.appendChild(style);
+
+    setInterval(createParticle, 2000);
+</script>
 </body>
 </html>
