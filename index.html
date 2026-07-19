@@ -3,28 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khaled Ahmed Ibrahim | Digital Marketing Manager</title>
-  <meta name="description" content="Khaled Ahmed Ibrahim - Digital Marketing Manager, Content Creator, and Social Media Strategist based in Cairo, Egypt." />
-  <meta name="keywords" content="Khaled Ahmed Ibrahim, Digital Marketing, Content Creator, Social Media Strategist, SEO, Media Buying, Cairo, Egypt" />
+
+  <title>Khaled Ahmed Ibrahim | Digital Marketing Manager & Content Creator</title>
+  <meta name="description" content="Khaled Ahmed Ibrahim is a Digital Marketing Manager, Content Creator, and Social Media Strategist based in Cairo, Egypt. Explore his work in SEO, media buying, content creation, videography, and brand growth." />
+  <meta name="keywords" content="Khaled Ahmed Ibrahim, Digital Marketing Manager, Content Creator, Social Media Strategist, SEO Egypt, Media Buying, Videographer, Portfolio, Cairo" />
+  <meta name="author" content="Khaled Ahmed Ibrahim" />
+
+  <meta property="og:title" content="Khaled Ahmed Ibrahim | Digital Marketing Manager & Content Creator" />
+  <meta property="og:description" content="Portfolio of Khaled Ahmed Ibrahim — Digital Marketing Manager, Content Creator, and Social Media Strategist." />
+  <meta property="og:image" content="images/hero.jpg" />
+  <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #0f172a;
-      --bg-soft: #111b34;
-      --card: rgba(255,255,255,0.07);
-      --card-border: rgba(255,255,255,0.12);
-      --text: #ffffff;
-      --muted: #c7d2fe;
-      --accent: #d4a95f;
-      --accent-2: #7c88ff;
+      --bg: #0b1020;
+      --bg-2: #11182d;
+      --card: rgba(255, 255, 255, 0.06);
+      --card-border: rgba(255,255,255,0.10);
       --white: #ffffff;
-      --shadow: 0 20px 50px rgba(0,0,0,0.25);
+      --text: #eef2ff;
+      --muted: #b8c0d9;
+      --primary: #7c89ff;
+      --secondary: #d6ab68;
+      --accent: #8ef0c3;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
       --radius: 24px;
-      --max: 1200px;
+      --max-width: 1200px;
+      --gradient: linear-gradient(135deg, #7c89ff, #9b6dff);
+      --gradient2: linear-gradient(135deg, #d6ab68, #f1d49b);
     }
 
     * {
@@ -38,14 +48,18 @@
     }
 
     body {
-      font-family: "Inter", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(124,136,255,0.18), transparent 28%),
-        radial-gradient(circle at right center, rgba(212,169,95,0.12), transparent 22%),
-        linear-gradient(135deg, #0b1120 0%, #111827 45%, #0f172a 100%);
+      font-family: 'Inter', sans-serif;
       color: var(--text);
-      line-height: 1.7;
+      background:
+        radial-gradient(circle at top left, rgba(124, 137, 255, 0.16), transparent 25%),
+        radial-gradient(circle at bottom right, rgba(214, 171, 104, 0.12), transparent 20%),
+        linear-gradient(135deg, #090d18, #0f172a 45%, #11182d 100%);
       overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     a {
@@ -53,61 +67,60 @@
       color: inherit;
     }
 
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
     .container {
-      width: min(92%, var(--max));
+      width: min(92%, var(--max-width));
       margin: auto;
     }
 
-    .section {
-      padding: 90px 0;
+    section {
+      padding: 100px 0;
     }
 
     .section-head {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 55px;
     }
 
-    .section-head span {
-      color: var(--accent);
-      font-weight: 700;
+    .section-head .tag {
       display: inline-block;
-      margin-bottom: 10px;
-      letter-spacing: .8px;
-      text-transform: uppercase;
+      color: var(--secondary);
       font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
     }
 
     .section-head h2 {
       font-size: clamp(2rem, 4vw, 3rem);
       margin-bottom: 12px;
+      font-weight: 900;
     }
 
     .section-head p {
       color: var(--muted);
-      max-width: 700px;
+      max-width: 720px;
       margin: auto;
+      line-height: 1.8;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 14px 22px;
+      gap: 10px;
+      padding: 14px 24px;
       border-radius: 14px;
       font-weight: 700;
-      transition: 0.3s ease;
+      transition: .3s ease;
       border: 1px solid transparent;
+      cursor: pointer;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #f1c27d);
+      background: var(--gradient2);
       color: #111;
-      box-shadow: 0 12px 30px rgba(212,169,95,.25);
+      box-shadow: 0 12px 30px rgba(214, 171, 104, 0.25);
     }
 
     .btn-primary:hover {
@@ -115,24 +128,25 @@
     }
 
     .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.15);
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.04);
       color: var(--white);
+      border-color: rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
     }
 
     .btn-secondary:hover {
-      background: rgba(255,255,255,0.09);
       transform: translateY(-3px);
+      border-color: rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.08);
     }
 
     /* Navbar */
     .navbar {
       position: sticky;
       top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(14px);
-      background: rgba(10, 15, 30, 0.72);
+      z-index: 999;
+      background: rgba(8, 12, 24, 0.75);
+      backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
@@ -144,35 +158,38 @@
     }
 
     .logo {
-      font-weight: 800;
-      font-size: 1.2rem;
-      letter-spacing: .5px;
-      color: var(--white);
+      font-weight: 900;
+      font-size: 1.25rem;
+      letter-spacing: .4px;
     }
 
     .logo span {
-      color: var(--accent);
+      color: var(--secondary);
     }
 
     .nav-links {
       display: flex;
+      gap: 28px;
       align-items: center;
-      gap: 26px;
     }
 
     .nav-links a {
-      color: rgba(255,255,255,0.82);
+      color: var(--muted);
+      transition: .25s ease;
       font-weight: 500;
-      transition: .25s;
     }
 
     .nav-links a:hover {
-      color: var(--accent);
+      color: var(--white);
     }
 
     /* Hero */
     .hero {
-      padding: 70px 0 30px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 70px 0 40px;
+      position: relative;
     }
 
     .hero-grid {
@@ -183,42 +200,61 @@
     }
 
     .hero-badge {
-      display: inline-block;
-      padding: 9px 16px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--secondary);
+      padding: 10px 16px;
       border-radius: 999px;
-      color: var(--accent);
       font-size: .92rem;
       font-weight: 700;
       margin-bottom: 18px;
     }
 
+    .hero-dot {
+      width: 10px;
+      height: 10px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 12px var(--accent);
+    }
+
     .hero h1 {
-      font-size: clamp(2.6rem, 5vw, 5rem);
-      line-height: 1.06;
-      margin-bottom: 14px;
+      font-size: clamp(2.7rem, 5vw, 5rem);
+      line-height: 1.05;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 span {
+      background: var(--gradient2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .hero-role {
-      color: var(--accent);
-      font-size: 1.15rem;
-      font-weight: 700;
+      font-size: 1.12rem;
+      color: var(--primary);
+      font-weight: 800;
       margin-bottom: 18px;
     }
 
     .hero p {
       color: var(--muted);
-      margin-bottom: 28px;
+      line-height: 1.9;
       max-width: 650px;
-      font-size: 1.02rem;
+      margin-bottom: 28px;
+      font-size: 1rem;
     }
 
     .hero-actions {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
     .hero-tags {
@@ -228,11 +264,11 @@
     }
 
     .hero-tags span {
-      border: 1px solid rgba(255,255,255,0.1);
-      background: rgba(255,255,255,0.05);
-      color: var(--muted);
       padding: 10px 14px;
       border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
       font-size: .92rem;
     }
 
@@ -240,200 +276,223 @@
       position: relative;
     }
 
-    .hero-image-card {
+    .hero-card {
       position: relative;
-      border-radius: 32px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 30px;
       box-shadow: var(--shadow);
       padding: 14px;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
     }
 
-    .hero-image-card img {
+    .hero-card img {
       width: 100%;
       height: 620px;
+      border-radius: 22px;
       object-fit: cover;
       object-position: center top;
-      border-radius: 24px;
     }
 
-    .floating-box {
+    .floating {
       position: absolute;
       background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
       backdrop-filter: blur(16px);
-      border: 1px solid rgba(255,255,255,0.1);
       border-radius: 18px;
       padding: 14px 18px;
       box-shadow: var(--shadow);
+      min-width: 180px;
     }
 
-    .floating-box h4 {
-      font-size: 1rem;
-      margin-bottom: 2px;
+    .floating h4 {
+      font-size: .95rem;
+      margin-bottom: 4px;
+      color: var(--white);
     }
 
-    .floating-box p {
-      font-size: .88rem;
+    .floating p {
+      font-size: .85rem;
       color: var(--muted);
       margin: 0;
     }
 
-    .box-1 {
+    .floating.one {
       left: -20px;
-      bottom: 40px;
+      bottom: 30px;
     }
 
-    .box-2 {
+    .floating.two {
       right: -20px;
       top: 40px;
     }
 
     /* Stats */
     .stats {
-      margin-top: 40px;
+      margin-top: 35px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 18px;
     }
 
     .stat {
-      border-radius: 22px;
-      padding: 24px;
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 24px;
       backdrop-filter: blur(14px);
+      transition: .3s ease;
+    }
+
+    .stat:hover {
+      transform: translateY(-5px);
+      border-color: rgba(214, 171, 104, 0.35);
     }
 
     .stat h3 {
-      color: var(--accent);
       font-size: 1.9rem;
-      margin-bottom: 5px;
+      color: var(--secondary);
+      margin-bottom: 6px;
     }
 
     .stat p {
       color: var(--muted);
-      font-size: .95rem;
+      font-size: .94rem;
     }
 
     /* About */
+    .about {
+      background: rgba(255,255,255,0.02);
+    }
+
     .about-grid {
       display: grid;
       grid-template-columns: .9fr 1.1fr;
-      gap: 34px;
+      gap: 40px;
       align-items: center;
     }
 
     .about-image {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
       border-radius: 28px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,.1);
-      background: rgba(255,255,255,.06);
       padding: 12px;
       box-shadow: var(--shadow);
+      overflow: hidden;
     }
 
     .about-image img {
       width: 100%;
-      height: 500px;
+      height: 520px;
+      border-radius: 22px;
       object-fit: cover;
-      border-radius: 20px;
     }
 
     .about-content h3 {
       font-size: 2rem;
       margin-bottom: 18px;
+      font-weight: 800;
     }
 
     .about-content p {
       color: var(--muted);
       margin-bottom: 16px;
+      line-height: 1.9;
     }
 
-    .mini-cards {
-      margin-top: 28px;
+    .about-mini-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
+      margin-top: 26px;
     }
 
     .mini-card {
       background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.08);
       border-radius: 18px;
       padding: 18px;
     }
 
     .mini-card h4 {
-      color: var(--accent);
+      color: var(--secondary);
       margin-bottom: 8px;
+      font-size: 1rem;
     }
 
     .mini-card p {
-      color: var(--muted);
       margin: 0;
-      font-size: .94rem;
+      font-size: .92rem;
     }
 
-    /* Skills */
+    /* Expertise */
     .cards-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 22px;
     }
 
     .glass-card {
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 22px;
-      padding: 26px;
+      padding: 28px;
       backdrop-filter: blur(14px);
-      transition: 0.3s ease;
+      transition: .3s ease;
     }
 
     .glass-card:hover {
       transform: translateY(-6px);
-      border-color: rgba(212,169,95,.35);
+      border-color: rgba(124, 137, 255, 0.35);
     }
 
     .glass-card h3 {
       margin-bottom: 12px;
+      font-size: 1.1rem;
       color: var(--white);
     }
 
     .glass-card p {
       color: var(--muted);
       font-size: .95rem;
+      line-height: 1.8;
     }
 
     /* Experience */
     .timeline {
       display: grid;
-      gap: 18px;
+      gap: 20px;
     }
 
     .timeline-item {
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 22px;
-      padding: 26px;
+      border-radius: 24px;
+      padding: 28px;
+      transition: .3s ease;
+    }
+
+    .timeline-item:hover {
+      transform: translateY(-5px);
+      border-color: rgba(214, 171, 104, 0.25);
     }
 
     .timeline-top {
       display: flex;
       justify-content: space-between;
-      gap: 15px;
+      gap: 12px;
       flex-wrap: wrap;
       margin-bottom: 8px;
     }
 
     .timeline-top h3 {
-      color: var(--accent);
+      color: var(--secondary);
       font-size: 1.18rem;
     }
 
     .timeline-top span {
-      color: #f1d8aa;
+      color: var(--primary);
       font-weight: 700;
     }
 
@@ -449,25 +508,32 @@
 
     .timeline-item li {
       margin-bottom: 8px;
+      line-height: 1.8;
     }
 
     /* Portfolio */
+    .portfolio {
+      background: rgba(255,255,255,0.02);
+    }
+
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 22px;
     }
 
     .portfolio-card {
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 22px;
+      border-radius: 24px;
       overflow: hidden;
+      backdrop-filter: blur(10px);
       transition: .3s ease;
     }
 
     .portfolio-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
+      border-color: rgba(214, 171, 104, 0.25);
     }
 
     .portfolio-img {
@@ -479,7 +545,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: .4s ease;
+      transition: transform .4s ease;
     }
 
     .portfolio-card:hover .portfolio-img img {
@@ -490,22 +556,24 @@
       padding: 22px;
     }
 
-    .portfolio-body span {
-      color: var(--accent);
-      font-size: .85rem;
-      font-weight: 700;
+    .portfolio-body .label {
       display: inline-block;
+      color: var(--secondary);
+      font-size: .82rem;
+      font-weight: 700;
       margin-bottom: 8px;
     }
 
     .portfolio-body h3 {
       margin-bottom: 10px;
+      font-size: 1.08rem;
     }
 
     .portfolio-body p {
       color: var(--muted);
+      font-size: .94rem;
       margin-bottom: 16px;
-      font-size: .95rem;
+      line-height: 1.8;
     }
 
     /* Gallery */
@@ -516,95 +584,160 @@
     }
 
     .gallery-item {
-      border-radius: 22px;
-      overflow: hidden;
       position: relative;
-      min-height: 300px;
-      border: 1px solid rgba(255,255,255,0.1);
+      min-height: 320px;
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
     .gallery-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: .4s ease;
+      transition: transform .45s ease;
     }
 
     .gallery-item:hover img {
-      transform: scale(1.05);
+      transform: scale(1.06);
     }
 
     .gallery-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0.05));
+      background: linear-gradient(to top, rgba(0,0,0,.62), rgba(0,0,0,.06));
       display: flex;
-      align-items: end;
+      align-items: flex-end;
       padding: 18px;
     }
 
     .gallery-overlay p {
-      color: white;
-      font-weight: 600;
       font-size: .95rem;
+      font-weight: 600;
+      color: white;
+    }
+
+    /* Tools */
+    .tools-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+    }
+
+    .tool {
+      padding: 14px 18px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--white);
+      font-weight: 600;
+      transition: .3s ease;
+    }
+
+    .tool:hover {
+      transform: translateY(-4px);
+      border-color: rgba(124, 137, 255, 0.35);
+    }
+
+    /* Certifications */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .cert-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      padding: 26px;
+      transition: .3s ease;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(214, 171, 104, 0.25);
+    }
+
+    .cert-card h3 {
+      color: var(--secondary);
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+
+    .cert-card p {
+      color: var(--muted);
+      font-size: .94rem;
+      line-height: 1.8;
     }
 
     /* Contact */
-    .contact-box {
+    .contact {
+      background: rgba(255,255,255,0.02);
+    }
+
+    .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 22px;
     }
 
     .contact-card {
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 24px;
-      padding: 28px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
     }
 
     .contact-card h3 {
+      color: var(--secondary);
       margin-bottom: 14px;
-      color: var(--accent);
     }
 
-    .contact-card p,
-    .contact-card li {
+    .contact-card p {
       color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 14px;
     }
 
     .contact-list {
       list-style: none;
       display: grid;
       gap: 12px;
-      margin-top: 15px;
+      margin-top: 14px;
+    }
+
+    .contact-list li {
+      color: var(--muted);
     }
 
     .contact-list a {
-      color: white;
+      color: var(--white);
       font-weight: 600;
     }
 
     /* Footer */
     footer {
-      padding: 35px 0 45px;
+      padding: 40px 0;
       text-align: center;
       color: var(--muted);
-      border-top: 1px solid rgba(255,255,255,.08);
-      margin-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.08);
     }
 
     /* Responsive */
     @media (max-width: 1100px) {
       .hero-grid,
       .about-grid,
-      .contact-box {
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
       .stats,
       .cards-grid,
-      .portfolio-grid {
+      .portfolio-grid,
+      .cert-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -612,18 +745,18 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .hero-image-card img {
+      .hero-card img {
         height: 520px;
       }
 
-      .box-1,
-      .box-2 {
+      .floating.one,
+      .floating.two {
         position: static;
-        margin-top: 15px;
+        margin-top: 14px;
       }
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 760px) {
       .nav-links {
         display: none;
       }
@@ -632,16 +765,13 @@
       .cards-grid,
       .portfolio-grid,
       .gallery-grid,
-      .mini-cards {
+      .cert-grid,
+      .about-mini-grid {
         grid-template-columns: 1fr;
       }
 
-      .section {
-        padding: 70px 0;
-      }
-
-      .hero-image-card img {
-        height: 420px;
+      section {
+        padding: 75px 0;
       }
 
       .hero-actions {
@@ -651,6 +781,11 @@
 
       .btn {
         width: 100%;
+      }
+
+      .hero-card img,
+      .about-image img {
+        height: 420px;
       }
     }
   </style>
@@ -662,7 +797,7 @@
       <a href="#" class="logo">Khaled <span>Ahmed</span></a>
       <nav class="nav-links">
         <a href="#about">About</a>
-        <a href="#skills">Expertise</a>
+        <a href="#expertise">Expertise</a>
         <a href="#experience">Experience</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#gallery">Gallery</a>
@@ -674,111 +809,123 @@
   <main>
     <!-- Hero -->
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <span class="hero-badge">Open to Full-time & Freelance Opportunities</span>
-          <h1>Khaled Ahmed Ibrahim</h1>
-          <div class="hero-role">Digital Marketing Manager • Content Creator • Social Media Strategist</div>
-          <p>
-            I help brands grow through powerful content, SEO-driven strategy, paid media campaigns, and creative storytelling across digital platforms.
-          </p>
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-badge">
+              <span class="hero-dot"></span>
+              Open to Full-time & Freelance Opportunities
+            </div>
 
-          <div class="hero-actions">
-            <a href="#portfolio" class="btn btn-primary">View My Work</a>
-            <a href="Khaled-Ahmed-Ibrahim-CV.pdf" class="btn btn-secondary" download>Download CV</a>
-            <a href="#contact" class="btn btn-secondary">Hire Me</a>
+            <h1>
+              Hi, I'm <span>Khaled Ahmed Ibrahim</span>
+            </h1>
+
+            <div class="hero-role">
+              Digital Marketing Manager • Content Creator • Social Media Strategist
+            </div>
+
+            <p>
+              I help brands grow through strategic content, social media management, SEO-driven communication, paid media campaigns, and creative visual storytelling that connects with the right audience.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#portfolio" class="btn btn-primary">View My Work</a>
+              <a href="Khaled-Ahmed-Ibrahim-CV.pdf" class="btn btn-secondary" download>Download CV</a>
+              <a href="#contact" class="btn btn-secondary">Hire Me</a>
+            </div>
+
+            <div class="hero-tags">
+              <span>SEO / SEM</span>
+              <span>Media Buying</span>
+              <span>Content Strategy</span>
+              <span>Videography</span>
+              <span>Social Media Management</span>
+            </div>
           </div>
 
-          <div class="hero-tags">
-            <span>SEO / SEM</span>
-            <span>Media Buying</span>
-            <span>Content Creation</span>
-            <span>Videography</span>
-            <span>Social Media Strategy</span>
+          <div class="hero-image-wrap">
+            <div class="hero-card">
+              <img src="images/hero.jpg" alt="Khaled Ahmed Ibrahim portrait">
+            </div>
+
+            <div class="floating one">
+              <h4>2+ Years Experience</h4>
+              <p>Digital marketing, content, and campaign execution</p>
+            </div>
+
+            <div class="floating two">
+              <h4>Creative + Strategic</h4>
+              <p>Blending storytelling with performance-focused thinking</p>
+            </div>
           </div>
         </div>
 
-        <div class="hero-image-wrap">
-          <div class="hero-image-card">
-            <img src="images/hero.jpg" alt="Khaled Ahmed Ibrahim portrait">
+        <div class="stats">
+          <div class="stat">
+            <h3>2+</h3>
+            <p>Years of hands-on marketing experience</p>
           </div>
-
-          <div class="floating-box box-1">
-            <h4>2+ Years</h4>
-            <p>Marketing Experience</p>
+          <div class="stat">
+            <h3>4+</h3>
+            <p>Major digital platforms managed</p>
           </div>
-
-          <div class="floating-box box-2">
-            <h4>Creative + Strategic</h4>
-            <p>Content & Growth Focused</p>
+          <div class="stat">
+            <h3>5+</h3>
+            <p>Marketing specialties across content, SEO, and paid media</p>
           </div>
-        </div>
-      </div>
-
-      <div class="container stats">
-        <div class="stat">
-          <h3>2+</h3>
-          <p>Years of practical experience</p>
-        </div>
-        <div class="stat">
-          <h3>4+</h3>
-          <p>Major platforms managed</p>
-        </div>
-        <div class="stat">
-          <h3>100%</h3>
-          <p>Focused on brand growth</p>
-        </div>
-        <div class="stat">
-          <h3>24/7</h3>
-          <p>Driven by creative improvement</p>
+          <div class="stat">
+            <h3>100%</h3>
+            <p>Open to full-time, freelance, and remote opportunities</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- About -->
-    <section class="section" id="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="section-head">
-          <span>About Me</span>
-          <h2>Professional, Creative, and Growth-Focused</h2>
+          <div class="tag">About Me</div>
+          <h2>A marketer with strategy, creativity, and real execution</h2>
           <p>
-            A marketing professional with a passion for content, audience engagement, and digital brand growth.
+            I combine communication, content, media buying, SEO, and visual production to help brands build stronger digital presence and better audience engagement.
           </p>
         </div>
 
         <div class="about-grid">
           <div class="about-image">
-            <img src="images/about.jpg" alt="Khaled Ahmed professional portrait">
+            <img src="images/about.jpg" alt="Khaled Ahmed Ibrahim professional photo">
           </div>
 
           <div class="about-content">
-            <h3>Building brands through strategy and storytelling</h3>
+            <h3>Building stronger brands through modern digital marketing</h3>
             <p>
-              I’m Khaled Ahmed Ibrahim, a results-driven Digital Marketing Manager and Content Creator based in Cairo, Egypt. I specialize in combining strategic marketing thinking with creative execution to help brands increase visibility, engagement, and performance.
+              I’m Khaled Ahmed Ibrahim, a results-driven Digital Marketing Manager and Content Creator based in Cairo, Egypt. My background includes hands-on work in SEO/SEM, paid media, social media strategy, content writing, videography, and post-production.
             </p>
             <p>
-              My background includes SEO/SEM, media buying, content strategy, copywriting, videography, social media management, and AI-powered content workflows.
+              I’ve worked on campaigns and content across Meta, Google, TikTok, Snapchat, and LinkedIn, with a strong focus on creating marketing that is not only visually appealing, but also aligned with measurable communication and growth goals.
             </p>
             <p>
-              I enjoy creating campaigns and content that not only look good, but also support measurable business and communication goals.
+              I also use AI-powered tools like ChatGPT, Midjourney, Canva AI, and CapCut AI to accelerate ideation, production, and content optimization.
             </p>
 
-            <div class="mini-cards">
+            <div class="about-mini-grid">
               <div class="mini-card">
                 <h4>SEO & Paid Media</h4>
-                <p>Building data-informed campaigns across Meta, Google, TikTok, and Snapchat.</p>
+                <p>Improving discoverability, reach, and campaign performance across digital channels.</p>
               </div>
               <div class="mini-card">
-                <h4>Content Creation</h4>
-                <p>Creating engaging visual and written content aligned with brand identity.</p>
+                <h4>Content & Copywriting</h4>
+                <p>Creating content that reflects brand voice and connects with target audiences.</p>
               </div>
               <div class="mini-card">
                 <h4>Video Production</h4>
-                <p>From planning and filming to editing and delivering polished visual stories.</p>
+                <p>Managing visual storytelling from concept to filming and post-production editing.</p>
               </div>
               <div class="mini-card">
                 <h4>AI Marketing Tools</h4>
-                <p>Using ChatGPT, Midjourney, Canva AI, and CapCut AI to improve speed and creativity.</p>
+                <p>Enhancing speed, creativity, and content workflows using modern AI solutions.</p>
               </div>
             </div>
           </div>
@@ -787,53 +934,58 @@
     </section>
 
     <!-- Expertise -->
-    <section class="section" id="skills">
+    <section id="expertise">
       <div class="container">
         <div class="section-head">
-          <span>Expertise</span>
+          <div class="tag">Core Expertise</div>
           <h2>What I Do Best</h2>
           <p>
-            A balanced mix of strategy, creativity, execution, and performance-focused marketing.
+            My work combines creative production, performance thinking, and audience-focused communication across multiple marketing disciplines.
           </p>
         </div>
 
         <div class="cards-grid">
           <div class="glass-card">
             <h3>Digital Marketing Strategy</h3>
-            <p>Planning integrated campaigns that connect content, paid media, and brand communication.</p>
+            <p>Planning integrated campaigns that align content, audience targeting, brand communication, and measurable goals.</p>
           </div>
+
           <div class="glass-card">
             <h3>Social Media Management</h3>
-            <p>Managing social platforms, audience interaction, content calendars, and engagement growth.</p>
+            <p>Managing platform presence, content calendars, community engagement, and strategic communication.</p>
           </div>
+
           <div class="glass-card">
             <h3>Media Buying</h3>
-            <p>Running and optimizing advertising campaigns across multiple platforms.</p>
+            <p>Working across Meta, Google, TikTok, and Snapchat with performance-focused campaign execution.</p>
           </div>
+
           <div class="glass-card">
             <h3>SEO / SEM</h3>
-            <p>Improving search visibility, organic reach, keyword alignment, and content discoverability.</p>
+            <p>Improving organic discoverability, search visibility, content structure, and audience reach.</p>
           </div>
+
           <div class="glass-card">
-            <h3>Content & Copywriting</h3>
-            <p>Producing content with strong messaging, brand consistency, and audience relevance.</p>
+            <h3>Content Creation & Copywriting</h3>
+            <p>Building content that balances storytelling, audience relevance, and brand consistency.</p>
           </div>
+
           <div class="glass-card">
             <h3>Videography & Editing</h3>
-            <p>Producing high-quality visual content for marketing, storytelling, and social media use.</p>
+            <p>Creating engaging visual content from idea to final delivery for marketing and brand storytelling.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Experience -->
-    <section class="section" id="experience">
+    <section id="experience">
       <div class="container">
         <div class="section-head">
-          <span>Experience</span>
+          <div class="tag">Experience</div>
           <h2>Professional Experience</h2>
           <p>
-            Real-world work across digital campaigns, content production, SEO, and audience communication.
+            Practical work experience in content production, digital strategy, social media, and campaign execution.
           </p>
         </div>
 
@@ -845,11 +997,11 @@
             </div>
             <div class="timeline-company">Al-Aasem Foundation for Development — Cairo, Egypt</div>
             <ul>
-              <li>Led digital campaigns across Facebook, Instagram, LinkedIn, and TikTok.</li>
-              <li>Built multi-channel strategies including SEO content, email marketing, and PPC.</li>
-              <li>Managed content production from idea to final delivery.</li>
-              <li>Improved organic discoverability through on-page and off-page SEO practices.</li>
-              <li>Used AI tools to accelerate ideation, creation, and performance insights.</li>
+              <li>Led digital marketing campaigns across Facebook, Instagram, LinkedIn, and TikTok.</li>
+              <li>Built multi-channel promotional strategies including SEO content, email marketing, and paid social advertising.</li>
+              <li>Managed the full content production pipeline from copywriting and planning to videography and post-production.</li>
+              <li>Applied SEO best practices to improve search rankings and organic discoverability.</li>
+              <li>Used AI tools to improve speed in ideation, execution, and content analysis.</li>
             </ul>
           </div>
 
@@ -860,10 +1012,10 @@
             </div>
             <div class="timeline-company">Torjoman — Cairo, Egypt</div>
             <ul>
-              <li>Created articles, blog posts, and social media content aligned with brand voice.</li>
-              <li>Delivered full-cycle videography projects for marketing and educational use.</li>
-              <li>Supported brand consistency and content quality across media outputs.</li>
-              <li>Applied SEO best practices to improve content reach and click-through rates.</li>
+              <li>Produced articles, blog posts, and social content aligned with brand voice and campaign needs.</li>
+              <li>Delivered full-cycle videography projects covering concept, shooting, editing, and final delivery.</li>
+              <li>Supported social media management, visual consistency, and brand communication quality.</li>
+              <li>Applied SEO principles to written content to improve reach and click-through performance.</li>
             </ul>
           </div>
         </div>
@@ -871,50 +1023,56 @@
     </section>
 
     <!-- Portfolio -->
-    <section class="section" id="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="container">
         <div class="section-head">
-          <span>Portfolio</span>
-          <h2>Selected Work</h2>
+          <div class="tag">Selected Work</div>
+          <h2>Portfolio & Featured Projects</h2>
           <p>
-            A showcase of visual, content, and marketing-focused work that reflects my creative and strategic abilities.
+            A selected view of my work across video, content strategy, social media execution, and brand-focused communication.
           </p>
         </div>
 
         <div class="portfolio-grid">
           <div class="portfolio-card">
             <div class="portfolio-img">
-              <img src="images/gallery1.jpg" alt="Video production showcase">
+              <img src="images/gallery1.jpg" alt="Videography and editing project">
             </div>
             <div class="portfolio-body">
-              <span>Videography</span>
+              <div class="label">Videography & Editing</div>
               <h3>Video Production Showcase</h3>
-              <p>Creative direction, filming, editing, and storytelling for digital-first content.</p>
-              <a href="#" class="btn btn-secondary">View More</a>
+              <p>
+                A curated visual portfolio showing storytelling, filming, editing, and content crafted for digital campaigns and social platforms.
+              </p>
+              <a href="#" class="btn btn-secondary">View Project</a>
             </div>
           </div>
 
           <div class="portfolio-card">
             <div class="portfolio-img">
-              <img src="images/gallery2.jpg" alt="SEO and content strategy showcase">
+              <img src="images/gallery2.jpg" alt="SEO and content strategy project">
             </div>
             <div class="portfolio-body">
-              <span>SEO & Content</span>
-              <h3>SEO-Driven Content Strategy</h3>
-              <p>Structured content planning and optimization to improve visibility and brand reach.</p>
-              <a href="#" class="btn btn-secondary">View More</a>
+              <div class="label">SEO & Content Strategy</div>
+              <h3>SEO-Driven Content Planning</h3>
+              <p>
+                A content approach focused on discoverability, search visibility, engagement, and stronger brand communication.
+              </p>
+              <a href="#" class="btn btn-secondary">View Project</a>
             </div>
           </div>
 
           <div class="portfolio-card">
             <div class="portfolio-img">
-              <img src="images/gallery3.jpg" alt="Social media strategy showcase">
+              <img src="images/gallery3.jpg" alt="Social media marketing project">
             </div>
             <div class="portfolio-body">
-              <span>Social Media</span>
+              <div class="label">Social Media Strategy</div>
               <h3>Cross-Platform Campaign Execution</h3>
-              <p>Planning and executing campaigns across major social and paid channels.</p>
-              <a href="#" class="btn btn-secondary">View More</a>
+              <p>
+                Strategic content planning and campaign communication across Meta, LinkedIn, TikTok, and other key platforms.
+              </p>
+              <a href="#" class="btn btn-secondary">View Project</a>
             </div>
           </div>
         </div>
@@ -922,85 +1080,140 @@
     </section>
 
     <!-- Gallery -->
-    <section class="section" id="gallery">
+    <section id="gallery">
       <div class="container">
         <div class="section-head">
-          <span>Gallery</span>
+          <div class="tag">Gallery</div>
           <h2>Personal Brand Gallery</h2>
           <p>
-            A visual side of my personal brand that adds personality, trust, and a human connection to my professional profile.
+            A visual side of my personal brand — professional, authentic, and aligned with the image I bring to my work.
           </p>
         </div>
 
         <div class="gallery-grid">
           <div class="gallery-item">
-            <img src="images/gallery1.jpg" alt="Khaled Ahmed portrait">
+            <img src="images/gallery1.jpg" alt="Khaled Ahmed portrait 1">
             <div class="gallery-overlay"><p>Professional Presence</p></div>
           </div>
-
           <div class="gallery-item">
-            <img src="images/gallery2.jpg" alt="Khaled Ahmed formal photo">
-            <div class="gallery-overlay"><p>Personal Branding</p></div>
-          </div>
-
-          <div class="gallery-item">
-            <img src="images/gallery3.jpg" alt="Khaled Ahmed stylish portrait">
+            <img src="images/gallery2.jpg" alt="Khaled Ahmed portrait 2">
             <div class="gallery-overlay"><p>Creative Identity</p></div>
           </div>
-
           <div class="gallery-item">
-            <img src="images/gallery4.jpg" alt="Khaled Ahmed lifestyle photo">
-            <div class="gallery-overlay"><p>Authentic Character</p></div>
+            <img src="images/gallery3.jpg" alt="Khaled Ahmed portrait 3">
+            <div class="gallery-overlay"><p>Confident Personal Brand</p></div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/gallery4.jpg" alt="Khaled Ahmed portrait 4">
+            <div class="gallery-overlay"><p>Modern & Professional Image</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="tag">Tools & Platforms</div>
+          <h2>Tools I Work With</h2>
+          <p>
+            Modern tools that support content quality, campaign execution, analytics, and digital growth.
+          </p>
+        </div>
+
+        <div class="tools-wrap">
+          <div class="tool">Meta Ads</div>
+          <div class="tool">Google Ads</div>
+          <div class="tool">TikTok Ads</div>
+          <div class="tool">Snapchat Ads</div>
+          <div class="tool">Google Analytics 4</div>
+          <div class="tool">Canva</div>
+          <div class="tool">CapCut</div>
+          <div class="tool">ChatGPT</div>
+          <div class="tool">Midjourney</div>
+          <div class="tool">Canva AI</div>
+          <div class="tool">Email Marketing</div>
+          <div class="tool">SEO Tools</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="tag">Certifications</div>
+          <h2>Professional Development</h2>
+          <p>
+            Continuous learning is a key part of how I strengthen my marketing perspective and practical execution.
+          </p>
+        </div>
+
+        <div class="cert-grid">
+          <div class="cert-card">
+            <h3>Diploma in Strategic Marketing</h3>
+            <p>Focused on strategic planning, branding, positioning, and campaign-oriented marketing communication.</p>
+          </div>
+
+          <div class="cert-card">
+            <h3>Diploma in Digital Marketing — MENA</h3>
+            <p>Applied knowledge in digital channels, platform-based promotion, campaign execution, and online growth tactics.</p>
+          </div>
+
+          <div class="cert-card">
+            <h3>Diploma in Business Marketing — Galaxy Academy</h3>
+            <p>Strengthened business understanding and marketing fundamentals tied to market communication and brand growth.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section class="section" id="contact">
+    <section class="contact" id="contact">
       <div class="container">
         <div class="section-head">
-          <span>Contact</span>
+          <div class="tag">Contact</div>
           <h2>Let’s Work Together</h2>
           <p>
-            I’m open to full-time roles, freelance opportunities, and creative collaborations.
+            I’m currently available for full-time roles, freelance projects, and collaborative opportunities in marketing, content, and brand growth.
           </p>
         </div>
 
-        <div class="contact-box">
+        <div class="contact-grid">
           <div class="contact-card">
-            <h3>Contact Info</h3>
+            <h3>Contact Information</h3>
             <ul class="contact-list">
               <li>Email: <a href="mailto:khaled2092002@gmail.com">khaled2092002@gmail.com</a></li>
               <li>Phone: <a href="tel:01156766611">01156766611</a></li>
               <li>Phone: <a href="tel:01015793576">01015793576</a></li>
               <li>Location: Cairo, Egypt</li>
-              <li>LinkedIn: <a href="#">Add Your LinkedIn</a></li>
-              <li>Behance: <a href="#">Add Your Behance</a></li>
+              <li>LinkedIn: <a href="#">Add your LinkedIn link</a></li>
+              <li>Behance: <a href="#">Add your Behance link</a></li>
+              <li>Portfolio Folder: <a href="https://drive.google.com/drive/folders/1DF7_XRQm1yi1sH1j15nvZTQQet3ebXuI" target="_blank">View Portfolio Files</a></li>
             </ul>
           </div>
 
           <div class="contact-card">
-            <h3>Ready to build something strong?</h3>
+            <h3>Why work with me?</h3>
             <p>
-              If you're looking for a marketer who combines strategy, creativity, content production, and brand-focused communication — I’d be happy to connect.
+              I bring a combination of marketing strategy, creative execution, audience understanding, and content production — which allows me to contribute across both planning and implementation.
             </p>
-            <p style="margin-top: 16px;">
-              Whether you need social media strategy, creative content, SEO support, or marketing execution, I’m ready to contribute.
+            <p>
+              Whether you need stronger content, better campaign execution, improved visibility, or a more polished digital brand image, I’m ready to help.
             </p>
-            <div style="margin-top: 20px;">
+            <div style="margin-top: 18px;">
               <a href="mailto:khaled2092002@gmail.com" class="btn btn-primary">Send Email</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer>
     <div class="container">
-      <p>© 2025 Khaled Ahmed Ibrahim — All Rights Reserved.</p>
+      <p>© 2025 Khaled Ahmed Ibrahim — All rights reserved.</p>
     </div>
   </footer>
 
