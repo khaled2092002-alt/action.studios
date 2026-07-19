@@ -1,632 +1,118 @@
-<!doctype html>
-<html lang="en" class="no-js">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+document.documentElement.classList.remove("no-js");
+document.documentElement.classList.add("js");
 
-  <title>Khaled Ahmed Ibrahim | Digital Marketing Manager & Content Creator</title>
+const header = document.querySelector("[data-header]");
+const navToggle = document.querySelector(".nav-toggle");
+const nav = document.querySelector(".site-nav");
+const navLinks = document.querySelectorAll(".site-nav a");
+const backToTop = document.querySelector(".back-to-top");
+const year = document.querySelector("#year");
+const contactForm = document.querySelector("#contactForm");
 
-  <meta name="description" content="Khaled Ahmed Ibrahim is a Cairo-based Digital Marketing Manager, Content Creator, and Social Media Strategist specializing in SEO, media buying, PPC, content strategy, videography, and AI-powered marketing." />
-  <meta name="author" content="Khaled Ahmed Ibrahim" />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <meta name="theme-color" content="#07111f" />
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
 
-  <link rel="canonical" href="https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Khaled Ahmed Ibrahim | Digital Marketing Manager & Content Creator" />
-  <meta property="og:description" content="SEO, media buying, social media strategy, content creation, videography, and AI-powered marketing for brands and organizations." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/" />
-  <meta property="og:image" content="https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/assets/og-khaled-ahmed.webp" />
-  <meta property="og:locale" content="en_US" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Khaled Ahmed Ibrahim | Digital Marketing Manager & Content Creator" />
-  <meta name="twitter:description" content="Digital marketing, media buying, SEO/SEM, content creation, videography, and AI marketing workflows." />
-  <meta name="twitter:image" content="assets/og-khaled-ahmed.webp" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="assets/css/styles.css" />
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/#person",
-        "name": "Khaled Ahmed Ibrahim",
-        "jobTitle": "Digital Marketing Manager | Content Creator | Social Media Strategist",
-        "url": "https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/",
-        "image": "https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/assets/khaled-ahmed-headshot.webp",
-        "email": "mailto:khaled2092002@gmail.com",
-        "telephone": "+201156766611",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Cairo",
-          "addressCountry": "EG"
-        },
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "Suez University"
-        },
-        "knowsAbout": [
-          "Digital Marketing",
-          "SEO",
-          "SEM",
-          "PPC Advertising",
-          "Media Buying",
-          "Meta Ads",
-          "Google Ads",
-          "TikTok Ads",
-          "Snapchat Ads",
-          "Social Media Strategy",
-          "Content Creation",
-          "Videography",
-          "Video Editing",
-          "Copywriting",
-          "Google Analytics 4",
-          "AI Marketing Tools"
-        ],
-        "sameAs": [
-          "https://drive.google.com/drive/folders/1DF7_XRQm1yi1sH1j15nvZTQQet3ebXuI"
-        ]
-      },
-      {
-        "@type": "ProfilePage",
-        "@id": "https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/#webpage",
-        "url": "https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/",
-        "name": "Khaled Ahmed Ibrahim Portfolio",
-        "about": {
-          "@id": "https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/#person"
-        },
-        "description": "Professional portfolio of Khaled Ahmed Ibrahim, Digital Marketing Manager and Content Creator based in Cairo, Egypt."
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is Khaled available for freelance projects?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Khaled Ahmed Ibrahim is open to full-time and freelance opportunities in digital marketing, content creation, social media strategy, media buying, SEO, and videography."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What digital marketing platforms does Khaled work with?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Khaled works with Meta, Google, TikTok, Snapchat, SEO/SEM tools, Google Analytics 4, and AI-powered marketing tools such as ChatGPT, Midjourney, Canva AI, and CapCut AI."
-            }
-          }
-        ]
-      }
-    ]
+const onScroll = () => {
+  if (header) {
+    header.classList.toggle("is-scrolled", window.scrollY > 20);
   }
-  </script>
-</head>
 
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  if (backToTop) {
+    backToTop.classList.toggle("is-visible", window.scrollY > 500);
+  }
+};
 
-  <header class="site-header" data-header>
-    <div class="container header__inner">
-      <a class="brand" href="#home" aria-label="Khaled Ahmed Ibrahim home">
-        <span class="brand__mark">K</span>
-        <span class="brand__text">
-          <strong>Khaled Ahmed</strong>
-          <small>Digital Marketing</small>
-        </span>
-      </a>
+window.addEventListener("scroll", onScroll);
+onScroll();
 
-      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+if (navToggle && nav) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
 
-      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-        <a href="#services">Services</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact" class="nav-cta">Hire Me</a>
-      </nav>
-    </div>
-  </header>
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
 
-  <main id="main">
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <div class="container hero__grid">
-        <div class="hero__content reveal">
-          <p class="eyebrow">
-            <span></span>
-            Open to Full-time & Freelance Opportunities
-          </p>
+if (backToTop) {
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 
-          <h1>Khaled Ahmed Ibrahim — Digital Marketing Manager & Content Creator</h1>
+const sections = document.querySelectorAll("section[id]");
 
-          <p class="hero__lead">
-            I plan, create, and optimize data-informed campaigns across Meta, Google,
-            TikTok, and Snapchat — combining SEO/SEM, paid media, social strategy,
-            videography, and AI-powered content workflows to grow brand visibility and engagement.
-          </p>
+if ("IntersectionObserver" in window) {
+  const activeObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
 
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#contact">Hire Me</a>
-            <a class="btn btn--secondary" href="https://drive.google.com/drive/folders/1DF7_XRQm1yi1sH1j15nvZTQQet3ebXuI" target="_blank" rel="noopener noreferrer">
-              View Portfolio
-            </a>
-            <a class="btn btn--ghost" href="assets/khaled-ahmed-ibrahim-cv.pdf" download>
-              Download CV
-            </a>
-          </div>
+        const id = entry.target.getAttribute("id");
 
-          <div class="hero__meta" aria-label="Profile highlights">
-            <div>
-              <strong>2+ Years</strong>
-              <span>Hands-on Experience</span>
-            </div>
-            <div>
-              <strong>4+ Platforms</strong>
-              <span>Meta, Google, TikTok, Snapchat</span>
-            </div>
-            <div>
-              <strong>Cairo, Egypt</strong>
-              <span>Available Remote & On-site</span>
-            </div>
-          </div>
-        </div>
+        navLinks.forEach((link) => {
+          link.classList.toggle(
+            "is-active",
+            link.getAttribute("href") === `#${id}`
+          );
+        });
+      });
+    },
+    {
+      rootMargin: "-40% 0px -55% 0px",
+      threshold: 0
+    }
+  );
 
-        <div class="hero__media reveal">
-          <div class="portrait-card">
-            <img
-              src="assets/khaled-ahmed-headshot.webp"
-              alt="Khaled Ahmed Ibrahim, Digital Marketing Manager and Content Creator in Cairo"
-              width="560"
-              height="680"
-              fetchpriority="high"
-            />
-            <div class="floating-card floating-card--top">
-              <strong>SEO / SEM</strong>
-              <span>Content-led growth</span>
-            </div>
-            <div class="floating-card floating-card--bottom">
-              <strong>AI Marketing</strong>
-              <span>Faster content workflows</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  sections.forEach((section) => activeObserver.observe(section));
+}
 
-    <!-- Platform bar -->
-    <section class="platforms" aria-label="Marketing platforms">
-      <div class="container platforms__inner">
-        <span>Meta Ads</span>
-        <span>Google Ads</span>
-        <span>TikTok Ads</span>
-        <span>Snapchat Ads</span>
-        <span>GA4</span>
-        <span>SEO</span>
-        <span>Canva AI</span>
-        <span>CapCut AI</span>
-      </div>
-    </section>
+const revealElements = document.querySelectorAll(".reveal");
 
-    <!-- Services -->
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section__header reveal">
-          <p class="section__eyebrow">Services</p>
-          <h2>Marketing support that helps brands get noticed, trusted, and contacted.</h2>
-          <p>
-            From strategy to execution, I help teams turn ideas into campaigns,
-            social content, and measurable digital performance.
-          </p>
-        </div>
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12 }
+  );
 
-        <div class="cards-grid">
-          <article class="service-card reveal">
-            <span class="card-icon">01</span>
-            <h3>Digital Campaign Strategy</h3>
-            <p>End-to-end campaign planning across awareness, engagement, traffic, and conversion objectives.</p>
-          </article>
+  revealElements.forEach((el) => revealObserver.observe(el));
+} else {
+  revealElements.forEach((el) => el.classList.add("is-visible"));
+}
 
-          <article class="service-card reveal">
-            <span class="card-icon">02</span>
-            <h3>Media Buying & PPC</h3>
-            <p>Paid campaigns across Meta, Google, TikTok, and Snapchat with performance tracking and optimization.</p>
-          </article>
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-          <article class="service-card reveal">
-            <span class="card-icon">03</span>
-            <h3>SEO & SEM</h3>
-            <p>On-page and off-page SEO, keyword-focused content, search visibility improvements, and SEM support.</p>
-          </article>
+    const formData = new FormData(contactForm);
 
-          <article class="service-card reveal">
-            <span class="card-icon">04</span>
-            <h3>Social Media Management</h3>
-            <p>Content calendars, publishing, engagement, community management, and performance reporting.</p>
-          </article>
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const service = formData.get("service");
+    const message = formData.get("message");
 
-          <article class="service-card reveal">
-            <span class="card-icon">05</span>
-            <h3>Content Creation & Copywriting</h3>
-            <p>Platform-ready posts, blog content, social copy, captions, scripts, and brand-aligned messaging.</p>
-          </article>
+    const subject = encodeURIComponent(`Portfolio Inquiry - ${service}`);
+    const body = encodeURIComponent(
+      `Hi Khaled,\n\n` +
+      `My name is: ${name}\n` +
+      `Email: ${email}\n` +
+      `Service needed: ${service}\n\n` +
+      `Message:\n${message}\n\n` +
+      `Sent from your portfolio website.`
+    );
 
-          <article class="service-card reveal">
-            <span class="card-icon">06</span>
-            <h3>Videography & Editing</h3>
-            <p>Concept, shooting, editing, post-production, short-form videos, educational content, and visual storytelling.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="section section--split" id="about">
-      <div class="container split">
-        <div class="split__content reveal">
-          <p class="section__eyebrow">About</p>
-          <h2>A marketing profile built on communication, content, and performance.</h2>
-          <p>
-            I’m a results-driven Digital Marketing Manager and Content Creator with 2+ years of hands-on experience
-            planning and executing campaigns across major advertising and social platforms.
-          </p>
-          <p>
-            With a B.Sc. in Mass Communication & Communication Technology and applied marketing diplomas,
-            I combine strategic thinking, storytelling, paid media, SEO, and AI tools to create faster and more effective marketing outputs.
-          </p>
-        </div>
-
-        <div class="about-panel reveal">
-          <h3>What makes my work valuable?</h3>
-          <ul class="check-list">
-            <li>Strong mix of strategy, content, and execution.</li>
-            <li>Experience with both organic and paid growth channels.</li>
-            <li>Ability to create content, shoot video, edit, write, and analyze.</li>
-            <li>AI-powered workflow for faster ideation and production.</li>
-            <li>Clear communication with teams, stakeholders, and audiences.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section class="section" id="experience">
-      <div class="container">
-        <div class="section__header reveal">
-          <p class="section__eyebrow">Experience</p>
-          <h2>Professional experience aligned with marketing, content, and growth.</h2>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="timeline-date">Sep 2024 — Present</div>
-            <div class="timeline-card">
-              <h3>Marketing Manager</h3>
-              <p class="company">Al-Aasem Foundation for Development — Cairo, Egypt</p>
-              <ul>
-                <li>Led end-to-end digital marketing campaigns across Facebook, Instagram, LinkedIn, and TikTok.</li>
-                <li>Built multi-channel promotional strategies including SEO content, email marketing, and paid social.</li>
-                <li>Owned the content production pipeline: copywriting, visual direction, videography, and post-production.</li>
-                <li>Applied SEO techniques to improve organic discoverability and search visibility.</li>
-                <li>Used AI tools such as ChatGPT, Midjourney, Canva AI, and CapCut AI to speed up ideation and production.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="timeline-date">Feb 2024 — Jun 2024</div>
-            <div class="timeline-card">
-              <h3>Content Writer & Videographer</h3>
-              <p class="company">Torjoman — Cairo, Egypt</p>
-              <ul>
-                <li>Produced articles, blog posts, and social media copy aligned with brand voice.</li>
-                <li>Delivered full-cycle videography projects from concept to post-production.</li>
-                <li>Supported visual identity consistency across multiple media touchpoints.</li>
-                <li>Applied SEO best practices to written content to improve reach and CTR.</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section__header reveal">
-          <p class="section__eyebrow">Selected Projects</p>
-          <h2>Case-study style projects for recruiters and clients.</h2>
-          <p>
-            Add screenshots, campaign results, analytics snapshots, video samples, and before/after examples to make this section even stronger.
-          </p>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card reveal">
-            <div class="project-card__top">
-              <span>Digital Marketing</span>
-              <span>Al-Aasem Foundation</span>
-            </div>
-            <h3>Integrated Digital Marketing Campaigns</h3>
-            <p>
-              Multi-channel campaigns across social media, paid ads, SEO content, community engagement, and brand visibility.
-            </p>
-            <div class="tags">
-              <span>Meta</span>
-              <span>TikTok</span>
-              <span>SEO</span>
-              <span>Content Strategy</span>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-card__top">
-              <span>Content</span>
-              <span>Torjoman</span>
-            </div>
-            <h3>SEO Content & Video Production</h3>
-            <p>
-              SEO-aligned articles, social content, and educational videos produced from concept to editing and publishing.
-            </p>
-            <div class="tags">
-              <span>Copywriting</span>
-              <span>Videography</span>
-              <span>Editing</span>
-              <span>SEO</span>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-card__top">
-              <span>Film</span>
-              <span>Creative Direction</span>
-            </div>
-            <h3>Short Film Production</h3>
-            <p>
-              Directed end-to-end production covering narrative development, videography, directing, and post-production editing.
-            </p>
-            <div class="tags">
-              <span>Storytelling</span>
-              <span>Directing</span>
-              <span>Video Editing</span>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-card__top">
-              <span>Portfolio</span>
-              <span>Showcase</span>
-            </div>
-            <h3>Videography & Editing Showcase</h3>
-            <p>
-              A curated showcase of visual storytelling, creative direction, motion graphics, and platform-ready video content.
-            </p>
-            <div class="tags">
-              <span>Motion</span>
-              <span>Reels</span>
-              <span>Post-production</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="center-actions reveal">
-          <a class="btn btn--primary" href="https://drive.google.com/drive/folders/1DF7_XRQm1yi1sH1j15nvZTQQet3ebXuI" target="_blank" rel="noopener noreferrer">
-            Open Full Portfolio
-          </a>
-          <a class="btn btn--secondary" href="#contact">
-            Discuss a Project
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section class="section section--soft" id="skills">
-      <div class="container">
-        <div class="section__header reveal">
-          <p class="section__eyebrow">Skills & Tools</p>
-          <h2>Core competencies recruiters search for.</h2>
-        </div>
-
-        <div class="skills-wrap reveal">
-          <span>SEO / SEM</span>
-          <span>Media Buying</span>
-          <span>Meta Ads</span>
-          <span>Google Ads</span>
-          <span>TikTok Ads</span>
-          <span>Snapchat Ads</span>
-          <span>PPC Advertising</span>
-          <span>Content Strategy</span>
-          <span>Social Media Management</span>
-          <span>Videography</span>
-          <span>Video Editing</span>
-          <span>Copywriting</span>
-          <span>Email Marketing</span>
-          <span>Brand Identity</span>
-          <span>Google Analytics 4</span>
-          <span>Community Engagement</span>
-          <span>ChatGPT</span>
-          <span>Midjourney</span>
-          <span>Canva AI</span>
-          <span>CapCut AI</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section class="section" id="education">
-      <div class="container split">
-        <div class="reveal">
-          <p class="section__eyebrow">Education</p>
-          <h2>B.Sc. Mass Communication & Communication Technology</h2>
-          <p class="muted">Suez University — Suez, Egypt · Jun 2024</p>
-        </div>
-
-        <div class="cert-card reveal">
-          <h3>Certifications & Professional Development</h3>
-          <ul class="check-list">
-            <li>Diploma in Strategic Marketing</li>
-            <li>Diploma in Digital Marketing — Middle East News Agency, MENA</li>
-            <li>Diploma in Business Marketing — Galaxy Academy</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process -->
-    <section class="section section--soft">
-      <div class="container">
-        <div class="section__header reveal">
-          <p class="section__eyebrow">Workflow</p>
-          <h2>A clear process for marketing projects.</h2>
-        </div>
-
-        <div class="process-grid">
-          <div class="process-step reveal">
-            <span>01</span>
-            <h3>Audit</h3>
-            <p>Review goals, audience, channels, content, competitors, and current performance.</p>
-          </div>
-          <div class="process-step reveal">
-            <span>02</span>
-            <h3>Strategy</h3>
-            <p>Create campaign direction, content pillars, KPIs, budget plan, and posting structure.</p>
-          </div>
-          <div class="process-step reveal">
-            <span>03</span>
-            <h3>Production</h3>
-            <p>Write, design, shoot, edit, schedule, and prepare campaign assets for publishing.</p>
-          </div>
-          <div class="process-step reveal">
-            <span>04</span>
-            <h3>Optimize</h3>
-            <p>Track performance, test creatives, improve targeting, and report clear next actions.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section" id="faq">
-      <div class="container narrow">
-        <div class="section__header reveal">
-          <p class="section__eyebrow">FAQ</p>
-          <h2>Quick answers for recruiters and clients.</h2>
-        </div>
-
-        <div class="faq reveal">
-          <details>
-            <summary>Are you available for full-time roles?</summary>
-            <p>Yes. I’m open to full-time digital marketing, social media, content, and media buying roles.</p>
-          </details>
-
-          <details>
-            <summary>Do you accept freelance projects?</summary>
-            <p>Yes. I can support campaign strategy, social media management, content creation, video editing, and paid advertising projects.</p>
-          </details>
-
-          <details>
-            <summary>Can you work with English and Arabic content?</summary>
-            <p>Yes. Arabic is my native language and I have professional working proficiency in English.</p>
-          </details>
-
-          <details>
-            <summary>What should I prepare before contacting you?</summary>
-            <p>Send your business goal, target audience, platforms, budget range if paid ads are needed, and examples of content you like.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section contact-section" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-copy reveal">
-          <p class="section__eyebrow">Contact</p>
-          <h2>Let’s build a campaign that gets attention and results.</h2>
-          <p>
-            If you’re hiring or need marketing support, send a message and I’ll get back to you as soon as possible.
-          </p>
-
-          <div class="contact-links">
-            <a href="mailto:khaled2092002@gmail.com">khaled2092002@gmail.com</a>
-            <a href="tel:+201156766611">+20 115 676 6611</a>
-            <a href="https://wa.me/201156766611?text=Hi%20Khaled%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity." target="_blank" rel="noopener noreferrer">
-              WhatsApp Me
-            </a>
-          </div>
-        </div>
-
-        <form class="contact-form reveal" id="contactForm">
-          <label>
-            Your Name
-            <input type="text" name="name" placeholder="Your name" required />
-          </label>
-
-          <label>
-            Email
-            <input type="email" name="email" placeholder="name@example.com" required />
-          </label>
-
-          <label>
-            Service Needed
-            <select name="service" required>
-              <option value="">Select a service</option>
-              <option>Full-time opportunity</option>
-              <option>Freelance digital marketing</option>
-              <option>Media buying / PPC</option>
-              <option>SEO / Content strategy</option>
-              <option>Videography / Editing</option>
-              <option>Social media management</option>
-            </select>
-          </label>
-
-          <label>
-            Message
-            <textarea name="message" rows="5" placeholder="Tell me about the opportunity or project..." required></textarea>
-          </label>
-
-          <button class="btn btn--primary" type="submit">Send Email Inquiry</button>
-
-          <p class="form-note">
-            This form opens your email app because the website is hosted on GitHub Pages.
-          </p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer__inner">
-      <p>© <span id="year"></span> Khaled Ahmed Ibrahim. All rights reserved.</p>
-
-      <div class="footer-links">
-        <a href="assets/khaled-ahmed-ibrahim-cv.pdf" download>CV</a>
-        <a href="https://drive.google.com/drive/folders/1DF7_XRQm1yi1sH1j15nvZTQQet3ebXuI" target="_blank" rel="noopener noreferrer">Portfolio</a>
-        <a href="mailto:khaled2092002@gmail.com">Email</a>
-      </div>
-    </div>
-  </footer>
-
-  <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
-
-  <script src="assets/js/main.js" defer></script>
-</body>
-</html>
+    window.location.href = `mailto:khaled2092002@gmail.com?subject=${subject}&body=${body}`;
+  });
+}
