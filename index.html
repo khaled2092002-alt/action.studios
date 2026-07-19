@@ -1,632 +1,586 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خالد أحمد إبراهيم | مدير تسويق رقمي وصانع محتوى</title>
+    <meta name="description" content="Khaled Ahmed Ibrahim - Digital Marketing Manager, Content Creator, and Social Media Strategist.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ===== Variables ===== */
+        :root {
+            --bg: #0b1120;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --primary: #d4a95f; /* Gold/Beige */
+            --primary-hover: #f1c27d;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --radius: 16px;
+            --transition: 0.3s ease;
+        }
 
-  <title>Khaled Ahmed Ibrahim | Digital Marketing Manager & Content Creator</title>
+        /* ===== Reset ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Cairo', sans-serif; /* Default to Arabic */
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at top right, rgba(212, 169, 95, 0.1), transparent 400px);
+        }
+        body.en { font-family: 'Inter', sans-serif; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
 
-  <meta name="description" content="Khaled Ahmed Ibrahim is a Cairo-based Digital Marketing Manager, Content Creator, and Social Media Strategist specializing in SEO, media buying, PPC, content strategy, videography, and AI-powered marketing." />
-  <meta name="author" content="Khaled Ahmed Ibrahim" />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <meta name="theme-color" content="#07111f" />
+        /* ===== Typography & Utilities ===== */
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        section { padding: 100px 0; }
+        
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-tag {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .section-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 15px; }
+        .section-desc { color: var(--text-muted); max-width: 600px; margin: 0 auto; }
 
-  <link rel="canonical" href="https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/" />
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 12px 28px; border-radius: 12px;
+            font-weight: 700; cursor: pointer; transition: var(--transition);
+            border: 1px solid transparent; font-family: inherit;
+        }
+        .btn-primary { background: var(--primary); color: #111; }
+        .btn-primary:hover { background: var(--primary-hover); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(212,169,95,0.2); }
+        .btn-secondary { background: var(--card-bg); border-color: var(--card-border); color: var(--text-main); }
+        .btn-secondary:hover { background: rgba(255,255,255,0.1); transform: translateY(-3px); }
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Khaled Ahmed Ibrahim | Digital Marketing Manager & Content Creator" />
-  <meta property="og:description" content="SEO, media buying, social media strategy, content creation, videography, and AI-powered marketing for brands and organizations." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/" />
-  <meta property="og:image" content="https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/assets/og-khaled-ahmed.webp" />
-  <meta property="og:locale" content="en_US" />
+        /* ===== Navbar ===== */
+        header {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: rgba(11, 17, 32, 0.8); backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--card-border); padding: 15px 0;
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; }
+        .logo span { color: var(--primary); }
+        .nav-links { display: flex; gap: 25px; }
+        .nav-links a { color: var(--text-muted); font-weight: 600; transition: var(--transition); }
+        .nav-links a:hover { color: var(--primary); }
+        .lang-btn {
+            background: transparent; border: 1px solid var(--primary); color: var(--primary);
+            padding: 6px 15px; border-radius: 8px; cursor: pointer; font-weight: bold;
+            transition: var(--transition); font-family: inherit;
+        }
+        .lang-btn:hover { background: var(--primary); color: #111; }
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Khaled Ahmed Ibrahim | Digital Marketing Manager & Content Creator" />
-  <meta name="twitter:description" content="Digital marketing, media buying, SEO/SEM, content creation, videography, and AI marketing workflows." />
-  <meta name="twitter:image" content="assets/og-khaled-ahmed.webp" />
+        /* ===== Hero ===== */
+        .hero { display: flex; align-items: center; min-height: 100vh; padding-top: 100px; }
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .hero-content h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1.2; margin-bottom: 15px; }
+        .hero-role { color: var(--primary); font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; }
+        .hero-desc { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 30px; max-width: 500px; }
+        .hero-actions { display: flex; gap: 15px; flex-wrap: wrap; }
+        
+        .hero-img-box { position: relative; border-radius: 24px; padding: 15px; background: var(--card-bg); border: 1px solid var(--card-border); }
+        .hero-img-box img { border-radius: 16px; width: 100%; height: 500px; object-fit: cover; }
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        /* ===== Cards (Shared) ===== */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card {
+            background: var(--card-bg); border: 1px solid var(--card-border);
+            border-radius: var(--radius); padding: 30px; transition: var(--transition);
+        }
+        .card:hover { transform: translateY(-5px); border-color: rgba(212,169,95,0.4); }
+        .card i { font-size: 2rem; color: var(--primary); margin-bottom: 20px; }
+        .card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; }
 
-  <link rel="stylesheet" href="assets/css/styles.css" />
+        /* ===== About ===== */
+        .about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: center; }
+        .about-img img { border-radius: var(--radius); border: 1px solid var(--card-border); }
+        .about-text h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--primary); }
+        .about-text p { color: var(--text-muted); margin-bottom: 15px; font-size: 1rem; }
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/#person",
-        "name": "Khaled Ahmed Ibrahim",
-        "jobTitle": "Digital Marketing Manager | Content Creator | Social Media Strategist",
-        "url": "https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/",
-        "image": "https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/assets/khaled-ahmed-headshot.webp",
-        "email": "mailto:khaled2092002@gmail.com",
-        "telephone": "+201156766611",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Cairo",
-          "addressCountry": "EG"
-        },
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "Suez University"
-        },
-        "knowsAbout": [
-          "Digital Marketing",
-          "SEO",
-          "SEM",
-          "PPC Advertising",
-          "Media Buying",
-          "Meta Ads",
-          "Google Ads",
-          "TikTok Ads",
-          "Snapchat Ads",
-          "Social Media Strategy",
-          "Content Creation",
-          "Videography",
-          "Video Editing",
-          "Copywriting",
-          "Google Analytics 4",
-          "AI Marketing Tools"
-        ],
-        "sameAs": [
-          "https://drive.google.com/drive/folders/1DF7_XRQm1yi1sH1j15nvZTQQet3ebXuI"
-        ]
-      },
-      {
-        "@type": "ProfilePage",
-        "@id": "https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/#webpage",
-        "url": "https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/",
-        "name": "Khaled Ahmed Ibrahim Portfolio",
-        "about": {
-          "@id": "https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/#person"
-        },
-        "description": "Professional portfolio of Khaled Ahmed Ibrahim, Digital Marketing Manager and Content Creator based in Cairo, Egypt."
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is Khaled available for freelance projects?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Khaled Ahmed Ibrahim is open to full-time and freelance opportunities in digital marketing, content creation, social media strategy, media buying, SEO, and videography."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What digital marketing platforms does Khaled work with?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Khaled works with Meta, Google, TikTok, Snapchat, SEO/SEM tools, Google Analytics 4, and AI-powered marketing tools such as ChatGPT, Midjourney, Canva AI, and CapCut AI."
-            }
-          }
-        ]
-      }
-    ]
-  }
-  </script>
+        /* ===== Portfolio ===== */
+        .portfolio-card { padding: 0; overflow: hidden; }
+        .portfolio-img { height: 200px; background: #1a233a; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--primary); }
+        .portfolio-info { padding: 25px; }
+        .portfolio-tag { color: var(--primary); font-size: 0.8rem; font-weight: bold; margin-bottom: 10px; display: block; }
+        .portfolio-info h3 { margin-bottom: 10px; }
+
+        /* ===== Experience Timeline ===== */
+        .timeline { display: flex; flex-direction: column; gap: 20px; }
+        .timeline-item { background: var(--card-bg); border: 1px solid var(--card-border); padding: 30px; border-radius: var(--radius); }
+        .timeline-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 10px; }
+        .timeline-header h3 { color: var(--primary); font-size: 1.3rem; }
+        .timeline-date { background: rgba(212,169,95,0.1); color: var(--primary); padding: 5px 15px; border-radius: 8px; font-size: 0.9rem; font-weight: bold; }
+        .timeline-company { font-weight: bold; margin-bottom: 15px; font-size: 1.1rem; }
+        .timeline-item ul { padding-inline-start: 20px; color: var(--text-muted); }
+        .timeline-item li { margin-bottom: 8px; list-style-type: disc; }
+
+        /* ===== Contact ===== */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
+        .contact-info { display: flex; flex-direction: column; gap: 20px; }
+        .contact-item { display: flex; align-items: center; gap: 15px; background: var(--card-bg); padding: 20px; border-radius: var(--radius); border: 1px solid var(--card-border); }
+        .contact-item i { font-size: 1.5rem; color: var(--primary); }
+        .contact-item div h4 { font-size: 0.9rem; color: var(--text-muted); }
+        .contact-item div p { font-weight: bold; }
+
+        .contact-form { background: var(--card-bg); padding: 40px; border-radius: var(--radius); border: 1px solid var(--card-border); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: bold; }
+        .form-control { width: 100%; padding: 15px; border-radius: 10px; background: rgba(0,0,0,0.2); border: 1px solid var(--card-border); color: #fff; font-family: inherit; }
+        .form-control:focus { outline: none; border-color: var(--primary); }
+        textarea.form-control { height: 150px; resize: vertical; }
+
+        footer { text-align: center; padding: 30px; border-top: 1px solid var(--card-border); margin-top: 50px; color: var(--text-muted); }
+
+        /* ===== Mobile ===== */
+        @media (max-width: 768px) {
+            .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; /* Can add hamburger menu later */ }
+            .section-title { font-size: 2rem; }
+            .hero { padding-top: 120px; text-align: center; }
+            .hero-actions { justify-content: center; }
+        }
+    </style>
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" data-header>
-    <div class="container header__inner">
-      <a class="brand" href="#home" aria-label="Khaled Ahmed Ibrahim home">
-        <span class="brand__mark">K</span>
-        <span class="brand__text">
-          <strong>Khaled Ahmed</strong>
-          <small>Digital Marketing</small>
-        </span>
-      </a>
+    <!-- Navbar -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Khaled <span>Ahmed</span></div>
+            <nav class="nav-links">
+                <a href="#about" data-i18n="nav_about">من أنا</a>
+                <a href="#expertise" data-i18n="nav_expertise">المهارات</a>
+                <a href="#portfolio" data-i18n="nav_portfolio">الأعمال</a>
+                <a href="#services" data-i18n="nav_services">الخدمات</a>
+                <a href="#experience" data-i18n="nav_experience">الخبرة</a>
+                <a href="#contact" data-i18n="nav_contact">تواصل</a>
+            </nav>
+            <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">English</button>
+        </div>
+    </header>
 
-      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-        <a href="#services">Services</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact" class="nav-cta">Hire Me</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section class="hero" id="home">
-      <div class="container hero__grid">
-        <div class="hero__content reveal">
-          <p class="eyebrow">
-            <span></span>
-            Open to Full-time & Freelance Opportunities
-          </p>
-
-          <h1>Khaled Ahmed Ibrahim — Digital Marketing Manager & Content Creator</h1>
-
-          <p class="hero__lead">
-            I plan, create, and optimize data-informed campaigns across Meta, Google,
-            TikTok, and Snapchat — combining SEO/SEM, paid media, social strategy,
-            videography, and AI-powered content workflows to grow brand visibility and engagement.
-          </p>
-
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#contact">Hire Me</a>
-            <a class="btn btn--secondary" href="https://drive.google.com/drive/folders/1DF7_XRQm1yi1sH1j15nvZTQQet3ebXuI" target="_blank" rel="noopener noreferrer">
-              View Portfolio
-            </a>
-            <a class="btn btn--ghost" href="assets/khaled-ahmed-ibrahim-cv.pdf" download>
-              Download CV
-            </a>
-          </div>
-
-          <div class="hero__meta" aria-label="Profile highlights">
-            <div>
-              <strong>2+ Years</strong>
-              <span>Hands-on Experience</span>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="section-tag" data-i18n="hero_tag">متاح لفرص العمل والعمل الحر</div>
+                <h1 data-i18n="hero_title">أهلاً، أنا <br><span style="color: var(--primary);">خالد أحمد إبراهيم</span></h1>
+                <p class="hero-role" data-i18n="hero_role">مدير تسويق رقمي | صانع محتوى | استراتيجي سوشيال ميديا</p>
+                <p class="hero-desc" data-i18n="hero_desc">
+                    أساعد العلامات التجارية على النمو عبر استراتيجيات المحتوى، إدارة السوشيال ميديا، السيو (SEO)، والحملات المدفوعة معتمداً على البيانات والسرد البصري.
+                </p>
+                <div class="hero-actions">
+                    <!-- Google Drive Link -->
+                    <a href="https://drive.google.com/drive/folders/1DF7_XRQm1yi1sH1j15nvZTQQet3ebXuI" target="_blank" class="btn btn-primary">
+                        <i class="fa-solid fa-folder-open"></i> <span data-i18n="btn_portfolio">مشاهدة الأعمال</span>
+                    </a>
+                    <a href="Khaled-Ahmed-Ibrahim-CV.pdf" download class="btn btn-secondary">
+                        <i class="fa-solid fa-download"></i> <span data-i18n="btn_cv">تحميل الـ CV</span>
+                    </a>
+                </div>
             </div>
-            <div>
-              <strong>4+ Platforms</strong>
-              <span>Meta, Google, TikTok, Snapchat</span>
+            <div class="hero-img">
+                <div class="hero-img-box">
+                    <!-- ضع الصورة بالبدلة البيج هنا -->
+                    <img src="assets/images/khaled-hero.jpg" alt="Khaled Ahmed Ibrahim">
+                </div>
             </div>
-            <div>
-              <strong>Cairo, Egypt</strong>
-              <span>Available Remote & On-site</span>
-            </div>
-          </div>
         </div>
-
-        <div class="hero__media reveal">
-          <div class="portrait-card">
-            <img
-              src="assets/khaled-ahmed-headshot.webp"
-              alt="Khaled Ahmed Ibrahim, Digital Marketing Manager and Content Creator in Cairo"
-              width="560"
-              height="680"
-              fetchpriority="high"
-            />
-            <div class="floating-card floating-card--top">
-              <strong>SEO / SEM</strong>
-              <span>Content-led growth</span>
-            </div>
-            <div class="floating-card floating-card--bottom">
-              <strong>AI Marketing</strong>
-              <span>Faster content workflows</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- Platform bar -->
-    <section class="platforms" aria-label="Marketing platforms">
-      <div class="container platforms__inner">
-        <span>Meta Ads</span>
-        <span>Google Ads</span>
-        <span>TikTok Ads</span>
-        <span>Snapchat Ads</span>
-        <span>GA4</span>
-        <span>SEO</span>
-        <span>Canva AI</span>
-        <span>CapCut AI</span>
-      </div>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="nav_about">من أنا</span>
+                <h2 class="section-title" data-i18n="about_title">مسوّق يجمع بين الاستراتيجية والإبداع</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-img">
+                    <!-- ضع الصورة بالبدلة الكحلي هنا -->
+                    <img src="assets/images/khaled-about.jpg" alt="About Khaled">
+                </div>
+                <div class="about-text">
+                    <h3 data-i18n="about_h3">بناء علامات تجارية أقوى من خلال التسويق الحديث</h3>
+                    <p data-i18n="about_p1">أنا خالد أحمد إبراهيم، مدير تسويق رقمي وصانع محتوى من القاهرة. أمتلك خبرة عملية تمتد لأكثر من عامين في تخطيط وتنفيذ حملات تسويقية متكاملة.</p>
+                    <p data-i18n="about_p2">عملت على إدارة منصات مثل Meta، Google، TikTok، و LinkedIn، وأدير دورة إنتاج المحتوى بالكامل من كتابة الكابشنز والمقالات مروراً بالتصوير والمونتاج وحتى نشر وتحليل الأداء.</p>
+                    <p data-i18n="about_p3">أدمج بين الأدوات الحديثة وتقنيات الذكاء الاصطناعي (ChatGPT, Midjourney, CapCut) لتسريع وتيرة العمل وتقديم جودة استثنائية.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Services -->
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section__header reveal">
-          <p class="section__eyebrow">Services</p>
-          <h2>Marketing support that helps brands get noticed, trusted, and contacted.</h2>
-          <p>
-            From strategy to execution, I help teams turn ideas into campaigns,
-            social content, and measurable digital performance.
-          </p>
+    <!-- Expertise Section -->
+    <section id="expertise">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="nav_expertise">المهارات والخبرات</span>
+                <h2 class="section-title" data-i18n="exp_title">أهم ما أقدمه</h2>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3 data-i18n="exp_1">التسويق الرقمي واستراتيجية السوشيال ميديا</h3>
+                    <p data-i18n="exp_1_desc">بناء خطط محتوى متكاملة وإدارة الحسابات الرقمية لزيادة التفاعل والوصول.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <h3 data-i18n="exp_2">الإعلانات الممولة (Media Buying)</h3>
+                    <p data-i18n="exp_2_desc">إطلاق وتحسين الحملات الإعلانية عبر Meta، Google، و TikTok لتحقيق أفضل عائد.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-pen-nib"></i>
+                    <h3 data-i18n="exp_3">كتابة المحتوى و SEO</h3>
+                    <p data-i18n="exp_3_desc">كتابة مقالات متوافقة مع محركات البحث، وصياغة نصوص إعلانية وكابشنز جذابة.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-video"></i>
+                    <h3 data-i18n="exp_4">تصوير ومونتاج الفيديو</h3>
+                    <p data-i18n="exp_4_desc">إنتاج محتوى مرئي كامل من الفكرة والتصوير وحتى المونتاج النهائي للعلامات التجارية.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-robot"></i>
+                    <h3 data-i18n="exp_5">أدوات الذكاء الاصطناعي</h3>
+                    <p data-i18n="exp_5_desc">استخدام AI في البحث، كتابة المحتوى، توليد الصور، وتحليل بيانات التسويق.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3 data-i18n="exp_6">بناء الهوية البصرية وإدارة المجتمع</h3>
+                    <p data-i18n="exp_6_desc">الحفاظ على صوت العلامة التجارية والتواصل الفعال مع الجمهور المستهدف.</p>
+                </div>
+            </div>
         </div>
-
-        <div class="cards-grid">
-          <article class="service-card reveal">
-            <span class="card-icon">01</span>
-            <h3>Digital Campaign Strategy</h3>
-            <p>End-to-end campaign planning across awareness, engagement, traffic, and conversion objectives.</p>
-          </article>
-
-          <article class="service-card reveal">
-            <span class="card-icon">02</span>
-            <h3>Media Buying & PPC</h3>
-            <p>Paid campaigns across Meta, Google, TikTok, and Snapchat with performance tracking and optimization.</p>
-          </article>
-
-          <article class="service-card reveal">
-            <span class="card-icon">03</span>
-            <h3>SEO & SEM</h3>
-            <p>On-page and off-page SEO, keyword-focused content, search visibility improvements, and SEM support.</p>
-          </article>
-
-          <article class="service-card reveal">
-            <span class="card-icon">04</span>
-            <h3>Social Media Management</h3>
-            <p>Content calendars, publishing, engagement, community management, and performance reporting.</p>
-          </article>
-
-          <article class="service-card reveal">
-            <span class="card-icon">05</span>
-            <h3>Content Creation & Copywriting</h3>
-            <p>Platform-ready posts, blog content, social copy, captions, scripts, and brand-aligned messaging.</p>
-          </article>
-
-          <article class="service-card reveal">
-            <span class="card-icon">06</span>
-            <h3>Videography & Editing</h3>
-            <p>Concept, shooting, editing, post-production, short-form videos, educational content, and visual storytelling.</p>
-          </article>
-        </div>
-      </div>
     </section>
 
-    <!-- About -->
-    <section class="section section--split" id="about">
-      <div class="container split">
-        <div class="split__content reveal">
-          <p class="section__eyebrow">About</p>
-          <h2>A marketing profile built on communication, content, and performance.</h2>
-          <p>
-            I’m a results-driven Digital Marketing Manager and Content Creator with 2+ years of hands-on experience
-            planning and executing campaigns across major advertising and social platforms.
-          </p>
-          <p>
-            With a B.Sc. in Mass Communication & Communication Technology and applied marketing diplomas,
-            I combine strategic thinking, storytelling, paid media, SEO, and AI tools to create faster and more effective marketing outputs.
-          </p>
+    <!-- Portfolio Section -->
+    <section id="portfolio" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="nav_portfolio">الأعمال</span>
+                <h2 class="section-title" data-i18n="port_title">نماذج من أعمالي</h2>
+                <p class="section-desc" data-i18n="port_desc">جميع أعمالي وتصميماتي والفيديوهات متوفرة في ملف جوجل درايف الخاص بي.</p>
+            </div>
+            <div class="grid-3">
+                <!-- Project 1 -->
+                <div class="card portfolio-card">
+                    <div class="portfolio-img"><i class="fa-solid fa-hashtag"></i></div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Social Media Campaigns</span>
+                        <h3 data-i18n="p1_title">حملات السوشيال ميديا</h3>
+                        <p data-i18n="p1_desc">نماذج من تصميمات وخطط المحتوى الخاصة بمنصات التواصل الاجتماعي.</p>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="card portfolio-card">
+                    <div class="portfolio-img"><i class="fa-solid fa-clapperboard"></i></div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Videography & Editing</span>
+                        <h3 data-i18n="p2_title">إنتاج وتعديل الفيديوهات</h3>
+                        <p data-i18n="p2_desc">أعمالي في تصوير وإخراج وتعديل الفيديوهات الترويجية والأفلام القصيرة.</p>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="card portfolio-card">
+                    <div class="portfolio-img"><i class="fa-solid fa-file-word"></i></div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">SEO & Copywriting</span>
+                        <h3 data-i18n="p3_title">المقالات والمحتوى المكتوب</h3>
+                        <p data-i18n="p3_desc">نماذج لمقالات متوافقة مع محركات البحث ونصوص إعلانية قوية.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://drive.google.com/drive/folders/1DF7_XRQm1yi1sH1j15nvZTQQet3ebXuI" target="_blank" class="btn btn-primary">
+                    <span data-i18n="btn_full_portfolio">تصفح فولدر الأعمال بالكامل</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
         </div>
-
-        <div class="about-panel reveal">
-          <h3>What makes my work valuable?</h3>
-          <ul class="check-list">
-            <li>Strong mix of strategy, content, and execution.</li>
-            <li>Experience with both organic and paid growth channels.</li>
-            <li>Ability to create content, shoot video, edit, write, and analyze.</li>
-            <li>AI-powered workflow for faster ideation and production.</li>
-            <li>Clear communication with teams, stakeholders, and audiences.</li>
-          </ul>
-        </div>
-      </div>
     </section>
 
-    <!-- Experience -->
-    <section class="section" id="experience">
-      <div class="container">
-        <div class="section__header reveal">
-          <p class="section__eyebrow">Experience</p>
-          <h2>Professional experience aligned with marketing, content, and growth.</h2>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="timeline-date">Sep 2024 — Present</div>
-            <div class="timeline-card">
-              <h3>Marketing Manager</h3>
-              <p class="company">Al-Aasem Foundation for Development — Cairo, Egypt</p>
-              <ul>
-                <li>Led end-to-end digital marketing campaigns across Facebook, Instagram, LinkedIn, and TikTok.</li>
-                <li>Built multi-channel promotional strategies including SEO content, email marketing, and paid social.</li>
-                <li>Owned the content production pipeline: copywriting, visual direction, videography, and post-production.</li>
-                <li>Applied SEO techniques to improve organic discoverability and search visibility.</li>
-                <li>Used AI tools such as ChatGPT, Midjourney, Canva AI, and CapCut AI to speed up ideation and production.</li>
-              </ul>
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="nav_services">الخدمات</span>
+                <h2 class="section-title" data-i18n="serv_title">كيف يمكنني مساعدة عملك؟</h2>
             </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="timeline-date">Feb 2024 — Jun 2024</div>
-            <div class="timeline-card">
-              <h3>Content Writer & Videographer</h3>
-              <p class="company">Torjoman — Cairo, Egypt</p>
-              <ul>
-                <li>Produced articles, blog posts, and social media copy aligned with brand voice.</li>
-                <li>Delivered full-cycle videography projects from concept to post-production.</li>
-                <li>Supported visual identity consistency across multiple media touchpoints.</li>
-                <li>Applied SEO best practices to written content to improve reach and CTR.</li>
-              </ul>
+            <div class="grid-3">
+                <div class="card">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h3 data-i18n="s1">إدارة منصات التواصل</h3>
+                    <p data-i18n="s1_d">استلام حسابات شركتك بالكامل من النشر إلى الرد على الجمهور.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    <h3 data-i18n="s2">تحسين محركات البحث SEO</h3>
+                    <p data-i18n="s2_d">تصدر نتائج بحث جوجل من خلال محتوى مدروس ومحسن.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-film"></i>
+                    <h3 data-i18n="s3">صناعة المحتوى المرئي</h3>
+                    <p data-i18n="s3_d">تصوير فيديوهات احترافية لمنتجاتك أو خدماتك مع المونتاج.</p>
+                </div>
             </div>
-          </article>
         </div>
-      </div>
     </section>
 
-    <!-- Projects -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section__header reveal">
-          <p class="section__eyebrow">Selected Projects</p>
-          <h2>Case-study style projects for recruiters and clients.</h2>
-          <p>
-            Add screenshots, campaign results, analytics snapshots, video samples, and before/after examples to make this section even stronger.
-          </p>
+    <!-- Experience & Certifications -->
+    <section id="experience" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="nav_experience">الخبرة والشهادات</span>
+                <h2 class="section-title" data-i18n="exp_sec_title">مسيرتي المهنية</h2>
+            </div>
+            
+            <div class="timeline">
+                <!-- Job 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 data-i18n="job1">مدير تسويق رقمي (Marketing Manager)</h3>
+                        <span class="timeline-date" data-i18n="date1">سبتمبر 2024 - الحاضر</span>
+                    </div>
+                    <div class="timeline-company" data-i18n="comp1">مؤسسة العاصم للتنمية - القاهرة</div>
+                    <ul>
+                        <li data-i18n="job1_1">قيادة حملات التسويق الرقمي عبر منصات فيسبوك، إنستجرام، ولينكد إن.</li>
+                        <li data-i18n="job1_2">إدارة كاملة لإنتاج المحتوى بدءاً من التصميم وكتابة الإعلانات إلى المونتاج.</li>
+                        <li data-i18n="job1_3">تطبيق استراتيجيات SEO لزيادة الزيارات العضوية للموقع.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 data-i18n="job2">كاتب محتوى ومصور فيديو (Content Writer & Videographer)</h3>
+                        <span class="timeline-date" data-i18n="date2">فبراير 2024 - يونيو 2024</span>
+                    </div>
+                    <div class="timeline-company" data-i18n="comp2">Torjoman - القاهرة</div>
+                    <ul>
+                        <li data-i18n="job2_1">كتابة مقالات ترويجية وتعليمية تتوافق مع هوية العلامة التجارية.</li>
+                        <li data-i18n="job2_2">تنفيذ مشاريع تصوير فيديو من مرحلة الفكرة وحتى التعديل النهائي.</li>
+                    </ul>
+                </div>
+
+                <!-- Education -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 data-i18n="edu_title">التعليم والشهادات</h3>
+                    </div>
+                    <ul style="margin-top: 10px;">
+                        <li data-i18n="edu_1">بكالوريوس إعلام وتكنولوجيا اتصال - جامعة السويس (يونيو 2024)</li>
+                        <li data-i18n="edu_2">دبلومة في التسويق الاستراتيجي</li>
+                        <li data-i18n="edu_3">دبلومة التسويق الرقمي - وكالة أنباء الشرق الأوسط (MENA)</li>
+                        <li data-i18n="edu_4">دبلومة تسويق الأعمال - أكاديمية جالاكسي</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
-        <div class="project-grid">
-          <article class="project-card reveal">
-            <div class="project-card__top">
-              <span>Digital Marketing</span>
-              <span>Al-Aasem Foundation</span>
-            </div>
-            <h3>Integrated Digital Marketing Campaigns</h3>
-            <p>
-              Multi-channel campaigns across social media, paid ads, SEO content, community engagement, and brand visibility.
-            </p>
-            <div class="tags">
-              <span>Meta</span>
-              <span>TikTok</span>
-              <span>SEO</span>
-              <span>Content Strategy</span>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-card__top">
-              <span>Content</span>
-              <span>Torjoman</span>
-            </div>
-            <h3>SEO Content & Video Production</h3>
-            <p>
-              SEO-aligned articles, social content, and educational videos produced from concept to editing and publishing.
-            </p>
-            <div class="tags">
-              <span>Copywriting</span>
-              <span>Videography</span>
-              <span>Editing</span>
-              <span>SEO</span>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-card__top">
-              <span>Film</span>
-              <span>Creative Direction</span>
-            </div>
-            <h3>Short Film Production</h3>
-            <p>
-              Directed end-to-end production covering narrative development, videography, directing, and post-production editing.
-            </p>
-            <div class="tags">
-              <span>Storytelling</span>
-              <span>Directing</span>
-              <span>Video Editing</span>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-card__top">
-              <span>Portfolio</span>
-              <span>Showcase</span>
-            </div>
-            <h3>Videography & Editing Showcase</h3>
-            <p>
-              A curated showcase of visual storytelling, creative direction, motion graphics, and platform-ready video content.
-            </p>
-            <div class="tags">
-              <span>Motion</span>
-              <span>Reels</span>
-              <span>Post-production</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="center-actions reveal">
-          <a class="btn btn--primary" href="https://drive.google.com/drive/folders/1DF7_XRQm1yi1sH1j15nvZTQQet3ebXuI" target="_blank" rel="noopener noreferrer">
-            Open Full Portfolio
-          </a>
-          <a class="btn btn--secondary" href="#contact">
-            Discuss a Project
-          </a>
-        </div>
-      </div>
     </section>
 
-    <!-- Skills -->
-    <section class="section section--soft" id="skills">
-      <div class="container">
-        <div class="section__header reveal">
-          <p class="section__eyebrow">Skills & Tools</p>
-          <h2>Core competencies recruiters search for.</h2>
-        </div>
+    <!-- Contact Form Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="nav_contact">تواصل معي</span>
+                <h2 class="section-title" data-i18n="contact_title">دعنا نناقش مشروعك القادم</h2>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4 data-i18n="lbl_email">البريد الإلكتروني</h4>
+                            <p>khaled2092002@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4 data-i18n="lbl_phone">رقم الهاتف / واتساب</h4>
+                            <p dir="ltr">+20 115 676 6611</p>
+                            <p dir="ltr">+20 101 579 3576</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <div>
+                            <h4 data-i18n="lbl_linkedin">لينكد إن</h4>
+                            <!-- ضع رابط لينكد ان هنا -->
+                            <p><a href="#" target="_blank">Khaled Ahmed Ibrahim</a></p>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="skills-wrap reveal">
-          <span>SEO / SEM</span>
-          <span>Media Buying</span>
-          <span>Meta Ads</span>
-          <span>Google Ads</span>
-          <span>TikTok Ads</span>
-          <span>Snapchat Ads</span>
-          <span>PPC Advertising</span>
-          <span>Content Strategy</span>
-          <span>Social Media Management</span>
-          <span>Videography</span>
-          <span>Video Editing</span>
-          <span>Copywriting</span>
-          <span>Email Marketing</span>
-          <span>Brand Identity</span>
-          <span>Google Analytics 4</span>
-          <span>Community Engagement</span>
-          <span>ChatGPT</span>
-          <span>Midjourney</span>
-          <span>Canva AI</span>
-          <span>CapCut AI</span>
+                <!-- Contact Form (Functional via FormSubmit) -->
+                <div class="contact-form">
+                    <form action="https://formsubmit.co/khaled2092002@gmail.com" method="POST">
+                        
+                        <!-- إعدادات FormSubmit -->
+                        <input type="hidden" name="_subject" value="رسالة جديدة من موقع الـ Portfolio الخاص بك">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://khaled2092002-alt.github.io/-https-khaled-ahmed.github.io-portfolio-/thanks.html">
+                        
+                        <div class="form-group">
+                            <label data-i18n="frm_name">الاسم</label>
+                            <input type="text" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="frm_email">البريد الإلكتروني</label>
+                            <input type="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="frm_msg">رسالتك</label>
+                            <textarea name="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <span data-i18n="frm_btn">إرسال الرسالة</span> <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Education -->
-    <section class="section" id="education">
-      <div class="container split">
-        <div class="reveal">
-          <p class="section__eyebrow">Education</p>
-          <h2>B.Sc. Mass Communication & Communication Technology</h2>
-          <p class="muted">Suez University — Suez, Egypt · Jun 2024</p>
+    <footer>
+        <div class="container">
+            <p data-i18n="footer">© 2024 خالد أحمد إبراهيم. جميع الحقوق محفوظة.</p>
         </div>
+    </footer>
 
-        <div class="cert-card reveal">
-          <h3>Certifications & Professional Development</h3>
-          <ul class="check-list">
-            <li>Diploma in Strategic Marketing</li>
-            <li>Diploma in Digital Marketing — Middle East News Agency, MENA</li>
-            <li>Diploma in Business Marketing — Galaxy Academy</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <!-- JavaScript for Language Toggle -->
+    <script>
+        const translations = {
+            ar: {
+                nav_about: "من أنا", nav_expertise: "المهارات", nav_portfolio: "الأعمال",
+                nav_services: "الخدمات", nav_experience: "الخبرة", nav_contact: "تواصل",
+                hero_tag: "متاح لفرص العمل والعمل الحر",
+                hero_title: "أهلاً، أنا <br><span style='color: var(--primary);'>خالد أحمد إبراهيم</span>",
+                hero_role: "مدير تسويق رقمي | صانع محتوى | استراتيجي سوشيال ميديا",
+                hero_desc: "أساعد العلامات التجارية على النمو عبر استراتيجيات المحتوى، إدارة السوشيال ميديا، السيو (SEO)، والحملات المدفوعة معتمداً على البيانات والسرد البصري.",
+                btn_portfolio: "مشاهدة الأعمال", btn_cv: "تحميل الـ CV",
+                about_title: "مسوّق يجمع بين الاستراتيجية والإبداع",
+                about_h3: "بناء علامات تجارية أقوى من خلال التسويق الحديث",
+                about_p1: "أنا خالد أحمد إبراهيم، مدير تسويق رقمي وصانع محتوى من القاهرة. أمتلك خبرة عملية تمتد لأكثر من عامين في تخطيط وتنفيذ حملات تسويقية متكاملة.",
+                about_p2: "عملت على إدارة منصات مثل Meta، Google، TikTok، و LinkedIn، وأدير دورة إنتاج المحتوى بالكامل من كتابة الكابشنز والمقالات مروراً بالتصوير والمونتاج وحتى نشر وتحليل الأداء.",
+                about_p3: "أدمج بين الأدوات الحديثة وتقنيات الذكاء الاصطناعي لتسريع وتيرة العمل وتقديم جودة استثنائية.",
+                exp_title: "أهم ما أقدمه",
+                exp_1: "التسويق الرقمي واستراتيجية السوشيال ميديا", exp_1_desc: "بناء خطط محتوى متكاملة وإدارة الحسابات الرقمية لزيادة التفاعل والوصول.",
+                exp_2: "الإعلانات الممولة", exp_2_desc: "إطلاق وتحسين الحملات الإعلانية عبر Meta، Google، و TikTok لتحقيق أفضل عائد.",
+                exp_3: "كتابة المحتوى و SEO", exp_3_desc: "كتابة مقالات متوافقة مع محركات البحث، وصياغة نصوص إعلانية وكابشنز جذابة.",
+                exp_4: "تصوير ومونتاج الفيديو", exp_4_desc: "إنتاج محتوى مرئي كامل من الفكرة والتصوير وحتى المونتاج النهائي للعلامات التجارية.",
+                exp_5: "أدوات الذكاء الاصطناعي", exp_5_desc: "استخدام AI في البحث، كتابة المحتوى، توليد الصور، وتحليل بيانات التسويق.",
+                exp_6: "بناء الهوية البصرية وإدارة المجتمع", exp_6_desc: "الحفاظ على صوت العلامة التجارية والتواصل الفعال مع الجمهور المستهدف.",
+                port_title: "نماذج من أعمالي", port_desc: "جميع أعمالي وتصميماتي والفيديوهات متوفرة في ملف جوجل درايف الخاص بي.",
+                p1_title: "حملات السوشيال ميديا", p1_desc: "نماذج من تصميمات وخطط المحتوى الخاصة بمنصات التواصل الاجتماعي.",
+                p2_title: "إنتاج وتعديل الفيديوهات", p2_desc: "أعمالي في تصوير وإخراج وتعديل الفيديوهات الترويجية والأفلام القصيرة.",
+                p3_title: "المقالات والمحتوى المكتوب", p3_desc: "نماذج لمقالات متوافقة مع محركات البحث ونصوص إعلانية قوية.",
+                btn_full_portfolio: "تصفح فولدر الأعمال بالكامل",
+                serv_title: "كيف يمكنني مساعدة عملك؟",
+                s1: "إدارة منصات التواصل", s1_d: "استلام حسابات شركتك بالكامل من النشر إلى الرد على الجمهور.",
+                s2: "تحسين محركات البحث SEO", s2_d: "تصدر نتائج بحث جوجل من خلال محتوى مدروس ومحسن.",
+                s3: "صناعة المحتوى المرئي", s3_d: "تصوير فيديوهات احترافية لمنتجاتك أو خدماتك مع المونتاج.",
+                exp_sec_title: "مسيرتي المهنية",
+                job1: "مدير تسويق رقمي (Marketing Manager)", date1: "سبتمبر 2024 - الحاضر", comp1: "مؤسسة العاصم للتنمية - القاهرة",
+                job1_1: "قيادة حملات التسويق الرقمي عبر منصات فيسبوك، إنستجرام، ولينكد إن.",
+                job1_2: "إدارة كاملة لإنتاج المحتوى بدءاً من التصميم وكتابة الإعلانات إلى المونتاج.",
+                job1_3: "تطبيق استراتيجيات SEO لزيادة الزيارات العضوية للموقع.",
+                job2: "كاتب محتوى ومصور فيديو", date2: "فبراير 2024 - يونيو 2024", comp2: "Torjoman - القاهرة",
+                job2_1: "كتابة مقالات ترويجية وتعليمية تتوافق مع هوية العلامة التجارية.",
+                job2_2: "تنفيذ مشاريع تصوير فيديو من مرحلة الفكرة وحتى التعديل النهائي.",
+                edu_title: "التعليم والشهادات",
+                edu_1: "بكالوريوس إعلام وتكنولوجيا اتصال - جامعة السويس (يونيو 2024)", edu_2: "دبلومة في التسويق الاستراتيجي", edu_3: "دبلومة التسويق الرقمي - وكالة أنباء الشرق الأوسط (MENA)", edu_4: "دبلومة تسويق الأعمال - أكاديمية جالاكسي",
+                contact_title: "دعنا نناقش مشروعك القادم",
+                lbl_email: "البريد الإلكتروني", lbl_phone: "رقم الهاتف / واتساب", lbl_linkedin: "لينكد إن",
+                frm_name: "الاسم", frm_email: "البريد الإلكتروني", frm_msg: "رسالتك", frm_btn: "إرسال الرسالة",
+                footer: "© 2024 خالد أحمد إبراهيم. جميع الحقوق محفوظة."
+            },
+            en: {
+                nav_about: "About", nav_expertise: "Expertise", nav_portfolio: "Portfolio",
+                nav_services: "Services", nav_experience: "Experience", nav_contact: "Contact",
+                hero_tag: "Available for Full-time & Freelance",
+                hero_title: "Hi, I'm <br><span style='color: var(--primary);'>Khaled Ahmed Ibrahim</span>",
+                hero_role: "Digital Marketing Manager | Content Creator | Social Media Strategist",
+                hero_desc: "I help brands grow through strategic content, social media management, SEO, and paid media campaigns driven by data and visual storytelling.",
+                btn_portfolio: "View Portfolio", btn_cv: "Download CV",
+                about_title: "A Marketer Combining Strategy & Creativity",
+                about_h3: "Building Stronger Brands Through Modern Marketing",
+                about_p1: "I am Khaled Ahmed Ibrahim, a Digital Marketing Manager and Content Creator based in Cairo. I have over two years of hands-on experience planning and executing integrated marketing campaigns.",
+                about_p2: "I've managed platforms like Meta, Google, TikTok, and LinkedIn, overseeing the full content production cycle—from copywriting and SEO articles to videography, editing, and performance analysis.",
+                about_p3: "I integrate modern AI tools (ChatGPT, Midjourney, CapCut) to accelerate workflows and deliver exceptional quality.",
+                exp_title: "Core Expertise",
+                exp_1: "Digital Marketing & Social Strategy", exp_1_desc: "Building integrated content plans and managing digital accounts to increase engagement and reach.",
+                exp_2: "Media Buying", exp_2_desc: "Launching and optimizing ad campaigns across Meta, Google, and TikTok for maximum ROI.",
+                exp_3: "Content Writing & SEO", exp_3_desc: "Writing SEO-optimized articles, compelling ad copy, and engaging social media captions.",
+                exp_4: "Videography & Editing", exp_4_desc: "Producing visual content from concept and shooting to final editing for brands.",
+                exp_5: "AI Marketing Tools", exp_5_desc: "Leveraging AI for research, copywriting, image generation, and data analysis.",
+                exp_6: "Brand Identity & Community Management", exp_6_desc: "Maintaining brand voice and actively communicating with the target audience.",
+                port_title: "Featured Work", port_desc: "All my designs, videos, and campaigns are available in my Google Drive portfolio.",
+                p1_title: "Social Media Campaigns", p1_desc: "Examples of content plans and designs for social media platforms.",
+                p2_title: "Video Production & Editing", p2_desc: "My work in directing, shooting, and editing promotional videos and short films.",
+                p3_title: "Articles & Copywriting", p3_desc: "Samples of SEO-friendly articles and impactful advertising copy.",
+                btn_full_portfolio: "Browse Full Portfolio Folder",
+                serv_title: "How Can I Help Your Business?",
+                s1: "Social Media Management", s1_d: "Full management of your company's accounts from posting to community engagement.",
+                s2: "Search Engine Optimization (SEO)", s2_d: "Ranking higher on Google through well-researched and optimized content.",
+                s3: "Visual Content Creation", s3_d: "Shooting and editing professional videos for your products or services.",
+                exp_sec_title: "My Career Journey",
+                job1: "Marketing Manager", date1: "Sep 2024 - Present", comp1: "Al-Aasem Foundation for Development - Cairo",
+                job1_1: "Leading digital marketing campaigns across Facebook, Instagram, and LinkedIn.",
+                job1_2: "Full management of content production from design and copywriting to video editing.",
+                job1_3: "Implementing SEO strategies to increase organic website traffic.",
+                job2: "Content Writer & Videographer", date2: "Feb 2024 - Jun 2024", comp2: "Torjoman - Cairo",
+                job2_1: "Writing promotional and educational articles aligned with brand identity.",
+                job2_2: "Executing video shooting projects from ideation to final editing.",
+                edu_title: "Education & Certifications",
+                edu_1: "B.Sc. Mass Communication & Comm. Tech. - Suez University (Jun 2024)", edu_2: "Diploma in Strategic Marketing", edu_3: "Digital Marketing Diploma - Middle East News Agency (MENA)", edu_4: "Business Marketing Diploma - Galaxy Academy",
+                contact_title: "Let's Discuss Your Next Project",
+                lbl_email: "Email Address", lbl_phone: "Phone / WhatsApp", lbl_linkedin: "LinkedIn",
+                frm_name: "Name", frm_email: "Email", frm_msg: "Message", frm_btn: "Send Message",
+                footer: "© 2024 Khaled Ahmed Ibrahim. All rights reserved."
+            }
+        };
 
-    <!-- Process -->
-    <section class="section section--soft">
-      <div class="container">
-        <div class="section__header reveal">
-          <p class="section__eyebrow">Workflow</p>
-          <h2>A clear process for marketing projects.</h2>
-        </div>
+        let currentLang = 'ar';
 
-        <div class="process-grid">
-          <div class="process-step reveal">
-            <span>01</span>
-            <h3>Audit</h3>
-            <p>Review goals, audience, channels, content, competitors, and current performance.</p>
-          </div>
-          <div class="process-step reveal">
-            <span>02</span>
-            <h3>Strategy</h3>
-            <p>Create campaign direction, content pillars, KPIs, budget plan, and posting structure.</p>
-          </div>
-          <div class="process-step reveal">
-            <span>03</span>
-            <h3>Production</h3>
-            <p>Write, design, shoot, edit, schedule, and prepare campaign assets for publishing.</p>
-          </div>
-          <div class="process-step reveal">
-            <span>04</span>
-            <h3>Optimize</h3>
-            <p>Track performance, test creatives, improve targeting, and report clear next actions.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            
+            // Toggle Direction and Font
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            document.documentElement.lang = currentLang;
+            document.body.className = currentLang;
+            
+            // Toggle Button Text
+            document.getElementById('langBtn').innerText = currentLang === 'ar' ? 'English' : 'العربية';
 
-    <!-- FAQ -->
-    <section class="section" id="faq">
-      <div class="container narrow">
-        <div class="section__header reveal">
-          <p class="section__eyebrow">FAQ</p>
-          <h2>Quick answers for recruiters and clients.</h2>
-        </div>
-
-        <div class="faq reveal">
-          <details>
-            <summary>Are you available for full-time roles?</summary>
-            <p>Yes. I’m open to full-time digital marketing, social media, content, and media buying roles.</p>
-          </details>
-
-          <details>
-            <summary>Do you accept freelance projects?</summary>
-            <p>Yes. I can support campaign strategy, social media management, content creation, video editing, and paid advertising projects.</p>
-          </details>
-
-          <details>
-            <summary>Can you work with English and Arabic content?</summary>
-            <p>Yes. Arabic is my native language and I have professional working proficiency in English.</p>
-          </details>
-
-          <details>
-            <summary>What should I prepare before contacting you?</summary>
-            <p>Send your business goal, target audience, platforms, budget range if paid ads are needed, and examples of content you like.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section contact-section" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-copy reveal">
-          <p class="section__eyebrow">Contact</p>
-          <h2>Let’s build a campaign that gets attention and results.</h2>
-          <p>
-            If you’re hiring or need marketing support, send a message and I’ll get back to you as soon as possible.
-          </p>
-
-          <div class="contact-links">
-            <a href="mailto:khaled2092002@gmail.com">khaled2092002@gmail.com</a>
-            <a href="tel:+201156766611">+20 115 676 6611</a>
-            <a href="https://wa.me/201156766611?text=Hi%20Khaled%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity." target="_blank" rel="noopener noreferrer">
-              WhatsApp Me
-            </a>
-          </div>
-        </div>
-
-        <form class="contact-form reveal" id="contactForm">
-          <label>
-            Your Name
-            <input type="text" name="name" placeholder="Your name" required />
-          </label>
-
-          <label>
-            Email
-            <input type="email" name="email" placeholder="name@example.com" required />
-          </label>
-
-          <label>
-            Service Needed
-            <select name="service" required>
-              <option value="">Select a service</option>
-              <option>Full-time opportunity</option>
-              <option>Freelance digital marketing</option>
-              <option>Media buying / PPC</option>
-              <option>SEO / Content strategy</option>
-              <option>Videography / Editing</option>
-              <option>Social media management</option>
-            </select>
-          </label>
-
-          <label>
-            Message
-            <textarea name="message" rows="5" placeholder="Tell me about the opportunity or project..." required></textarea>
-          </label>
-
-          <button class="btn btn--primary" type="submit">Send Email Inquiry</button>
-
-          <p class="form-note">
-            This form opens your email app because the website is hosted on GitHub Pages.
-          </p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer__inner">
-      <p>© <span id="year"></span> Khaled Ahmed Ibrahim. All rights reserved.</p>
-
-      <div class="footer-links">
-        <a href="assets/khaled-ahmed-ibrahim-cv.pdf" download>CV</a>
-        <a href="https://drive.google.com/drive/folders/1DF7_XRQm1yi1sH1j15nvZTQQet3ebXuI" target="_blank" rel="noopener noreferrer">Portfolio</a>
-        <a href="mailto:khaled2092002@gmail.com">Email</a>
-      </div>
-    </div>
-  </footer>
-
-  <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
-
-  <script src="assets/js/main.js" defer></script>
+            // Replace Texts
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+        }
+    </script>
 </body>
 </html>
