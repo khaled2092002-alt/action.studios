@@ -1,52 +1,1396 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تم إرسال رسالتك | Khaled Ahmed Ibrahim</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khaled Ahmed Ibrahim | Digital Marketing Manager</title>
+  <meta name="description" content="Khaled Ahmed Ibrahim - Digital Marketing Manager, Content Creator, and Social Media Strategist based in Cairo, Egypt." />
+  <meta name="keywords" content="Khaled Ahmed Ibrahim, Digital Marketing, Content Creator, Social Media Strategist, SEO, Media Buying, Cairo, Egypt" />
+
+  <meta property="og:title" content="Khaled Ahmed Ibrahim | Digital Marketing Manager" />
+  <meta property="og:description" content="Portfolio of Khaled Ahmed Ibrahim - Digital Marketing Manager, Content Creator, and Social Media Strategist." />
+  <meta property="og:image" content="images/hero.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
   <style>
-    body {
+    :root {
+      --bg: #0b1020;
+      --bg2: #121a30;
+      --card: rgba(255,255,255,0.06);
+      --border: rgba(255,255,255,0.10);
+      --text: #ffffff;
+      --muted: #c1c8de;
+      --primary: #7c89ff;
+      --secondary: #d7ae6d;
+      --accent: #8ef0c3;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+      --radius: 24px;
+      --max: 1200px;
+      --grad1: linear-gradient(135deg, #7c89ff, #9b6dff);
+      --grad2: linear-gradient(135deg, #d7ae6d, #f0d39d);
+    }
+
+    * {
       margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-      background: #0b1020;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .box {
-      max-width: 520px;
-      padding: 45px 30px;
-      border-radius: 24px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.12);
+    html {
+      scroll-behavior: smooth;
     }
 
-    h1 { color: #d7ae6d; }
-    p { color: #c1c8de; line-height: 1.8; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(124,137,255,0.16), transparent 25%),
+        radial-gradient(circle at bottom right, rgba(215,174,109,0.10), transparent 20%),
+        linear-gradient(135deg, #090d18, #0f172a 45%, #121a30 100%);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    body.ar {
+      font-family: 'Cairo', sans-serif;
+    }
 
     a {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 13px 22px;
-      border-radius: 12px;
-      background: #d7ae6d;
-      color: #111;
       text-decoration: none;
-      font-weight: bold;
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: auto;
+    }
+
+    section {
+      padding: 95px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-head .tag {
+      color: var(--secondary);
+      font-size: .9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 12px;
+      font-weight: 900;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      max-width: 760px;
+      margin: auto;
+      line-height: 1.9;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: .3s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--grad2);
+      color: #111;
+      box-shadow: 0 12px 30px rgba(215,174,109,.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.04);
+      border-color: var(--border);
+      color: var(--text);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(9, 13, 24, 0.76);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .nav-wrap {
+      min-height: 78px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--secondary);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 500;
+      transition: .25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .lang-toggle {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 70px 0 40px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.09);
+      color: var(--secondary);
+      font-size: .92rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 14px var(--accent);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      line-height: 1.05;
+      margin-bottom: 12px;
+      font-weight: 900;
+    }
+
+    .hero h1 span {
+      background: var(--grad2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-role {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: 18px;
+    }
+
+    .hero-desc {
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 1rem;
+      max-width: 650px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .hero-tags {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-tags span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .hero-img-wrap {
+      position: relative;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 30px;
+      padding: 14px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 620px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 22px;
+    }
+
+    .float-box {
+      position: absolute;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 14px 18px;
+      backdrop-filter: blur(14px);
+      box-shadow: var(--shadow);
+      max-width: 220px;
+    }
+
+    .float-box h4 {
+      margin-bottom: 4px;
+      font-size: .96rem;
+    }
+
+    .float-box p {
+      color: var(--muted);
+      font-size: .86rem;
+      line-height: 1.6;
+    }
+
+    .float-1 {
+      left: -20px;
+      bottom: 30px;
+    }
+
+    .float-2 {
+      right: -20px;
+      top: 40px;
+    }
+
+    /* Stats */
+    .stats {
+      margin-top: 35px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 20px;
+      padding: 24px;
+      backdrop-filter: blur(10px);
+      transition: .3s ease;
+    }
+
+    .stat:hover {
+      transform: translateY(-5px);
+    }
+
+    .stat h3 {
+      font-size: 1.9rem;
+      color: var(--secondary);
+      margin-bottom: 6px;
+    }
+
+    .stat p {
+      color: var(--muted);
+      font-size: .94rem;
+      line-height: 1.7;
+    }
+
+    /* Generic cards */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 22px;
+      padding: 26px;
+      transition: .3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 1.08rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: .95rem;
+    }
+
+    /* About */
+    .about {
+      background: rgba(255,255,255,.02);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 38px;
+      align-items: center;
+    }
+
+    .about-image {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 28px;
+      padding: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      border-radius: 22px;
+    }
+
+    .about-content h3 {
+      font-size: 2rem;
+      margin-bottom: 18px;
+    }
+
+    .about-content p {
+      color: var(--muted);
+      margin-bottom: 16px;
+      line-height: 1.9;
+    }
+
+    .mini-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .mini-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .mini-card h4 {
+      color: var(--secondary);
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .mini-card p {
+      margin: 0;
+      font-size: .92rem;
+    }
+
+    /* Experience */
+    .timeline {
+      display: grid;
+      gap: 20px;
+    }
+
+    .timeline-item {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .timeline-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .timeline-top h3 {
+      color: var(--secondary);
+      font-size: 1.15rem;
+    }
+
+    .timeline-top span {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .timeline-company {
+      color: var(--muted);
+      margin-bottom: 14px;
+      font-size: .95rem;
+    }
+
+    .timeline-item ul {
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .timeline-item li {
+      margin-bottom: 8px;
+      line-height: 1.8;
+    }
+
+    body.ar .timeline-item ul {
+      padding-left: 0;
+      padding-right: 20px;
+    }
+
+    /* Portfolio */
+    .portfolio {
+      background: rgba(255,255,255,.02);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .portfolio-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 24px;
+      overflow: hidden;
+      transition: .3s ease;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .portfolio-img {
+      height: 240px;
+      overflow: hidden;
+    }
+
+    .portfolio-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .4s ease;
+    }
+
+    .portfolio-card:hover .portfolio-img img {
+      transform: scale(1.05);
+    }
+
+    .portfolio-body {
+      padding: 22px;
+    }
+
+    .portfolio-label {
+      display: inline-block;
+      color: var(--secondary);
+      font-size: .84rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .portfolio-body h3 {
+      margin-bottom: 10px;
+      font-size: 1.06rem;
+    }
+
+    .portfolio-body p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: .94rem;
+      margin-bottom: 16px;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      position: relative;
+      min-height: 320px;
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .45s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,.08));
+      display: flex;
+      align-items: flex-end;
+      padding: 18px;
+    }
+
+    .gallery-overlay p {
+      color: white;
+      font-weight: 600;
+      font-size: .94rem;
+    }
+
+    /* Tools */
+    .tools-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+    }
+
+    .tool {
+      padding: 14px 18px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      font-weight: 600;
+      transition: .3s ease;
+    }
+
+    .tool:hover {
+      transform: translateY(-4px);
+    }
+
+    /* Contact */
+    .contact {
+      background: rgba(255,255,255,.02);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 14px;
+      color: var(--secondary);
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    .contact-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .contact-list li {
+      color: var(--muted);
+    }
+
+    .contact-list a {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats,
+      .grid-3,
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-card img {
+        height: 520px;
+      }
+
+      .float-1,
+      .float-2 {
+        position: static;
+        margin-top: 14px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .stats,
+      .grid-3,
+      .portfolio-grid,
+      .gallery-grid,
+      .mini-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .hero-card img,
+      .about-image img {
+        height: 420px;
+      }
     }
   </style>
 </head>
 <body>
-  <main class="box">
-    <h1>تم إرسال رسالتك بنجاح ✓</h1>
-    <p>
-      شكرًا لتواصلك معي. سأراجع رسالتك وأرد عليك في أقرب وقت ممكن.
-    </p>
-    <a href="./index.html">العودة للموقع</a>
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <a href="#" class="logo">Khaled <span>Ahmed</span></a>
+
+      <div class="nav-right">
+        <nav class="nav-links">
+          <a href="#about" data-i18n="navAbout">About</a>
+          <a href="#expertise" data-i18n="navExpertise">Expertise</a>
+          <a href="#experience" data-i18n="navExperience">Experience</a>
+          <a href="#portfolio" data-i18n="navPortfolio">Portfolio</a>
+          <a href="#gallery" data-i18n="navGallery">Gallery</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+        </nav>
+
+        <button class="lang-toggle" id="langToggle">العربية</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-badge">
+              <span class="dot"></span>
+              <span data-i18n="heroBadge">Open to Full-time & Freelance Opportunities</span>
+            </div>
+
+            <h1 data-i18n="heroTitle">Hi, I'm <span>Khaled Ahmed Ibrahim</span></h1>
+            <div class="hero-role" data-i18n="heroRole">Digital Marketing Manager • Content Creator • Social Media Strategist</div>
+            <p class="hero-desc" data-i18n="heroDesc">
+              I help brands grow through strategic content, social media management, SEO-driven communication, paid media campaigns, and creative visual storytelling that connects with the right audience.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#portfolio" class="btn btn-primary" data-i18n="heroBtn1">View My Work</a>
+              <a href="Khaled-Ahmed-Ibrahim-CV.pdf" class="btn btn-secondary" download data-i18n="heroBtn2">Download CV</a>
+              <a href="#contact" class="btn btn-secondary" data-i18n="heroBtn3">Hire Me</a>
+            </div>
+
+            <div class="hero-tags">
+              <span>SEO / SEM</span>
+              <span>Media Buying</span>
+              <span data-i18n="tagContent">Content Strategy</span>
+              <span data-i18n="tagVideo">Videography</span>
+              <span data-i18n="tagSocial">Social Media Management</span>
+            </div>
+          </div>
+
+          <div class="hero-img-wrap">
+            <div class="hero-card">
+              <img src="images/hero.jpg" alt="Khaled Ahmed Ibrahim portrait">
+            </div>
+
+            <div class="float-box float-1">
+              <h4 data-i18n="float1Title">2+ Years Experience</h4>
+              <p data-i18n="float1Desc">Digital marketing, content, and campaign execution</p>
+            </div>
+
+            <div class="float-box float-2">
+              <h4 data-i18n="float2Title">Creative + Strategic</h4>
+              <p data-i18n="float2Desc">Blending storytelling with performance-focused thinking</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <h3>2+</h3>
+            <p data-i18n="stat1">Years of hands-on marketing experience</p>
+          </div>
+          <div class="stat">
+            <h3>4+</h3>
+            <p data-i18n="stat2">Major digital platforms managed</p>
+          </div>
+          <div class="stat">
+            <h3>5+</h3>
+            <p data-i18n="stat3">Marketing specialties across content, SEO, and paid media</p>
+          </div>
+          <div class="stat">
+            <h3>100%</h3>
+            <p data-i18n="stat4">Open to full-time, freelance, and remote opportunities</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="tag" data-i18n="aboutTag">About Me</div>
+          <h2 data-i18n="aboutTitle">A marketer with strategy, creativity, and real execution</h2>
+          <p data-i18n="aboutSub">
+            I combine communication, content, media buying, SEO, and visual production to help brands build stronger digital presence and better audience engagement.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-image">
+            <img src="images/about.jpg" alt="Khaled Ahmed Ibrahim professional photo">
+          </div>
+
+          <div class="about-content">
+            <h3 data-i18n="aboutHeading">Building stronger brands through modern digital marketing</h3>
+            <p data-i18n="aboutP1">
+              I’m Khaled Ahmed Ibrahim, a results-driven Digital Marketing Manager and Content Creator based in Cairo, Egypt. My background includes hands-on work in SEO/SEM, paid media, social media strategy, content writing, videography, and post-production.
+            </p>
+            <p data-i18n="aboutP2">
+              I’ve worked on campaigns and content across Meta, Google, TikTok, Snapchat, and LinkedIn, with a strong focus on creating marketing that is not only visually appealing, but also aligned with measurable communication and growth goals.
+            </p>
+            <p data-i18n="aboutP3">
+              I also use AI-powered tools like ChatGPT, Midjourney, Canva AI, and CapCut AI to accelerate ideation, production, and content optimization.
+            </p>
+
+            <div class="mini-grid">
+              <div class="mini-card">
+                <h4 data-i18n="mini1Title">SEO & Paid Media</h4>
+                <p data-i18n="mini1Desc">Improving discoverability, reach, and campaign performance across digital channels.</p>
+              </div>
+              <div class="mini-card">
+                <h4 data-i18n="mini2Title">Content & Copywriting</h4>
+                <p data-i18n="mini2Desc">Creating content that reflects brand voice and connects with target audiences.</p>
+              </div>
+              <div class="mini-card">
+                <h4 data-i18n="mini3Title">Video Production</h4>
+                <p data-i18n="mini3Desc">Managing visual storytelling from concept to filming and post-production editing.</p>
+              </div>
+              <div class="mini-card">
+                <h4 data-i18n="mini4Title">AI Marketing Tools</h4>
+                <p data-i18n="mini4Desc">Enhancing speed, creativity, and content workflows using modern AI solutions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise -->
+    <section id="expertise">
+      <div class="container">
+        <div class="section-head">
+          <div class="tag" data-i18n="expTag">Core Expertise</div>
+          <h2 data-i18n="expTitle">What I Do Best</h2>
+          <p data-i18n="expSub">My work combines creative production, performance thinking, and audience-focused communication across multiple marketing disciplines.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3 data-i18n="card1Title">Digital Marketing Strategy</h3>
+            <p data-i18n="card1Desc">Planning integrated campaigns that align content, audience targeting, brand communication, and measurable goals.</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="card2Title">Social Media Management</h3>
+            <p data-i18n="card2Desc">Managing platform presence, content calendars, community engagement, and strategic communication.</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="card3Title">Media Buying</h3>
+            <p data-i18n="card3Desc">Working across Meta, Google, TikTok, and Snapchat with performance-focused campaign execution.</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="card4Title">SEO / SEM</h3>
+            <p data-i18n="card4Desc">Improving organic discoverability, search visibility, content structure, and audience reach.</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="card5Title">Content Creation & Copywriting</h3>
+            <p data-i18n="card5Desc">Building content that balances storytelling, audience relevance, and brand consistency.</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="card6Title">Videography & Editing</h3>
+            <p data-i18n="card6Desc">Creating engaging visual content from idea to final delivery for marketing and brand storytelling.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head">
+          <div class="tag" data-i18n="experienceTag">Experience</div>
+          <h2 data-i18n="experienceTitle">Professional Experience</h2>
+          <p data-i18n="experienceSub">Practical work experience in content production, digital strategy, social media, and campaign execution.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-top">
+              <h3 data-i18n="job1Title">Marketing Manager</h3>
+              <span data-i18n="job1Date">Sep 2024 – Present</span>
+            </div>
+            <div class="timeline-company" data-i18n="job1Company">Al-Aasem Foundation for Development — Cairo, Egypt</div>
+            <ul>
+              <li data-i18n="job1Li1">Led digital marketing campaigns across Facebook, Instagram, LinkedIn, and TikTok.</li>
+              <li data-i18n="job1Li2">Built multi-channel promotional strategies including SEO content, email marketing, and paid social advertising.</li>
+              <li data-i18n="job1Li3">Managed the full content production pipeline from copywriting and planning to videography and post-production.</li>
+              <li data-i18n="job1Li4">Applied SEO best practices to improve search rankings and organic discoverability.</li>
+              <li data-i18n="job1Li5">Used AI tools to improve speed in ideation, execution, and content analysis.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-top">
+              <h3 data-i18n="job2Title">Content Writer & Videographer</h3>
+              <span data-i18n="job2Date">Feb 2024 – Jun 2024</span>
+            </div>
+            <div class="timeline-company" data-i18n="job2Company">Torjoman — Cairo, Egypt</div>
+            <ul>
+              <li data-i18n="job2Li1">Produced articles, blog posts, and social content aligned with brand voice and campaign needs.</li>
+              <li data-i18n="job2Li2">Delivered full-cycle videography projects covering concept, shooting, editing, and final delivery.</li>
+              <li data-i18n="job2Li3">Supported social media management, visual consistency, and brand communication quality.</li>
+              <li data-i18n="job2Li4">Applied SEO principles to written content to improve reach and click-through performance.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-head">
+          <div class="tag" data-i18n="portfolioTag">Selected Work</div>
+          <h2 data-i18n="portfolioTitle">Portfolio & Featured Projects</h2>
+          <p data-i18n="portfolioSub">A selected view of my work across video, content strategy, social media execution, and brand-focused communication.</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <img src="images/gallery1.jpg" alt="Videography project">
+            </div>
+            <div class="portfolio-body">
+              <div class="portfolio-label" data-i18n="p1Label">Videography & Editing</div>
+              <h3 data-i18n="p1Title">Video Production Showcase</h3>
+              <p data-i18n="p1Desc">A curated visual portfolio showing storytelling, filming, editing, and content crafted for digital campaigns and social platforms.</p>
+              <a href="#" class="btn btn-secondary" data-i18n="viewProject">View Project</a>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <img src="images/gallery2.jpg" alt="SEO project">
+            </div>
+            <div class="portfolio-body">
+              <div class="portfolio-label" data-i18n="p2Label">SEO & Content Strategy</div>
+              <h3 data-i18n="p2Title">SEO-Driven Content Planning</h3>
+              <p data-i18n="p2Desc">A content approach focused on discoverability, search visibility, engagement, and stronger brand communication.</p>
+              <a href="#" class="btn btn-secondary" data-i18n="viewProject">View Project</a>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <img src="images/gallery3.jpg" alt="Social media project">
+            </div>
+            <div class="portfolio-body">
+              <div class="portfolio-label" data-i18n="p3Label">Social Media Strategy</div>
+              <h3 data-i18n="p3Title">Cross-Platform Campaign Execution</h3>
+              <p data-i18n="p3Desc">Strategic content planning and campaign communication across Meta, LinkedIn, TikTok, and other key platforms.</p>
+              <a href="#" class="btn btn-secondary" data-i18n="viewProject">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <div class="tag" data-i18n="galleryTag">Gallery</div>
+          <h2 data-i18n="galleryTitle">Personal Brand Gallery</h2>
+          <p data-i18n="gallerySub">A visual side of my personal brand — professional, authentic, and aligned with the image I bring to my work.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="images/gallery1.jpg" alt="Khaled image 1">
+            <div class="gallery-overlay"><p data-i18n="g1">Professional Presence</p></div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/gallery2.jpg" alt="Khaled image 2">
+            <div class="gallery-overlay"><p data-i18n="g2">Creative Identity</p></div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/gallery3.jpg" alt="Khaled image 3">
+            <div class="gallery-overlay"><p data-i18n="g3">Confident Personal Brand</p></div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/gallery4.jpg" alt="Khaled image 4">
+            <div class="gallery-overlay"><p data-i18n="g4">Modern & Professional Image</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="tag" data-i18n="toolsTag">Tools & Platforms</div>
+          <h2 data-i18n="toolsTitle">Tools I Work With</h2>
+          <p data-i18n="toolsSub">Modern tools that support content quality, campaign execution, analytics, and digital growth.</p>
+        </div>
+
+        <div class="tools-wrap">
+          <div class="tool">Meta Ads</div>
+          <div class="tool">Google Ads</div>
+          <div class="tool">TikTok Ads</div>
+          <div class="tool">Snapchat Ads</div>
+          <div class="tool">Google Analytics 4</div>
+          <div class="tool">Canva</div>
+          <div class="tool">CapCut</div>
+          <div class="tool">ChatGPT</div>
+          <div class="tool">Midjourney</div>
+          <div class="tool">Canva AI</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="tag" data-i18n="contactTag">Contact</div>
+          <h2 data-i18n="contactTitle">Let’s Work Together</h2>
+          <p data-i18n="contactSub">I’m currently available for full-time roles, freelance projects, and collaborative opportunities in marketing, content, and brand growth.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3 data-i18n="contactInfoTitle">Contact Information</h3>
+            <ul class="contact-list">
+              <li><span data-i18n="emailLabel">Email</span>: <a href="mailto:khaled2092002@gmail.com">khaled2092002@gmail.com</a></li>
+              <li><span data-i18n="phoneLabel">Phone</span>: <a href="tel:01156766611">01156766611</a></li>
+              <li><span data-i18n="phoneLabel">Phone</span>: <a href="tel:01015793576">01015793576</a></li>
+              <li><span data-i18n="locationLabel">Location</span>: <span data-i18n="locationValue">Cairo, Egypt</span></li>
+              <li>LinkedIn: <a href="#">Add your LinkedIn link</a></li>
+              <li>Behance: <a href="#">Add your Behance link</a></li>
+            </ul>
+          </div>
+
+          <div class="contact-card">
+            <h3 data-i18n="contactWhyTitle">Why work with me?</h3>
+            <p data-i18n="contactWhyP1">I bring a combination of marketing strategy, creative execution, audience understanding, and content production — which allows me to contribute across both planning and implementation.</p>
+            <p data-i18n="contactWhyP2">Whether you need stronger content, better campaign execution, improved visibility, or a more polished digital brand image, I’m ready to help.</p>
+            <a href="mailto:khaled2092002@gmail.com" class="btn btn-primary" data-i18n="contactBtn">Send Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <div class="container">
+      <p data-i18n="footerText">© 2025 Khaled Ahmed Ibrahim — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        navAbout: "About",
+        navExpertise: "Expertise",
+        navExperience: "Experience",
+        navPortfolio: "Portfolio",
+        navGallery: "Gallery",
+        navContact: "Contact",
+
+        heroBadge: "Open to Full-time & Freelance Opportunities",
+        heroTitle: "Hi, I'm <span>Khaled Ahmed Ibrahim</span>",
+        heroRole: "Digital Marketing Manager • Content Creator • Social Media Strategist",
+        heroDesc: "I help brands grow through strategic content, social media management, SEO-driven communication, paid media campaigns, and creative visual storytelling that connects with the right audience.",
+        heroBtn1: "View My Work",
+        heroBtn2: "Download CV",
+        heroBtn3: "Hire Me",
+        tagContent: "Content Strategy",
+        tagVideo: "Videography",
+        tagSocial: "Social Media Management",
+        float1Title: "2+ Years Experience",
+        float1Desc: "Digital marketing, content, and campaign execution",
+        float2Title: "Creative + Strategic",
+        float2Desc: "Blending storytelling with performance-focused thinking",
+
+        stat1: "Years of hands-on marketing experience",
+        stat2: "Major digital platforms managed",
+        stat3: "Marketing specialties across content, SEO, and paid media",
+        stat4: "Open to full-time, freelance, and remote opportunities",
+
+        aboutTag: "About Me",
+        aboutTitle: "A marketer with strategy, creativity, and real execution",
+        aboutSub: "I combine communication, content, media buying, SEO, and visual production to help brands build stronger digital presence and better audience engagement.",
+        aboutHeading: "Building stronger brands through modern digital marketing",
+        aboutP1: "I’m Khaled Ahmed Ibrahim, a results-driven Digital Marketing Manager and Content Creator based in Cairo, Egypt. My background includes hands-on work in SEO/SEM, paid media, social media strategy, content writing, videography, and post-production.",
+        aboutP2: "I’ve worked on campaigns and content across Meta, Google, TikTok, Snapchat, and LinkedIn, with a strong focus on creating marketing that is not only visually appealing, but also aligned with measurable communication and growth goals.",
+        aboutP3: "I also use AI-powered tools like ChatGPT, Midjourney, Canva AI, and CapCut AI to accelerate ideation, production, and content optimization.",
+        mini1Title: "SEO & Paid Media",
+        mini1Desc: "Improving discoverability, reach, and campaign performance across digital channels.",
+        mini2Title: "Content & Copywriting",
+        mini2Desc: "Creating content that reflects brand voice and connects with target audiences.",
+        mini3Title: "Video Production",
+        mini3Desc: "Managing visual storytelling from concept to filming and post-production editing.",
+        mini4Title: "AI Marketing Tools",
+        mini4Desc: "Enhancing speed, creativity, and content workflows using modern AI solutions.",
+
+        expTag: "Core Expertise",
+        expTitle: "What I Do Best",
+        expSub: "My work combines creative production, performance thinking, and audience-focused communication across multiple marketing disciplines.",
+        card1Title: "Digital Marketing Strategy",
+        card1Desc: "Planning integrated campaigns that align content, audience targeting, brand communication, and measurable goals.",
+        card2Title: "Social Media Management",
+        card2Desc: "Managing platform presence, content calendars, community engagement, and strategic communication.",
+        card3Title: "Media Buying",
+        card3Desc: "Working across Meta, Google, TikTok, and Snapchat with performance-focused campaign execution.",
+        card4Title: "SEO / SEM",
+        card4Desc: "Improving organic discoverability, search visibility, content structure, and audience reach.",
+        card5Title: "Content Creation & Copywriting",
+        card5Desc: "Building content that balances storytelling, audience relevance, and brand consistency.",
+        card6Title: "Videography & Editing",
+        card6Desc: "Creating engaging visual content from idea to final delivery for marketing and brand storytelling.",
+
+        experienceTag: "Experience",
+        experienceTitle: "Professional Experience",
+        experienceSub: "Practical work experience in content production, digital strategy, social media, and campaign execution.",
+        job1Title: "Marketing Manager",
+        job1Date: "Sep 2024 – Present",
+        job1Company: "Al-Aasem Foundation for Development — Cairo, Egypt",
+        job1Li1: "Led digital marketing campaigns across Facebook, Instagram, LinkedIn, and TikTok.",
+        job1Li2: "Built multi-channel promotional strategies including SEO content, email marketing, and paid social advertising.",
+        job1Li3: "Managed the full content production pipeline from copywriting and planning to videography and post-production.",
+        job1Li4: "Applied SEO best practices to improve search rankings and organic discoverability.",
+        job1Li5: "Used AI tools to improve speed in ideation, execution, and content analysis.",
+
+        job2Title: "Content Writer & Videographer",
+        job2Date: "Feb 2024 – Jun 2024",
+        job2Company: "Torjoman — Cairo, Egypt",
+        job2Li1: "Produced articles, blog posts, and social content aligned with brand voice and campaign needs.",
+        job2Li2: "Delivered full-cycle videography projects covering concept, shooting, editing, and final delivery.",
+        job2Li3: "Supported social media management, visual consistency, and brand communication quality.",
+        job2Li4: "Applied SEO principles to written content to improve reach and click-through performance.",
+
+        portfolioTag: "Selected Work",
+        portfolioTitle: "Portfolio & Featured Projects",
+        portfolioSub: "A selected view of my work across video, content strategy, social media execution, and brand-focused communication.",
+        p1Label: "Videography & Editing",
+        p1Title: "Video Production Showcase",
+        p1Desc: "A curated visual portfolio showing storytelling, filming, editing, and content crafted for digital campaigns and social platforms.",
+        p2Label: "SEO & Content Strategy",
+        p2Title: "SEO-Driven Content Planning",
+        p2Desc: "A content approach focused on discoverability, search visibility, engagement, and stronger brand communication.",
+        p3Label: "Social Media Strategy",
+        p3Title: "Cross-Platform Campaign Execution",
+        p3Desc: "Strategic content planning and campaign communication across Meta, LinkedIn, TikTok, and other key platforms.",
+        viewProject: "View Project",
+
+        galleryTag: "Gallery",
+        galleryTitle: "Personal Brand Gallery",
+        gallerySub: "A visual side of my personal brand — professional, authentic, and aligned with the image I bring to my work.",
+        g1: "Professional Presence",
+        g2: "Creative Identity",
+        g3: "Confident Personal Brand",
+        g4: "Modern & Professional Image",
+
+        toolsTag: "Tools & Platforms",
+        toolsTitle: "Tools I Work With",
+        toolsSub: "Modern tools that support content quality, campaign execution, analytics, and digital growth.",
+
+        contactTag: "Contact",
+        contactTitle: "Let’s Work Together",
+        contactSub: "I’m currently available for full-time roles, freelance projects, and collaborative opportunities in marketing, content, and brand growth.",
+        contactInfoTitle: "Contact Information",
+        emailLabel: "Email",
+        phoneLabel: "Phone",
+        locationLabel: "Location",
+        locationValue: "Cairo, Egypt",
+        contactWhyTitle: "Why work with me?",
+        contactWhyP1: "I bring a combination of marketing strategy, creative execution, audience understanding, and content production — which allows me to contribute across both planning and implementation.",
+        contactWhyP2: "Whether you need stronger content, better campaign execution, improved visibility, or a more polished digital brand image, I’m ready to help.",
+        contactBtn: "Send Email",
+
+        footerText: "© 2025 Khaled Ahmed Ibrahim — All rights reserved."
+      },
+
+      ar: {
+        navAbout: "من أنا",
+        navExpertise: "الخبرات",
+        navExperience: "الخبرة",
+        navPortfolio: "الأعمال",
+        navGallery: "الصور",
+        navContact: "تواصل",
+
+        heroBadge: "متاح لفرص العمل بدوام كامل والعمل الحر",
+        heroTitle: "مرحبًا، أنا <span>خالد أحمد إبراهيم</span>",
+        heroRole: "مدير تسويق رقمي • صانع محتوى • استراتيجي سوشيال ميديا",
+        heroDesc: "أساعد العلامات التجارية على النمو من خلال المحتوى الاستراتيجي، وإدارة السوشيال ميديا، والتواصل المعتمد على SEO، والحملات الإعلانية المدفوعة، وصناعة محتوى بصري إبداعي يصل للجمهور المناسب.",
+        heroBtn1: "شاهد أعمالي",
+        heroBtn2: "تحميل السيرة الذاتية",
+        heroBtn3: "وظفني",
+        tagContent: "استراتيجية المحتوى",
+        tagVideo: "تصوير وصناعة فيديو",
+        tagSocial: "إدارة السوشيال ميديا",
+        float1Title: "خبرة +2 سنوات",
+        float1Desc: "في التسويق الرقمي والمحتوى وتنفيذ الحملات",
+        float2Title: "إبداع + استراتيجية",
+        float2Desc: "دمج بين السرد الإبداعي والتفكير القائم على النتائج",
+
+        stat1: "سنوات من الخبرة العملية في التسويق",
+        stat2: "منصات رقمية رئيسية تم العمل عليها",
+        stat3: "تخصصات تسويقية في المحتوى وSEO والإعلانات",
+        stat4: "متاح للعمل الكامل، الحر، والريموت",
+
+        aboutTag: "من أنا",
+        aboutTitle: "مسوّق يجمع بين الاستراتيجية، والإبداع، والتنفيذ الحقيقي",
+        aboutSub: "أجمع بين التواصل، والمحتوى، والإعلانات، وSEO، والإنتاج البصري لمساعدة العلامات التجارية على بناء حضور رقمي أقوى وتفاعل أفضل.",
+        aboutHeading: "بناء علامات تجارية أقوى من خلال التسويق الرقمي الحديث",
+        aboutP1: "أنا خالد أحمد إبراهيم، مدير تسويق رقمي وصانع محتوى أعمل من القاهرة. لدي خبرة عملية في SEO/SEM، والإعلانات المدفوعة، واستراتيجيات السوشيال ميديا، وكتابة المحتوى، والتصوير، والمونتاج.",
+        aboutP2: "عملت على حملات ومحتوى عبر Meta وGoogle وTikTok وSnapchat وLinkedIn، مع تركيز قوي على صناعة تسويق جذاب بصريًا ومبني أيضًا على أهداف واضحة للنمو والتواصل.",
+        aboutP3: "كما أستخدم أدوات الذكاء الاصطناعي مثل ChatGPT وMidjourney وCanva AI وCapCut AI لتسريع الأفكار والإنتاج وتحسين المحتوى.",
+        mini1Title: "SEO والإعلانات المدفوعة",
+        mini1Desc: "تحسين الظهور والوصول وأداء الحملات عبر القنوات الرقمية المختلفة.",
+        mini2Title: "المحتوى والكابشنات",
+        mini2Desc: "صناعة محتوى يعكس هوية العلامة التجارية ويتواصل مع الجمهور المستهدف.",
+        mini3Title: "إنتاج الفيديو",
+        mini3Desc: "إدارة السرد البصري من الفكرة وحتى التصوير والمونتاج النهائي.",
+        mini4Title: "أدوات الذكاء الاصطناعي",
+        mini4Desc: "رفع السرعة والإبداع وكفاءة العمل باستخدام أدوات AI الحديثة.",
+
+        expTag: "الخبرات الأساسية",
+        expTitle: "أهم ما أقدمه",
+        expSub: "عملي يجمع بين الإنتاج الإبداعي، والتفكير المبني على الأداء، والتواصل الموجه للجمهور عبر تخصصات تسويقية متعددة.",
+        card1Title: "استراتيجية التسويق الرقمي",
+        card1Desc: "تخطيط حملات متكاملة تربط بين المحتوى، والجمهور، وهوية العلامة التجارية، والأهداف القابلة للقياس.",
+        card2Title: "إدارة السوشيال ميديا",
+        card2Desc: "إدارة المنصات، وخطط المحتوى، والتفاعل مع الجمهور، والتواصل الاستراتيجي.",
+        card3Title: "الإعلانات الممولة",
+        card3Desc: "العمل على Meta وGoogle وTikTok وSnapchat مع تركيز على الأداء والنتائج.",
+        card4Title: "SEO / SEM",
+        card4Desc: "تحسين الظهور العضوي، وترتيب البحث، وبنية المحتوى، والوصول للجمهور.",
+        card5Title: "صناعة المحتوى والكتابة",
+        card5Desc: "بناء محتوى يجمع بين السرد، واهتمامات الجمهور، وثبات هوية العلامة التجارية.",
+        card6Title: "التصوير والمونتاج",
+        card6Desc: "إنتاج محتوى بصري جذاب من الفكرة حتى التسليم النهائي لأغراض التسويق وبناء العلامة.",
+
+        experienceTag: "الخبرة",
+        experienceTitle: "الخبرة المهنية",
+        experienceSub: "خبرة عملية في إنتاج المحتوى، والاستراتيجية الرقمية، والسوشيال ميديا، وتنفيذ الحملات.",
+        job1Title: "مدير تسويق",
+        job1Date: "سبتمبر 2024 – حتى الآن",
+        job1Company: "مؤسسة العاصم للتنمية — القاهرة، مصر",
+        job1Li1: "قيادة الحملات التسويقية الرقمية عبر Facebook وInstagram وLinkedIn وTikTok.",
+        job1Li2: "بناء استراتيجيات ترويج متعددة القنوات تشمل محتوى SEO، والتسويق عبر البريد، والإعلانات المدفوعة.",
+        job1Li3: "إدارة دورة إنتاج المحتوى بالكامل من الكتابة والتخطيط وحتى التصوير والمونتاج.",
+        job1Li4: "تطبيق أفضل ممارسات SEO لتحسين ترتيب البحث وزيادة الظهور العضوي.",
+        job1Li5: "استخدام أدوات الذكاء الاصطناعي لتسريع الأفكار والتنفيذ وتحليل الأداء.",
+
+        job2Title: "كاتب محتوى ومصور فيديو",
+        job2Date: "فبراير 2024 – يونيو 2024",
+        job2Company: "ترجمان — القاهرة، مصر",
+        job2Li1: "إنتاج مقالات ومنشورات ومدخلات سوشيال ميديا متوافقة مع صوت العلامة التجارية.",
+        job2Li2: "تنفيذ مشاريع تصوير فيديو كاملة من الفكرة وحتى التصوير والمونتاج والتسليم.",
+        job2Li3: "دعم إدارة السوشيال ميديا والحفاظ على الاتساق البصري وجودة التواصل.",
+        job2Li4: "تطبيق مبادئ SEO على المحتوى المكتوب لتحسين الوصول ومعدلات النقر.",
+
+        portfolioTag: "أعمال مختارة",
+        portfolioTitle: "الأعمال والمشاريع المميزة",
+        portfolioSub: "نظرة مختارة على أعمالي في الفيديو، واستراتيجية المحتوى، وتنفيذ السوشيال ميديا، والتواصل المرتبط بالعلامة التجارية.",
+        p1Label: "تصوير ومونتاج",
+        p1Title: "عرض أعمال إنتاج الفيديو",
+        p1Desc: "عرض بصري منسق يوضح السرد الإبداعي، والتصوير، والمونتاج، وصناعة محتوى للحملات والمنصات الاجتماعية.",
+        p2Label: "SEO واستراتيجية المحتوى",
+        p2Title: "تخطيط محتوى معتمد على SEO",
+        p2Desc: "أسلوب محتوى يركز على الظهور، وتحسين محركات البحث، والتفاعل، وتقوية الرسالة التسويقية.",
+        p3Label: "استراتيجية السوشيال ميديا",
+        p3Title: "تنفيذ حملات متعددة المنصات",
+        p3Desc: "تخطيط محتوى واستراتيجية تواصل عبر Meta وLinkedIn وTikTok ومنصات رئيسية أخرى.",
+        viewProject: "عرض المشروع",
+
+        galleryTag: "الصور",
+        galleryTitle: "معرض الهوية الشخصية",
+        gallerySub: "جانب بصري من هويتي الشخصية — احترافي، حقيقي، ومتوافق مع الصورة التي أقدمها في عملي.",
+        g1: "حضور احترافي",
+        g2: "هوية إبداعية",
+        g3: "علامة شخصية واثقة",
+        g4: "صورة عصرية واحترافية",
+
+        toolsTag: "الأدوات والمنصات",
+        toolsTitle: "الأدوات التي أعمل بها",
+        toolsSub: "أدوات حديثة تدعم جودة المحتوى، وتنفيذ الحملات، والتحليل، والنمو الرقمي.",
+
+        contactTag: "تواصل",
+        contactTitle: "دعنا نعمل معًا",
+        contactSub: "أنا متاح حاليًا للوظائف بدوام كامل، والعمل الحر، وفرص التعاون في التسويق والمحتوى ونمو العلامات التجارية.",
+        contactInfoTitle: "معلومات التواصل",
+        emailLabel: "البريد",
+        phoneLabel: "الهاتف",
+        locationLabel: "الموقع",
+        locationValue: "القاهرة، مصر",
+        contactWhyTitle: "لماذا العمل معي؟",
+        contactWhyP1: "أجمع بين الاستراتيجية التسويقية، والتنفيذ الإبداعي، وفهم الجمهور، وإنتاج المحتوى، مما يسمح لي بالمساهمة في التخطيط والتنفيذ معًا.",
+        contactWhyP2: "إذا كنت تحتاج إلى محتوى أقوى، أو تنفيذ أفضل للحملات، أو ظهور أكبر، أو صورة رقمية أكثر احترافية للعلامة التجارية، فأنا مستعد للمساعدة.",
+        contactBtn: "إرسال بريد",
+
+        footerText: "© 2025 خالد أحمد إبراهيم — جميع الحقوق محفوظة."
+      }
+    };
+
+    const toggleBtn = document.getElementById('langToggle');
+    let currentLang = 'en';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.body.classList.toggle('ar', lang === 'ar');
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+
+      toggleBtn.textContent = lang === 'en' ? 'العربية' : 'English';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      setLanguage(currentLang === 'en' ? 'ar' : 'en');
+    });
+
+    setLanguage('en');
+  </script>
 </body>
 </html>
